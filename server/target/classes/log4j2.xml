@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{HH:mm:ss.SSS} %-5level] %msg%n" charset="UTF-8"/>
+        </Console>
+        <File name="File1" fileName="log/errors.log" immediateFlush="true" append="true">
+            <PatternLayout pattern="[%d{HH:mm:ss.SSS} %-5level] %msg%n" charset="UTF-8"/>
+        </File>
+        <File name="File" fileName="log/application.log" immediateFlush="true" append="true">
+            <PatternLayout pattern="[%d{HH:mm:ss.SSS} %-5level] %msg%n" charset="UTF-8"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="Console" level="TRACE" />
+            <AppenderRef ref="File1" level="ERROR"/>
+            <AppenderRef ref="File" level="TRACE"/>
+        </Root>
+    </Loggers>
+</Configuration>

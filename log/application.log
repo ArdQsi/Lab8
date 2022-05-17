@@ -1,0 +1,1520 @@
+[22:09:27.695 INFO ] collection successfully loaded
+[22:09:27.711 INFO ] starting server
+[22:10:28.456 ERROR]  showno such user, or user login or password is incorrect
+[22:22:01.825 INFO ] collection successfully loaded
+[22:22:01.834 INFO ] starting server
+[22:24:17.861 INFO ] collection successfully loaded
+[22:24:17.871 INFO ] starting server
+[22:31:04.738 INFO ] collection successfully loaded
+[22:31:04.746 TRACE] starting server
+[22:31:10.289 TRACE] received request from /127.0.0.1:54310
+[22:31:10.299 ERROR]  infono such user, or user login or password is incorrect
+[22:31:10.302 TRACE] sent response to /127.0.0.1:54310
+[22:31:45.647 INFO ] collection successfully loaded
+[22:31:45.657 INFO ] starting server
+[22:36:02.481 INFO ] collection successfully loaded
+[22:36:02.490 INFO ] starting server
+[22:40:48.267 INFO ] collection successfully loaded
+[22:40:48.276 INFO ] starting server
+[23:05:44.523 INFO ] collection successfully loaded
+[23:05:44.532 INFO ] starting server
+[23:05:52.521 INFO ] received request from /127.0.0.1:60938
+[23:07:26.300 INFO ] collection successfully loaded
+[23:07:26.310 INFO ] starting server
+[23:07:31.434 INFO ] received request from /127.0.0.1:62069
+[23:09:03.083 INFO ] collection successfully loaded
+[23:09:03.092 INFO ] starting server
+[23:09:11.596 INFO ] received request from /127.0.0.1:57341
+[23:12:09.137 INFO ] collection successfully loaded
+[23:12:09.148 INFO ] starting server
+[23:12:14.754 INFO ] received request from /127.0.0.1:65122
+[23:12:14.762 ERROR] wrong command
+[23:12:14.765 INFO ] sent response to /127.0.0.1:65122
+[23:14:56.322 INFO ] collection successfully loaded
+[23:14:56.332 INFO ] starting server
+[23:15:02.153 INFO ] received request from /127.0.0.1:59381
+[23:18:42.201 INFO ] collection successfully loaded
+[23:18:42.211 INFO ] starting server
+[23:18:47.907 INFO ] received request from /127.0.0.1:55947
+[23:23:30.171 INFO ] collection successfully loaded
+[23:23:30.183 INFO ] starting server
+[23:23:35.869 INFO ] received request from /127.0.0.1:65340
+[23:23:35.879 ERROR] wrong command
+[23:23:35.882 INFO ] sent response to /127.0.0.1:65340
+[23:23:41.840 INFO ] received request from /127.0.0.1:65340
+[23:23:41.842 ERROR]  showno such user, or user login or password is incorrect
+[23:23:41.843 INFO ] sent response to /127.0.0.1:65340
+[23:23:48.821 INFO ] received request from /127.0.0.1:65340
+[23:23:48.823 ERROR]  Jack  loginlogin or password is incorrect
+[23:23:48.824 INFO ] sent response to /127.0.0.1:65340
+[23:23:49.351 INFO ] received request from /127.0.0.1:65340
+[23:23:49.353 ERROR] wrong command
+[23:23:49.353 INFO ] sent response to /127.0.0.1:65340
+[23:23:52.659 INFO ] received request from /127.0.0.1:65340
+[23:23:52.660 ERROR]  showno such user, or user login or password is incorrect
+[23:23:52.660 INFO ] sent response to /127.0.0.1:65340
+[23:24:04.844 INFO ] received request from /127.0.0.1:65340
+[23:24:04.847 ERROR]  roma  loginlogin or password is incorrect
+[23:24:04.848 INFO ] sent response to /127.0.0.1:65340
+[23:25:46.518 INFO ] received request from /127.0.0.1:65340
+[23:25:46.521 ERROR]  jaj  loginlogin or password is incorrect
+[23:25:46.522 INFO ] sent response to /127.0.0.1:65340
+[23:25:51.501 INFO ] received request from /127.0.0.1:65340
+[23:25:51.502 INFO ]  hah  loginlogin successful
+[23:25:51.503 INFO ] sent response to /127.0.0.1:65340
+[23:25:52.857 INFO ] received request from /127.0.0.1:65340
+[23:25:52.862 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[23:25:52.863 INFO ] sent response to /127.0.0.1:65340
+[23:27:27.555 INFO ] collection successfully loaded
+[23:27:27.564 INFO ] starting server
+[23:27:34.847 INFO ] received request from /127.0.0.1:51754
+[23:27:34.857 ERROR] wrong command
+[23:27:34.860 INFO ] sent response to /127.0.0.1:51754
+[23:27:42.237 INFO ] received request from /127.0.0.1:51754
+[23:27:42.240 INFO ]  hah  loginlogin successful
+[23:27:42.241 INFO ] sent response to /127.0.0.1:51754
+[23:27:43.174 INFO ] received request from /127.0.0.1:51754
+[23:27:43.178 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[23:27:43.179 INFO ] sent response to /127.0.0.1:51754
+[23:34:49.495 INFO ] collection successfully loaded
+[23:34:49.504 INFO ] starting server
+[23:34:56.635 INFO ] received request from /127.0.0.1:59002
+[23:34:56.643 ERROR] wrong command
+[23:34:56.647 INFO ] sent response to /127.0.0.1:59002
+[23:34:58.229 INFO ] received request from /127.0.0.1:59002
+[23:34:58.231 ERROR]  helpno such user, or user login or password is incorrect
+[23:34:58.241 INFO ] sent response to /127.0.0.1:59002
+[23:35:04.670 INFO ] received request from /127.0.0.1:59002
+[23:35:04.671 ERROR]  loginlogin or password is incorrect
+[23:35:04.672 INFO ] sent response to /127.0.0.1:59002
+[23:35:11.047 INFO ] received request from /127.0.0.1:59002
+[23:35:11.049 INFO ]  hah  loginlogin successful
+[23:35:11.051 INFO ] sent response to /127.0.0.1:59002
+[23:35:13.110 INFO ] received request from /127.0.0.1:59002
+[23:35:13.117 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[23:35:13.118 INFO ] sent response to /127.0.0.1:59002
+[23:36:44.755 INFO ] collection successfully loaded
+[23:36:44.765 INFO ] starting server
+[23:36:51.058 INFO ] received request from /127.0.0.1:65032
+[23:36:51.071 ERROR]  showno such user, or user login or password is incorrect
+[23:36:51.074 INFO ] sent response to /127.0.0.1:65032
+[23:36:56.162 INFO ] received request from /127.0.0.1:65032
+[23:36:56.165 INFO ]  hah  loginlogin successful
+[23:36:56.166 INFO ] sent response to /127.0.0.1:65032
+[23:36:56.952 INFO ] received request from /127.0.0.1:65032
+[23:36:56.957 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[23:36:56.962 INFO ] sent response to /127.0.0.1:65032
+[23:37:13.989 INFO ] received request from /127.0.0.1:65032
+[23:37:14.001 INFO ]  hah  add
+Added element: {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}
+[23:37:14.005 INFO ] sent response to /127.0.0.1:65032
+[23:37:16.240 INFO ] received request from /127.0.0.1:65032
+[23:37:16.242 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}, {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}]
+[23:37:16.243 INFO ] sent response to /127.0.0.1:65032
+[01:13:56.280 INFO ] collection successfully loaded
+[01:13:56.289 INFO ] starting server
+[01:14:02.301 INFO ] received request from /127.0.0.1:55654
+[01:14:02.309 ERROR] wrong command
+[01:14:02.312 INFO ] sent response to /127.0.0.1:55654
+[01:14:04.437 INFO ] received request from /127.0.0.1:55654
+[01:14:04.439 ERROR]  showno such user, or user login or password is incorrect
+[01:14:04.440 INFO ] sent response to /127.0.0.1:55654
+[01:19:39.925 INFO ] collection successfully loaded
+[01:19:39.940 INFO ] starting server
+[01:19:46.860 INFO ] received request from /127.0.0.1:59993
+[01:19:46.860 ERROR]  showno such user, or user login or password is incorrect
+[01:19:46.876 INFO ] sent response to /127.0.0.1:59993
+[01:19:57.130 INFO ] received request from /127.0.0.1:59993
+[01:19:57.130 ERROR]  user  loginlogin or password is incorrect
+[01:19:57.130 INFO ] sent response to /127.0.0.1:59993
+[01:20:02.897 INFO ] received request from /127.0.0.1:59993
+[01:20:02.897 INFO ]  hah  loginlogin successful
+[01:20:02.897 INFO ] sent response to /127.0.0.1:59993
+[01:20:04.396 INFO ] received request from /127.0.0.1:59993
+[01:20:04.396 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[01:20:04.396 INFO ] sent response to /127.0.0.1:59993
+[02:07:11.579 INFO ] collection successfully loaded
+[02:09:10.145 INFO ] collection successfully loaded
+[02:10:43.543 INFO ] collection successfully loaded
+[02:11:38.622 INFO ] collection successfully loaded
+[02:12:28.597 INFO ] collection successfully loaded
+[02:13:48.118 INFO ] collection successfully loaded
+[02:14:45.779 INFO ] collection successfully loaded
+[02:15:21.044 INFO ] collection successfully loaded
+[02:15:34.788 INFO ] collection successfully loaded
+[02:15:34.788 INFO ] starting server
+[02:16:59.082 INFO ] collection successfully loaded
+[02:17:20.413 INFO ] collection successfully loaded
+[02:17:20.429 INFO ] starting server
+[02:17:22.775 ERROR]  showno such user, or user login or password is incorrect
+[16:47:37.928 INFO ] collection successfully loaded
+[16:47:37.944 INFO ] starting server
+[16:47:50.036 INFO ] received request from /127.0.0.1:65504
+[16:47:50.052 ERROR]  infono such user, or user login or password is incorrect
+[16:47:50.068 INFO ] sent response to /127.0.0.1:65504
+[19:13:59.423 INFO ] collection successfully loaded
+[19:13:59.438 INFO ] starting server
+[19:14:33.070 INFO ] collection successfully loaded
+[19:14:33.079 INFO ] starting server
+[19:14:42.884 INFO ] received request from /127.0.0.1:63365
+[19:14:42.884 ERROR] received data is damaged
+[19:22:47.151 INFO ] collection successfully loaded
+[19:22:47.167 INFO ] starting server
+[19:22:53.190 INFO ] received request from /127.0.0.1:49885
+[19:22:53.190 ERROR] received data is damaged
+[19:57:38.299 INFO ] collection successfully loaded
+[19:57:38.315 INFO ] starting server
+[19:57:46.264 INFO ] received request from /127.0.0.1:60198
+[19:57:46.272 ERROR] received data is damaged
+[20:01:16.511 INFO ] collection successfully loaded
+[20:01:16.527 INFO ] starting server
+[20:01:26.212 INFO ] received request from /127.0.0.1:61258
+[20:01:26.212 ERROR] received data is damaged
+[20:02:40.083 INFO ] collection successfully loaded
+[20:02:40.114 INFO ] starting server
+[20:02:46.639 INFO ] received request from /127.0.0.1:55274
+[20:02:46.655 ERROR] received data is damaged
+[20:04:26.459 INFO ] collection successfully loaded
+[20:04:26.490 INFO ] starting server
+[20:04:35.115 INFO ] received request from /127.0.0.1:59227
+[20:04:35.130 ERROR] received data is damaged
+[20:10:43.368 INFO ] collection successfully loaded
+[20:10:43.383 INFO ] starting server
+[20:10:49.805 INFO ] received request from /127.0.0.1:60755
+[20:10:49.821 ERROR] received data is damaged
+[20:17:52.452 INFO ] collection successfully loaded
+[20:17:52.467 INFO ] starting server
+[20:19:10.396 INFO ] collection successfully loaded
+[20:19:10.412 INFO ] starting server
+[20:19:15.735 INFO ] received request from /127.0.0.1:63860
+[20:19:15.751 ERROR] received data is damaged
+[20:21:52.243 INFO ] collection successfully loaded
+[20:21:52.258 INFO ] starting server
+[20:22:10.113 INFO ] received request from /127.0.0.1:58269
+[20:22:10.128 ERROR] received data is damaged
+[20:22:39.276 INFO ] collection successfully loaded
+[20:22:39.292 INFO ] starting server
+[20:22:45.620 INFO ] received request from /127.0.0.1:51969
+[20:22:45.620 ERROR] received data is damaged
+[20:35:13.260 INFO ] collection successfully loaded
+[20:35:13.277 INFO ] starting server
+[20:35:20.702 INFO ] received request from /127.0.0.1:51490
+[20:35:20.706 ERROR] received data is damaged
+[20:42:02.969 INFO ] collection successfully loaded
+[20:42:02.985 INFO ] starting server
+[20:42:09.691 INFO ] received request from /127.0.0.1:60518
+[20:42:09.691 ERROR] received data is damaged
+[20:44:40.512 INFO ] collection successfully loaded
+[20:44:40.527 INFO ] starting server
+[20:44:46.565 INFO ] received request from /127.0.0.1:60738
+[20:44:46.565 ERROR] received data is damaged
+[20:58:49.877 INFO ] collection successfully loaded
+[20:58:49.892 INFO ] starting server
+[20:58:57.301 INFO ] received request from /127.0.0.1:62476
+[20:58:57.317 ERROR] wrong command
+[20:58:57.317 INFO ] sent response to /127.0.0.1:62476
+[20:58:59.217 INFO ] received request from /127.0.0.1:62476
+[20:58:59.217 ERROR]  showno such user, or user login or password is incorrect
+[20:58:59.217 INFO ] sent response to /127.0.0.1:62476
+[21:12:44.134 INFO ] collection successfully loaded
+[21:12:44.134 INFO ] starting server
+[21:12:49.500 INFO ] received request from /127.0.0.1:61413
+[21:12:49.500 ERROR] wrong command
+[21:13:56.081 INFO ] collection successfully loaded
+[21:13:56.081 INFO ] starting server
+[21:14:02.608 INFO ] received request from /127.0.0.1:62261
+[21:14:02.608 ERROR] wrong command
+[21:15:15.703 INFO ] collection successfully loaded
+[21:15:15.703 INFO ] starting server
+[21:15:16.460 ERROR]  rwrong command
+[21:15:24.519 INFO ] received request from /127.0.0.1:49553
+[21:15:24.534 ERROR] wrong command
+[21:15:47.022 INFO ] received request from /127.0.0.1:65407
+[21:15:47.022 ERROR] wrong command
+[21:15:59.571 INFO ] collection successfully loaded
+[21:15:59.571 INFO ] starting server
+[21:16:02.866 INFO ] received request from /127.0.0.1:58990
+[21:16:02.866 ERROR] wrong command
+[21:16:05.063 INFO ] received request from /127.0.0.1:58990
+[21:16:05.063 ERROR]  showno such user, or user login or password is incorrect
+[21:22:27.620 INFO ] collection successfully loaded
+[21:22:27.636 INFO ] starting server
+[21:22:33.820 INFO ] received request from /127.0.0.1:55955
+[21:22:33.836 ERROR] wrong command
+[21:22:35.760 INFO ] received request from /127.0.0.1:55955
+[21:22:35.760 ERROR]  showno such user, or user login or password is incorrect
+[21:32:23.631 INFO ] collection successfully loaded
+[21:32:23.647 INFO ] starting server
+[21:32:30.054 INFO ] received request from /127.0.0.1:53817
+[21:32:30.069 ERROR] wrong command
+[21:32:31.301 INFO ] received request from /127.0.0.1:53817
+[21:32:31.301 ERROR]  showno such user, or user login or password is incorrect
+[21:32:46.093 INFO ] received request from /127.0.0.1:53817
+[21:32:46.093 ERROR]  addno such user, or user login or password is incorrect
+[21:32:53.871 INFO ] received request from /127.0.0.1:53817
+[21:32:53.871 INFO ]  hah  loginlogin successful
+[21:32:55.558 INFO ] received request from /127.0.0.1:53817
+[21:32:55.570 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[21:33:12.491 INFO ] received request from /127.0.0.1:58702
+[21:33:12.513 INFO ]  heh  registeruser heh successfully registered
+[21:33:13.844 INFO ] received request from /127.0.0.1:58702
+[21:33:13.844 INFO ]  heh  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[21:33:58.468 INFO ] received request from /127.0.0.1:58702
+[21:33:58.468 INFO ]  heh  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[21:33:58.468 INFO ] received request from /127.0.0.1:58702
+[21:33:58.468 INFO ]  heh  infoLinkedList of Product, size: 5, initialization date: 2022-05-11
+[21:33:58.468 INFO ] received request from /127.0.0.1:58702
+[21:33:58.468 INFO ]  heh  infoLinkedList of Product, size: 5, initialization date: 2022-05-11
+[20:00:13.995 INFO ] collection successfully loaded
+[21:50:28.302 INFO ] collection successfully loaded
+[21:50:28.320 INFO ] starting server
+[21:50:47.824 INFO ] received request from /127.0.0.1:49489
+[21:50:47.854 ERROR]  haha  loginlogin or password is incorrect
+[21:50:55.598 INFO ] received request from /127.0.0.1:49489
+[21:50:55.601 INFO ]  hah  loginlogin successful
+[21:50:59.131 INFO ] received request from /127.0.0.1:49489
+[21:50:59.150 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[21:51:10.104 INFO ] received request from /127.0.0.1:49489
+[21:51:10.108 INFO ]  hah  show
+[{
+id : "45",
+name : "e",
+coordinates : {x : "11",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1312123213"},
+userLogin : "hah"
+}, {
+id : "46",
+name : "r",
+coordinates : {x : "1",} {y : "11"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1111-11-11T00:00",weight : "123312.0",passportID : "132132312132"},
+userLogin : "kek"
+}, {
+id : "47",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "1321.0",passportID : "213312132312"},
+userLogin : "hah"
+}, {
+id : "39",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "R",birthday : "1222-12-12T00:00",weight : "21.0",passportID : "123132123"},
+userLogin : "roma"
+}, {
+id : "42",
+name : "r",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-10",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "123.0",passportID : "1321313"},
+userLogin : "roma"
+}]
+[01:08:58.046 INFO ] collection successfully loaded
+[01:08:58.055 INFO ] starting server
+[01:09:39.182 INFO ] received request from /127.0.0.1:55227
+[01:09:39.192 ERROR]  showno such user, or user login or password is incorrect
+[01:48:37.813 ERROR] nothing to load
+[01:48:37.822 INFO ] starting server
+[01:52:23.921 ERROR] nothing to load
+[01:52:23.932 INFO ] starting server
+[01:53:24.055 ERROR] nothing to load
+[01:53:24.064 INFO ] starting server
+[01:53:52.429 ERROR] nothing to load
+[01:53:52.438 INFO ] starting server
+[01:54:03.601 INFO ] received request from /127.0.0.1:60656
+[01:54:03.630 INFO ]  hah  registeruser hah successfully registered
+[01:54:43.069 INFO ] received request from /127.0.0.1:60656
+[01:54:43.082 INFO ]  hah  add
+Added element: {
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}
+[01:54:44.337 INFO ] received request from /127.0.0.1:60656
+[01:54:44.341 INFO ]  hah  show
+[{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}]
+[01:54:56.272 INFO ] received request from /127.0.0.1:60656
+[01:54:56.274 ERROR] wrong command
+[01:55:12.521 INFO ] received request from /127.0.0.1:51533
+[01:55:12.533 INFO ]  kek  registeruser kek successfully registered
+[01:55:16.159 INFO ] received request from /127.0.0.1:51533
+[01:55:16.162 INFO ]  kek  show
+[{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}]
+[01:55:19.252 INFO ] received request from /127.0.0.1:51533
+[01:55:19.264 INFO ]  kek  clearcollection cleared
+[01:55:20.177 INFO ] received request from /127.0.0.1:51533
+[01:55:20.179 INFO ]  kek  show
+[{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}]
+[01:56:05.173 INFO ] received request from /127.0.0.1:51533
+[01:56:05.184 INFO ]  kek  add
+Added element: {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}
+[23:27:24.858 INFO ] collection successfully loaded
+[23:27:24.873 INFO ] starting server
+[23:27:29.455 INFO ] received request from /127.0.0.1:53346
+[23:27:29.470 ERROR] wrong command
+[23:27:33.336 INFO ] received request from /127.0.0.1:53346
+[23:27:33.336 ERROR]  show no such user, or user login or password is incorrect
+[23:27:52.682 INFO ] collection successfully loaded
+[23:27:52.713 INFO ] starting server
+[23:27:57.282 INFO ] received request from /127.0.0.1:53347
+[23:27:57.314 ERROR]  showno such user, or user login or password is incorrect
+[23:28:04.798 INFO ] received request from /127.0.0.1:53347
+[23:28:04.798 ERROR]  helpno such user, or user login or password is incorrect
+[23:28:14.394 INFO ] received request from /127.0.0.1:53347
+[23:28:14.398 INFO ]  hah  loginlogin successful
+[23:28:17.844 INFO ] received request from /127.0.0.1:53347
+[23:28:17.844 ERROR] wrong command
+[23:28:19.203 INFO ] received request from /127.0.0.1:53347
+[23:28:19.203 INFO ]  hah  show
+[{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[23:28:39.473 INFO ] received request from /127.0.0.1:53347
+[23:28:39.473 ERROR]  hah  remove_by_idno such id 60
+[23:30:28.630 INFO ] received request from /127.0.0.1:53759
+[23:30:28.630 ERROR]  helpno such user, or user login or password is incorrect
+[23:30:32.384 INFO ] received request from /127.0.0.1:53759
+[23:30:32.384 ERROR]  showno such user, or user login or password is incorrect
+[23:31:14.038 INFO ] collection successfully loaded
+[23:31:14.054 INFO ] starting server
+[23:31:17.586 INFO ] received request from /127.0.0.1:53759
+[23:31:17.601 ERROR]  showno such user, or user login or password is incorrect
+[23:31:25.039 INFO ] received request from /127.0.0.1:53759
+[23:31:25.055 INFO ]  hah  login login successful
+[23:31:26.492 INFO ] received request from /127.0.0.1:53759
+[23:31:26.507 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[23:31:35.792 INFO ] received request from /127.0.0.1:53759
+[23:31:35.792 INFO ]  hah  help
+ help : вывести справку по доступным командам
+info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)
+show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении
+add {element} : добавить новый элемент в коллекцию
+update id {element} : обновить значение элемента коллекции, id которого равен заданному
+remove_by_id id : удалить элемент из коллекции по его id
+clear : очистить коллекцию
+save : сохранить коллекцию в файл
+execute_script file_name : считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+exit : завершить программу (без сохранения в файл)
+add_if_min {element} : добавить новый элемент в коллекцию, если его значение меньше, чем у наименьшего элемента этой коллекции
+remove_greater {element} : удалить из коллекции все элементы, превышающие заданный
+remove_lower {element} : удалить из коллекции все элементы, меньшие, чем заданный
+filter_less_than_manufacture_cost manufactureCost : вывести элементы, значение поля manufactureCost которых меньше заданного
+print_unique_owner : вывести уникальные значения поля owner всех элементов в коллекции
+
+[23:31:46.313 INFO ] received request from /127.0.0.1:53759
+[23:31:46.313 ERROR] wrong command
+[23:32:10.271 INFO ] received request from /127.0.0.1:53759
+[23:32:10.271 ERROR]  hah  remove_by_idno such id 9090
+[23:32:56.034 INFO ] collection successfully loaded
+[23:32:56.049 INFO ] starting server
+[23:33:00.023 INFO ] received request from /127.0.0.1:49289
+[23:33:00.054 ERROR]  show no such user, or user login or password is incorrect
+[23:33:10.514 INFO ] received request from /127.0.0.1:49289
+[23:33:10.514 ERROR]  help no such user, or user login or password is incorrect
+[23:39:00.076 ERROR]  show no such user, or user login or password is incorrect
+[23:39:02.443 ERROR]  show no such user, or user login or password is incorrect
+[23:58:49.365 INFO ] collection successfully loaded
+[23:58:49.381 INFO ] starting server
+[00:01:01.462 INFO ] collection successfully loaded
+[00:01:01.478 INFO ] starting server
+[00:03:54.991 INFO ] collection successfully loaded
+[00:03:55.007 INFO ] starting server
+[00:05:40.367 INFO ] collection successfully loaded
+[00:05:40.382 INFO ] starting server
+[00:07:29.085 INFO ] collection successfully loaded
+[00:07:29.100 INFO ] starting server
+[00:10:21.244 INFO ] collection successfully loaded
+[00:10:21.260 INFO ] starting server
+[00:10:33.260 INFO ] received request from /127.0.0.1:54733
+[00:10:33.275 ERROR]  sha  login login or password is incorrect
+[00:10:42.196 INFO ] received request from /127.0.0.1:54733
+[00:10:42.196 ERROR]  sha  login login or password is incorrect
+[00:10:51.025 INFO ] received request from /127.0.0.1:54733
+[00:10:51.025 ERROR]  login login or password is incorrect
+[00:10:57.756 INFO ] received request from /127.0.0.1:54733
+[00:10:57.756 INFO ]  hah  login login successful
+[00:11:03.016 INFO ] received request from /127.0.0.1:54733
+[00:11:03.016 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[00:13:07.593 INFO ] collection successfully loaded
+[00:13:07.609 INFO ] starting server
+[00:13:16.988 INFO ] received request from /127.0.0.1:62882
+[00:13:17.019 INFO ]  hah  login login successful
+[00:13:18.897 INFO ] received request from /127.0.0.1:62882
+[00:13:18.912 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[00:13:33.687 INFO ] received request from /127.0.0.1:62883
+[00:13:33.687 ERROR]  kek  register user kek already exist
+[00:13:37.568 INFO ] received request from /127.0.0.1:62883
+[00:13:37.568 ERROR]  show no such user, or user login or password is incorrect
+[00:13:49.721 INFO ] received request from /127.0.0.1:62883
+[00:13:49.737 INFO ]  lol  register user lol successfully registered
+[00:13:51.051 INFO ] received request from /127.0.0.1:62883
+[00:13:51.055 INFO ]  lol  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[00:13:57.510 ERROR]  show no such user, or user login or password is incorrect
+[00:22:12.762 INFO ] collection successfully loaded
+[00:22:12.778 INFO ] starting server
+[00:22:14.099 ERROR]  show no such user, or user login or password is incorrect
+[00:23:34.266 INFO ] collection successfully loaded
+[00:23:34.282 INFO ] starting server
+[00:23:37.387 ERROR]  help no such user, or user login or password is incorrect
+[00:23:38.932 ERROR]  show no such user, or user login or password is incorrect
+[00:23:44.879 ERROR]  exit wrong command
+[00:25:18.171 INFO ] collection successfully loaded
+[00:25:18.186 INFO ] starting server
+[00:25:33.984 INFO ] collection successfully loaded
+[00:25:34.000 INFO ] starting server
+[00:28:04.918 INFO ] collection successfully loaded
+[00:28:04.933 INFO ] starting server
+[00:28:14.742 INFO ] received request from /127.0.0.1:54848
+[00:28:14.757 ERROR]  show no such user, or user login or password is incorrect
+[00:28:19.257 INFO ] received request from /127.0.0.1:54848
+[00:28:19.272 INFO ]  hah  login login successful
+[00:28:21.957 INFO ] received request from /127.0.0.1:54848
+[00:28:21.957 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[00:28:32.071 INFO ] received request from /127.0.0.1:54848
+[00:28:32.087 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[00:28:40.959 INFO ] received request from /127.0.0.1:54848
+[00:28:40.959 ERROR]  hah  remove_by_id no such id 90
+[02:16:26.688 INFO ] collection successfully loaded
+[02:16:26.688 INFO ] starting server
+[02:16:37.530 INFO ] received request from /127.0.0.1:63114
+[02:16:37.545 ERROR]  show no such user, or user login or password is incorrect
+[02:16:45.804 INFO ] received request from /127.0.0.1:63114
+[02:16:45.804 INFO ]  hah  login login successful
+[02:16:46.890 INFO ] received request from /127.0.0.1:63114
+[02:16:46.902 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}]
+[02:16:53.665 INFO ] received request from /127.0.0.1:63114
+[02:16:53.665 INFO ]  hah  info LinkedList of Product, size: 2, initialization date: 2022-05-14
+[02:17:10.631 INFO ] received request from /127.0.0.1:63114
+[02:17:10.654 INFO ]  hah  add
+ Added element: {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}
+[02:17:11.957 INFO ] received request from /127.0.0.1:63114
+[02:17:11.957 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}]
+[02:17:48.404 INFO ] collection successfully loaded
+[02:17:48.419 INFO ] starting server
+[02:17:55.794 INFO ] received request from /127.0.0.1:62366
+[02:17:55.818 INFO ]  hah  login login successful
+[02:17:56.655 INFO ] received request from /127.0.0.1:62366
+[02:17:56.655 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}]
+[02:25:41.904 INFO ] collection successfully loaded
+[02:25:41.904 INFO ] starting server
+[02:26:37.153 INFO ] received request from /127.0.0.1:50199
+[02:26:37.169 INFO ]  hah  login login successful
+[07:11:06.496 INFO ] collection successfully loaded
+[07:11:06.512 INFO ] starting server
+[07:11:18.315 INFO ] received request from /127.0.0.1:62849
+[07:11:18.346 INFO ]  hah  login login successful
+[07:11:19.757 INFO ] received request from /127.0.0.1:62849
+[07:11:19.778 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}]
+[07:12:01.666 INFO ] received request from /127.0.0.1:62849
+[07:12:01.682 INFO ]  hah  add
+ Added element: {
+id : "51",
+name : "cola",
+coordinates : {x : "3",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "11.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "hah",birthday : "2121-12-11T00:00",weight : "234234.0",passportID : "234234234234"},
+userLogin : "hah"
+}
+[07:12:05.585 INFO ] received request from /127.0.0.1:62849
+[07:12:05.585 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}, {
+id : "51",
+name : "cola",
+coordinates : {x : "3",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "11.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "hah",birthday : "2121-12-11T00:00",weight : "234234.0",passportID : "234234234234"},
+userLogin : "hah"
+}]
+[07:26:53.227 INFO ] collection successfully loaded
+[07:26:53.243 INFO ] starting server
+[07:27:03.820 INFO ] received request from /127.0.0.1:63373
+[07:27:03.836 INFO ]  hah  login login successful
+[07:27:05.595 INFO ] received request from /127.0.0.1:63373
+[07:27:05.595 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}, {
+id : "51",
+name : "cola",
+coordinates : {x : "3",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "11.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "hah",birthday : "2121-12-11T00:00",weight : "234234.0",passportID : "234234234234"},
+userLogin : "hah"
+}]
+[21:08:07.708 INFO ] collection successfully loaded
+[21:08:07.723 INFO ] starting server
+[21:08:14.852 INFO ] received request from /127.0.0.1:55988
+[21:08:14.852 ERROR]  show no such user, or user login or password is incorrect
+[21:08:19.307 INFO ] received request from /127.0.0.1:55988
+[21:08:19.307 INFO ]  hah  login login successful
+[21:08:20.390 INFO ] received request from /127.0.0.1:55988
+[21:08:20.390 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}, {
+id : "51",
+name : "cola",
+coordinates : {x : "3",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "11.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "hah",birthday : "2121-12-11T00:00",weight : "234234.0",passportID : "234234234234"},
+userLogin : "hah"
+}]
+[21:12:18.286 INFO ] collection successfully loaded
+[21:12:18.295 INFO ] starting server
+[21:12:52.909 INFO ] received request from /127.0.0.1:53215
+[21:12:52.920 ERROR]  show no such user, or user login or password is incorrect
+[21:12:57.035 INFO ] received request from /127.0.0.1:53215
+[21:12:57.039 INFO ]  hah  login login successful
+[21:12:58.137 INFO ] received request from /127.0.0.1:53215
+[21:12:58.142 INFO ]  hah  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}, {
+id : "51",
+name : "cola",
+coordinates : {x : "3",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "11.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "hah",birthday : "2121-12-11T00:00",weight : "234234.0",passportID : "234234234234"},
+userLogin : "hah"
+}]
