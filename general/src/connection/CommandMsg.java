@@ -6,7 +6,7 @@ import data.Product;
 import java.io.Serializable;
 
 
-public class CommandMsg implements Request, Serializable {
+public class CommandMsg implements Request {
     private String commandName;
     private String commandStringArgument;
     private Product product;
@@ -29,47 +29,42 @@ public class CommandMsg implements Request, Serializable {
         this.status = Status.DEFAULT;
     }
 
-    public CommandMsg() {}
-    private byte[] msgBytes;
-
-    public CommandMsg(Status status, byte[] msgBytes) {
-        this.status = status;
-        this.msgBytes = msgBytes;
+    public CommandMsg() {
+        commandName = null;
+        commandStringArgument =null;
+        product = null;
+        status = Status.DEFAULT;
     }
-    String data;
+
     public CommandMsg(String s) {
-        this.data = s;
+        commandName = s;
+        commandStringArgument = null;
+        product = null;
+        status = Status.DEFAULT;
     }
 
-    private Request request;
-    public CommandMsg(Status status, Request request) {
-        this.request = request;
+    public CommandMsg setStatus(Status status) {
         this.status = status;
-    }
-
-    public CommandMsg(Request request) {
-        this.request = request;
-    }
-
-    public Request getRequest() {
-        return request;
-    }
-
-    public byte[] getMsgBytes() {
-        return msgBytes;
-    }
-
-
-    public void setStatus(Status status) {
-        this.status = status;
+        return this;
     }
 
     public Status getStatus() {
         return status;
     }
 
-    public void setUser(User user) {
+    public CommandMsg setUser(User user) {
         this.user = user;
+        return this;
+    }
+
+    public CommandMsg setProduct(Product p) {
+        product = p;
+        return this;
+    }
+
+    public CommandMsg setArgument(String s) {
+        commandStringArgument = s;
+        return this;
     }
 
     public String getCommandName() {

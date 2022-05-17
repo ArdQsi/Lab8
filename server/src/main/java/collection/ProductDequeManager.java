@@ -72,7 +72,7 @@ public class ProductDequeManager implements CollectionManager<Product> {
     }
 
     public String getInfo() {
-        return "LinkedList of Product, size: " + collection.size() + ", initialization date: " + initDate.toString();
+        return "Database of Product, size: " + collection.size() + ", initialization date: " + initDate.toString();
     }
 
     public boolean chekID(long id) {

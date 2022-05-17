@@ -1,5 +1,6 @@
 package io;
 
+import auth.User;
 import data.Coordinates;
 import data.Person;
 import data.Product;
@@ -8,7 +9,8 @@ import data.UnitOfMeasure;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-import static io.OutputManager.print;
+import static io.ConsoleOutputter.print;
+
 
 /**
  * ConsoleInputManager class
@@ -99,5 +101,22 @@ public class ConsoleInputManager extends InputManagerImplements{
         UnitOfMeasure unitOfMeasure = readUnitOfMeasure();
         Person owner = readOwner();
         return new Product(name,coords,price,manufactureCost,unitOfMeasure,owner);
+    }
+
+    @Override
+    public String readLogin() {
+        return new Question<String>("Введите логин:", super::readLogin).getAnswer();
+    }
+
+    @Override
+    public String readPassword() {
+        return new Question<String>("Введите пароль:", super::readPassword).getAnswer();
+    }
+
+    @Override
+    public User readUser() {
+        String login = readLogin();
+        String password = readPassword();
+        return new User(login,password);
     }
 }

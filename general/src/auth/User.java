@@ -42,5 +42,4 @@ public class User implements Serializable {
     public String toString() {
         return getLogin();
     }
-
 }

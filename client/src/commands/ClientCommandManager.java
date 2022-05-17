@@ -8,7 +8,8 @@ import connection.Response;
 import exceptions.ConnectionException;
 import exceptions.InvalidDataException;
 
-import static io.OutputManager.print;
+import static io.ConsoleOutputter.print;
+
 
 public class ClientCommandManager extends CommandManager {
     private final Client client;

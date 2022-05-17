@@ -1,11 +1,13 @@
 package io;
 
+import auth.User;
 import connection.CommandMsg;
 import data.Coordinates;
 import data.Person;
 import data.Product;
 import data.UnitOfMeasure;
 import exceptions.*;
+import org.omg.CORBA.DynAnyPackage.Invalid;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
@@ -115,4 +117,9 @@ public interface InputManager {
      * @return
      */
     public Scanner getScanner();
+
+    boolean hasNextLine();
+    String readPassword() throws InvalidDataException;
+    String readLogin() throws InvalidDataException;
+    User readUser() throws InvalidDataException;
 }

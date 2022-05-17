@@ -14,14 +14,17 @@ public interface Request extends Serializable {
 
     User getUser();
 
-    void setUser(User user);
+    Request setUser(User user);
 
     Status getStatus();
 
-    void setStatus(Status s);
+    Request setStatus(Status s);
 
     enum Status {
         DEFAULT,
+        CONNECTION_TEST,
+        EXIT,
+        HELLO,
         SENT_FROM_CLIENT,
         RECEIVED_BY_SERVER
     }

@@ -1,24 +1,15 @@
 package file;
 
 import com.opencsv.CSVWriter;
-import data.Coordinates;
-import data.Person;
 import data.Product;
-import data.UnitOfMeasure;
 import exceptions.EmptyPathException;
 import exceptions.FileException;
 import exceptions.FileNotExistsException;
 import exceptions.FileWrongPermissionException;
 
 import java.io.*;
-import java.nio.file.NoSuchFileException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.LinkedList;
-
-import static io.OutputManager.printErr;
 
 /**
  * Operates the main collection file for saving/loading, reads a script file

@@ -81,7 +81,7 @@ public class ServerCommandManager extends CommandManager {
                 Log.logger.fatal(message + "shutting down");
                 server.close();
                 break;
-            case ERRROR:
+            case ERROR:
                 Log.logger.error(message+ " " + res.getMessage());
                 break;
             case AUTH_SUCCESS:

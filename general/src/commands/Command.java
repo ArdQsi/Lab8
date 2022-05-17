@@ -1,12 +1,14 @@
 package commands;
 
+import connection.CollectionOperation;
 import connection.Request;
 import connection.Response;
 import exceptions.*;
 
 public interface Command {
-    public Response run() throws InvalidDataException, CommandException, FileException, ConnectionException, CollectionException;
-    public String getName();
-    public CommandType getType();
-    public void setArgument(Request a);
+    Response run() throws InvalidDataException, CommandException, FileException, ConnectionException, CollectionException;
+    String getName();
+    CommandType getType();
+    CollectionOperation getOperation();
+    void setArgument(Request a);
 }

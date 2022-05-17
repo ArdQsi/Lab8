@@ -1,6 +1,9 @@
 package connection;
 
+import data.Product;
+
 import java.io.Serializable;
+import java.util.Collection;
 
 public interface Response extends Serializable {
     String getMessage();
@@ -8,9 +11,15 @@ public interface Response extends Serializable {
     Status getStatus();
 
     enum Status {
-        ERRROR,
+        ERROR,
         FINE,
         EXIT,
-        AUTH_SUCCESS
+        AUTH_SUCCESS,
+        BROADCAST,
+        COLLECTION
     }
+
+    CollectionOperation getCollectionOperation();
+
+    public Collection<Product> getCollection();
 }

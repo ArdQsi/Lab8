@@ -1,6 +1,7 @@
 package commands;
 
 import connection.AnswerMsg;
+import connection.CollectionOperation;
 import connection.Request;
 import connection.Response;
 import data.Product;
@@ -10,15 +11,26 @@ public abstract class CommandImplements implements Command {
     private final CommandType type;
     private final String name;
     private Request arg;
+    private CollectionOperation operation;
+
+    public CommandImplements(String n, CommandType t, CollectionOperation op) {
+        name = n;
+        type = t;
+        operation = op;
+    }
 
     public CommandImplements(String n, CommandType t) {
         name = n;
         type = t;
+        operation = CollectionOperation.NONE;
     }
 
-    @Override
     public CommandType getType() {
         return type;
+    }
+
+    public CollectionOperation getOperation() {
+        return operation;
     }
 
     public String getName() {
