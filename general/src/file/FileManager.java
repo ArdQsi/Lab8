@@ -1,5 +1,6 @@
 package file;
 
+import com.opencsv.CSVWriter;
 import data.Coordinates;
 import data.Person;
 import data.Product;
@@ -64,6 +65,23 @@ public class FileManager{
         return str;
     }
 
+    /**
+     * Write data in csv to file
+     * @param arrayList
+     */
+    public void writeToCSV(ArrayList<String[]> arrayList){
+        try {
+            FileWriter fileWriter = new FileWriter(path);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            CSVWriter csvWriter = new CSVWriter(bufferedWriter, ',','\0' ,'\0' ,"\n");
+            for (String[] out : arrayList) {
+                csvWriter.writeNext(out);
+            }
+            csvWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Reads the element's data and puts it into a ArrayList<String[]>

@@ -1,8 +1,10 @@
 package collection;
 
+import auth.User;
 import data.Product;
 
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 public interface CollectionManager<T> {
