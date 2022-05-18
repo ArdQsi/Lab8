@@ -1518,3 +1518,7 @@ unitOfMeasure : "MILLILITERS",
 owner : {personName : "hah",birthday : "2121-12-11T00:00",weight : "234234.0",passportID : "234234234234"},
 userLogin : "hah"
 }]
+[03:04:17.729 INFO ] collection successfully loaded
+[03:04:51.599 INFO ] collection successfully loaded
+[03:04:58.757 INFO ] collection successfully loaded
+[03:04:58.766 INFO ] starting server
