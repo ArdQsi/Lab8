@@ -170,7 +170,7 @@ public class Client extends Thread implements Closeable {
 
     public void processAuthentication(String login, String password, boolean register) {
         attempt = new User(login,password);
-        CommandMsg msg = new CommandMsg();
+        CommandMsg msg;
         if (register) {
             msg = new CommandMsg("register").setStatus(Request.Status.DEFAULT).setUser(attempt);
         } else  {

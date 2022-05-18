@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 
 
-public class Main extends Application {
+/*public class Main extends Application {
 
     public static void main(String args[]) {
         //App.main(args);
@@ -23,6 +23,11 @@ public class Main extends Application {
         primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root, 700, 400));
         primaryStage.show();
+    }
+}*/
+public class Main {
+    public static void main(String[] args) {
+        App.main(args);
     }
 }
 

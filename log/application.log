@@ -1522,3 +1522,15 @@ userLogin : "hah"
 [03:04:51.599 INFO ] collection successfully loaded
 [03:04:58.757 INFO ] collection successfully loaded
 [03:04:58.766 INFO ] starting server
+[14:42:25.808 INFO ] collection successfully loaded
+[14:42:25.825 INFO ] starting server
+[14:45:18.916 INFO ] received request from /127.0.0.1:60264
+[14:45:18.943 INFO ] sent response to /127.0.0.1:60264
+[15:05:45.005 INFO ] collection successfully loaded
+[15:05:45.023 INFO ] starting server
+[15:19:48.714 INFO ] received request from /127.0.0.1:57011
+[15:19:48.745 ERROR]  show no such user, or user login or password is incorrect
+[15:19:48.751 INFO ] sent response to /127.0.0.1:57011
+[15:33:16.034 INFO ] received request from /127.0.0.1:62962
+[15:33:16.036 INFO ]  hah  login login successful
+[15:33:16.037 INFO ] sent response to /127.0.0.1:62962

@@ -93,7 +93,7 @@ public class Server extends Thread {
             clientAddress = (InetSocketAddress) channel.receive(buffer);
             if (clientAddress == null) return;
             if (!activeClients.contains(clientAddress)) activeClients.add(clientAddress);
-            Log.logger.info("received request from " + clientAddress.toString());
+            Log.logger.info("received request from " + clientAddress);
         } catch (ClosedChannelException e) {
             throw new ClosedConnectionException();
         } catch (IOException e) {

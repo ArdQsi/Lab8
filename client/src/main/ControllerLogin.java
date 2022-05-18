@@ -3,6 +3,8 @@ package main;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import client.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +15,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ControllerLogin {
+
+
 
     @FXML
     private ResourceBundle resources;
@@ -39,7 +43,16 @@ public class ControllerLogin {
             String passwordText = passwordField.getText().trim();
 
             if(!loginText.equals("") && !passwordText.equals("")) {
-
+               App.getClient().processAuthentication(loginText,passwordText,false);
+            }
+            else {
+                System.out.println("Не введен логин или пароль");
+            }
+            if (App.getClient().isAuthSuccess()) {
+                System.out.println("good");
+            }
+            else {
+                System.out.println("Неверный логин или пароль");
             }
         });
 

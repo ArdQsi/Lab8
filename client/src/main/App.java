@@ -1,4 +1,4 @@
-/*package main;
+package main;
 
 import client.Client;
 import exceptions.ConnectionException;
@@ -10,18 +10,29 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.util.Scanner;
-
-import static io.OutputManager.print;
+import static io.ConsoleOutputter.print;
 
 public class App extends Application {
+    static Client client;
+    static String address;
+    static int port;
 
+    public static void main(String[] args) {
+        if (initialize(args)) {
+            launch(args);
+        }
+        else {
+            System.exit(0);
+        }
+    }
 
     public static boolean initialize(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String addr = "";
-        int port = 0;
+        args = new String[]{"localhost"};
+        //String addr = "";
+        //int port = 0;
         try {
-            addr = args[0];
+            address = args[0];
             try {
                 System.out.println("Введите порт");
                 String s = scanner.nextLine();
@@ -29,18 +40,28 @@ public class App extends Application {
             } catch (NumberFormatException e) {
                 throw new InvalidPortException();
             }
-            Client client = new Client(addr, port);
-            client.start();
+            client = new Client(address, port);
+            //client.consoleMode();
         } catch (ConnectionException e) {
             print(e.getMessage());
+            return false;
         }
         return true;
     }
 
-    public static void main(String[] args) {
-        if (initialize(args)) launch(args);
-        else System.exit(0);
+    public static Client getClient() {
+        return client;
     }
+
+
+    /*public void init() {
+        try {
+            client = new Client(address, port);
+            client.connectionTest();
+        } catch (ConnectionException e) {
+            e.printStackTrace();
+        }
+    }*/
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -50,4 +71,4 @@ public class App extends Application {
         primaryStage.show();
     }
 
-}*/
+}
