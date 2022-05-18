@@ -34,6 +34,7 @@ public class Server extends Thread {
 
     private Queue<Map.Entry<InetSocketAddress, Request>> requestQueue;
     private Queue<Map.Entry<InetSocketAddress, Response>> responseQueue;
+    private Set<InetSocketAddress> activeClients;
 
     private volatile boolean running;
     private Selector selector;
@@ -50,6 +51,7 @@ public class Server extends Thread {
 
         requestQueue = new ConcurrentLinkedQueue<>();
         responseQueue = new ConcurrentLinkedQueue<>();
+        activeClients = ConcurrentHashMap.newKeySet();
 
         databaseHandler = new DatabaseHandler(properties.getProperty("url"), properties.getProperty("user"), properties.getProperty("password"));
         userManager = new UserDatabaseManager(databaseHandler);
@@ -83,8 +85,6 @@ public class Server extends Thread {
         }
     }
 
-    int INCREMENT = 4096;
-
     public void receive() throws ConnectionException, InvalidDataException {
         ByteBuffer buffer = ByteBuffer.allocate(4096);
         Request request = null;
@@ -92,6 +92,7 @@ public class Server extends Thread {
         try {
             clientAddress = (InetSocketAddress) channel.receive(buffer);
             if (clientAddress == null) return;
+            if (!activeClients.contains(clientAddress)) activeClients.add(clientAddress);
             Log.logger.info("received request from " + clientAddress.toString());
         } catch (ClosedChannelException e) {
             throw new ClosedConnectionException();
@@ -99,53 +100,30 @@ public class Server extends Thread {
             throw new ConnectionException("something went wrong during receiving request");
         }
         try {
-            StringBuilder stringBuilder = new StringBuilder();
             ObjectInputStream objectInputStream = new ObjectInputStream(new ByteArrayInputStream(buffer.array()));
-            Request1 req = (Request1) objectInputStream.readObject();
-
-            if (req.getIsBoolean()) {
-                requestQueue.offer(new AbstractMap.SimpleEntry<>(clientAddress, req.getRequest()));
-            } else {
-                do {
-                    stringBuilder.append(req.getRequest());
-                    channel.receive(buffer);
-                    req = (Request1) objectInputStream.readObject();
-                } while (!req.getIsBoolean());
-                request = new Request1(stringBuilder.toString());
-                requestQueue.offer(new AbstractMap.SimpleEntry<>(clientAddress, request));
-            }
-
-        } catch (ClassNotFoundException | IOException e) {
+            request = (Request) objectInputStream.readObject();
+        } catch (ClassNotFoundException | ClassCastException | IOException e) {
             throw new InvalidReceivedDataException();
         }
+        requestQueue.offer(new AbstractMap.SimpleEntry<>(clientAddress, request));
+    }
 
+    public void broadcast(Response response) {
+        Log.logger.info("broadcasting changes");
+        for (InetSocketAddress client : activeClients) {
+            responseQueue.offer(new AbstractMap.SimpleEntry<>(client, response));
+        }
     }
 
     public void send(InetSocketAddress clientAddress, Response response) throws ConnectionException {
         if (clientAddress == null) throw new InvalidAddressException("not found client address");
         try {
-            byte[] data = response.toString().getBytes();
-            int position = 0;
-            int limit = INCREMENT;
-
-            for (int capacity = 0; data.length > capacity; limit += 4096) {
-                byte[] window = Arrays.copyOfRange(data, position, limit);
-                capacity += limit - position;
-                Response1 response1;
-                if (capacity >= data.length) {
-                    response1 = new Response1(response, true);
-                } else {
-                    response1 = new Response1(window, false);
-                }
-
-                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(4096);
-                ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
-                objectOutputStream.writeObject(response1);
-                this.channel.send(ByteBuffer.wrap(byteArrayOutputStream.toByteArray()), clientAddress);
-                byteArrayOutputStream.close();
-                position = limit;
-            }
-
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(4096);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
+            objectOutputStream.writeObject(response);
+            this.channel.send(ByteBuffer.wrap(byteArrayOutputStream.toByteArray()), clientAddress);
+            Log.logger.info("sent response to " + clientAddress);
+            byteArrayOutputStream.close();
         } catch (IOException e) {
             throw new ConnectionException("something went wrong during sending response");
         }
@@ -154,8 +132,26 @@ public class Server extends Thread {
     private void handlerRequest(InetSocketAddress address, Request request) {
         AnswerMsg answerMsg = new AnswerMsg();
         try {
+            if (request.getStatus() == Request.Status.EXIT) {
+                activeClients.remove(address);
+                Log.logger.info("client " + address.toString() + " shut down");
+                return;
+            }
+            if (request.getStatus() == Request.Status.HELLO) {
+                answerMsg = new AnswerMsg().setStatus(Response.Status.COLLECTION).setCollectionOperation(CollectionOperation.ADD).setCollection(collectionManager.getCollection());
+                activeClients.add(address);
+                responseQueue.offer(new AbstractMap.SimpleEntry<>(address, answerMsg));
+                return;
+            }
+            if (request.getStatus() == Request.Status.CONNECTION_TEST) {
+                answerMsg.setStatus(Response.Status.FINE);
+                responseQueue.offer(new AbstractMap.SimpleEntry<>(address, answerMsg));
+                return;
+            }
             Product product = request.getProduct();
-            if (product != null) product.setCreationDate(LocalDate.now());
+            if (product != null) {
+                product.setCreationDate(LocalDate.now());
+            }
             request.setStatus(Request.Status.RECEIVED_BY_SERVER);
 
             if (commandManager.getCommand(request).getType() == CommandType.SERVER_ONLY) {
@@ -169,7 +165,13 @@ public class Server extends Thread {
             answerMsg.error(e.getMessage());
             Log.logger.error(e.getMessage());
         }
-        responseQueue.offer(new AbstractMap.SimpleEntry<>(address, answerMsg));
+        System.out.println(commandManager.getCommand(request).getOperation().toString());
+        if (answerMsg.getCollectionOperation() != CollectionOperation.NONE && answerMsg.getStatus()==answerMsg.getStatus().FINE) {
+            answerMsg.setStatus(Response.Status.BROADCAST);
+            broadcast(answerMsg);
+        } else {
+            responseQueue.offer(new AbstractMap.SimpleEntry<>(address, answerMsg));
+        }
     }
 
     public void run() {
