@@ -27,6 +27,7 @@ public class ControllerSignUp {
 
     @FXML
     void initialize() {
+        
         signUpInButton.setOnAction(event -> {
             String loginText = loginField.getText().trim();
             String passwordText = passwordField.getText().trim();

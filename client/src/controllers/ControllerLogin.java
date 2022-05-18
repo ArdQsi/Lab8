@@ -2,8 +2,10 @@ package controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
+import client.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,8 +15,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.App;
+import tools.ObservableResourceFactory;
 
 public class ControllerLogin {
+    App app;
+    Client client;
+    private ObservableResourceFactory resourceFactory;
 
     @FXML
     private ResourceBundle resources;
@@ -70,5 +76,21 @@ public class ControllerLogin {
             stage.setScene(new Scene(parent));
             stage.showAndWait();
         });
+    }
+
+    public void openNewScene(String window) {
+
+    }
+
+    public void setApp(App app) {
+        this.app = app;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public void initLangs(ObservableResourceFactory r) {
+        resourceFactory = r;
     }
 }
