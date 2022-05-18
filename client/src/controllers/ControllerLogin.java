@@ -1,10 +1,9 @@
-package main;
+package controllers;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import client.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,10 +12,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import main.App;
 
 public class ControllerLogin {
-
-
 
     @FXML
     private ResourceBundle resources;
@@ -59,7 +57,7 @@ public class ControllerLogin {
         signupButton.setOnAction(event -> {
             signupButton.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/main/signUp.fxml"));
+            loader.setLocation(getClass().getResource("/controllers/signUp.fxml"));
 
             try {
                 loader.load();
