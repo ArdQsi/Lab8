@@ -2,6 +2,8 @@ package main;
 
 import client.Client;
 import controllers.ControllerLogin;
+import controllers.ControllerSignUp;
+import controllers.MainWindowController;
 import exceptions.ConnectionException;
 import exceptions.InvalidPortException;
 import javafx.application.Application;
@@ -10,7 +12,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.util.ResourceBundle;
 import java.util.Scanner;
+
 import static io.ConsoleOutputter.print;
 
 public class App extends Application {
@@ -19,12 +24,15 @@ public class App extends Application {
     static int port;
     private Stage primaryStage;
     private static ObservableResourceFactory resourceFactory;
+    private static final String BUNDLE = "bundles.gui";
+    private static final String APP_TITTLE = "Product Manager";
 
     public static void main(String[] args) {
+        //resourceFactory = new ObservableResourceFactory();
+        //resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
         if (initialize(args)) {
             launch(args);
-        }
-        else {
+        } else {
             System.exit(0);
         }
     }
@@ -34,7 +42,7 @@ public class App extends Application {
         args = new String[]{"localhost"};
         //String addr = "";
         //int port = 0;
-        try {
+        /*try {
             address = args[0];
             try {
                 System.out.println("Введите порт");
@@ -48,6 +56,12 @@ public class App extends Application {
         } catch (ConnectionException e) {
             print(e.getMessage());
             return false;
+        }*/
+        port = 8080;
+        try {
+            client = new Client(address, port);
+        } catch (ConnectionException e) {
+
         }
         return true;
     }
@@ -75,6 +89,7 @@ public class App extends Application {
     }
 */
 
+
     @Override
     public void start(Stage stage) {
         try {
@@ -92,6 +107,56 @@ public class App extends Application {
             stage.setScene(loginWindowScene);
             stage.setResizable(false);
             stage.show();
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void setSignUp() {
+        try {
+            FXMLLoader signUpWindowLoader = new FXMLLoader();
+            signUpWindowLoader.setLocation(getClass().getResource("../controllers/signUp.fxml"));
+            signUpWindowLoader.load();
+            Parent signUpWindowRootNode = signUpWindowLoader.getRoot();
+            Scene signUpWindowScene = new Scene(signUpWindowRootNode);
+            ControllerSignUp controllerSignUp = signUpWindowLoader.getController();
+            controllerSignUp.setApp(this);
+            controllerSignUp.setClient(client);
+            controllerSignUp.initLangs(resourceFactory);
+            primaryStage.setScene(signUpWindowScene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void setMainWindow() {
+        try {
+            FXMLLoader mainWindowLoader = new FXMLLoader();
+            mainWindowLoader.setLocation(getClass().getResource("../controllers/main.fxml"));
+            Parent mainWindowRootNode = mainWindowLoader.load();
+            Scene mainWindowScene = new Scene(mainWindowRootNode);
+            MainWindowController mainWindowController = mainWindowLoader.getController();
+
+            mainWindowController.setClient(client);
+            mainWindowController.setUserName(client.getUser()!=null?client.getUser().getLogin():"");
+            mainWindowController.setPrimaryStage(primaryStage);
+
+
+            primaryStage.setScene(mainWindowScene);
+            primaryStage.setResizable(true);
+            primaryStage.setOnCloseRequest((e) ->{
+                print("Main window close!!!");
+                client.close();
+            });
+            primaryStage.show();
+
+
+
 
         } catch (Exception e) {
 

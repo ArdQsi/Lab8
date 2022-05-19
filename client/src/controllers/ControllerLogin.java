@@ -1,6 +1,6 @@
 package controllers;
 
-import java.io.IOException;
+
 import java.net.URL;
 import java.util.Observable;
 import java.util.ResourceBundle;
@@ -43,43 +43,26 @@ public class ControllerLogin {
     @FXML
     void initialize() {
         loginButton.setOnAction(event -> {
+            //loginButton.getScene().getWindow().hide();
             String loginText = loginField.getText().trim();
             String passwordText = passwordField.getText().trim();
-
-            if(!loginText.equals("") && !passwordText.equals("")) {
-               App.getClient().processAuthentication(loginText,passwordText,false);
-            }
-            else {
+            if (!loginText.equals("") && !passwordText.equals("")) {
+                client.processAuthentication(loginText, passwordText, false);
+            } else {
                 System.out.println("Не введен логин или пароль");
             }
-            if (App.getClient().isAuthSuccess()) {
-                System.out.println("good");
-            }
-            else {
+            if (client.isAuthSuccess()) {
+                app.setMainWindow();
+                client.start();
+            } else {
                 System.out.println("Неверный логин или пароль");
             }
         });
 
         signupButton.setOnAction(event -> {
             signupButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/controllers/signUp.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent parent = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(parent));
-            stage.showAndWait();
+            app.setSignUp();
         });
-    }
-
-    public void openNewScene(String window) {
-
     }
 
     public void setApp(App app) {

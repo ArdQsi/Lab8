@@ -4,6 +4,7 @@ import connection.CollectionOperation;
 import connection.Response;
 import controllers.MainWindowController;
 import data.Product;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -44,8 +45,20 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
                 super.updateById(product.getId(), product);
             }
         }
+        if (controller!=null && op!=CollectionOperation.NONE) {
+            Platform.runLater(()->{
+
+            });
+        }
     }
 
+    public void setController(MainWindowController c) {
+        controller = c;
+    }
+
+    public MainWindowController getController() {
+        return controller;
+    }
     public ObservableList<Product> getCollection() {
         return collection;
     }

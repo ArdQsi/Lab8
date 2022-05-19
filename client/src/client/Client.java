@@ -185,9 +185,12 @@ public class Client extends Thread implements Closeable {
                 user = attempt;
             } else {
                 outputManager.error("wrong password");
+
             }
         } catch (ConnectionException| InvalidDataException e) {
             connected = false;
+        } catch (NullPointerException e) {
+            outputManager.error("неудачная регистрация");
         }
     }
 
