@@ -3,10 +3,12 @@ package collection;
 import connection.CollectionOperation;
 import connection.Response;
 import controllers.MainWindowController;
+import controllers.MainWindowController1;
 import data.Product;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 
 import java.util.Collection;
 import java.util.Set;
@@ -15,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ProductObservableManager extends ProductManagerImpl<ObservableList<Product>> {
     private ObservableList<Product> collection;
     private Set<Long> uniqueIds;
-    private MainWindowController controller;
+    private MainWindowController1 controller;
 
     public ProductObservableManager() {
         collection = FXCollections.observableArrayList();
@@ -47,16 +49,16 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
         }
         if (controller!=null && op!=CollectionOperation.NONE) {
             Platform.runLater(()->{
-
+                controller.refreshTable();
             });
         }
     }
 
-    public void setController(MainWindowController c) {
+    public void setController(MainWindowController1 c) {
         controller = c;
     }
 
-    public MainWindowController getController() {
+    public MainWindowController1 getController() {
         return controller;
     }
     public ObservableList<Product> getCollection() {

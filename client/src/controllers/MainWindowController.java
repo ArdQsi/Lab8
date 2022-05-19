@@ -5,11 +5,11 @@ public class MainWindowController {
     private Client client;
     private Stage primaryStage;
     private static ObservableResourceFactory resourceFactory;
-    
-
+    private Map<String, Locale> localeMap;
 
     @FXML
     private TableView<Product> productTableView;
+
     @FXML
     private ResourceBundle resources;
 
@@ -50,10 +50,10 @@ public class MainWindowController {
     private TableColumn<Product, Float> table_p_weight;
 
     @FXML
-    private TableColumn<Product, String> table_p_passport_ip;
+    private TableColumn<Product, String> table_p_passport_id;
 
     @FXML
-    private TableColumn<?, ?> table_user_login;
+    private TableColumn<Product, String> table_user_login;
 
     @FXML
     private TextField name_field;
@@ -88,9 +88,40 @@ public class MainWindowController {
     @FXML
     private Label loginuser_field;
 
+    private Product product;
+    private Product resultProduct;
+
+
     @FXML
     void initialize() {
-        //initializeTable();
+        initializeTable();
+        //productTableView.setItems(FXCollections.observableArrayList(Position));
+        /*productTableView.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
+            int id = productTableView.getSelectionModel().getSelectedIndex();
+
+        }
+
+        ));*/
+    }
+
+
+    public void setProduct(Product product) {
+        table_name.setText(product.getName());
+        table_x.setText(product.getCoordinates().getX()+"");
+        table_y.setText(product.getCoordinates().getY()+"");
+        table_date.setText(product.getCreationDate()+"");
+        table_price.setText(product.getPrice()+"");
+        table_manufacture_cost.setText(product.getManufactureCost()+"");
+        table_unit_of_measure.setText(product.getUnitOfMeasure()+"");
+        table_p_name.setText(product.getOwner().getPersonName()+"");
+        table_p_birthday.setText(product.getOwner().getBirthday()+"");
+        table_p_weight.setText(product.getOwner().getWeight()+"");
+        table_p_passport_id.setText(product.getOwner().getPassportID()+"");
+        table_user_login.setText(product.getUserLogin());
+    }
+
+    public void refreshTable() {
+        productTableView.refresh();
     }
 
 
@@ -120,20 +151,27 @@ public class MainWindowController {
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getBirthday()));
         table_p_weight.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getWeight()));
-        table_p_passport_ip.setCellValueFactory(cellData ->
+        table_p_passport_id.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getPassportID()));
+        table_user_login.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(cellData.getValue().getUserLogin()));
     }
 
     /*private void bindGuiLanguage() {
-        resourceFactory.setResources(ResourceBundle.getBundle());
+        resourceFactory.setResources(ResourceBundle.getBundle("bundles.gui",));
+    }*/
+
+    /*public void initFilter() {
+        tableFilter = new TableFilter
     }*/
 
 
-    public void setClient(Client client) {
+    /*public void setClient(Client client) {
         this.client = client;
         productTableView.setItems(client.getProductManager().getCollection());
         client.getProductManager().setController(this);
-    }
+
+    }*/
 
     public void setUserName(String userName) {
         loginuser_field.setText(userName);

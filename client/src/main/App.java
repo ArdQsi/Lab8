@@ -4,6 +4,7 @@ import client.Client;
 import controllers.ControllerLogin;
 import controllers.ControllerSignUp;
 import controllers.MainWindowController;
+import controllers.MainWindowController1;
 import exceptions.ConnectionException;
 import exceptions.InvalidPortException;
 import javafx.application.Application;
@@ -134,10 +135,10 @@ public class App extends Application {
     }
 
 
-    public void setMainWindow() {
+    /*public void setMainWindow() {
         try {
             FXMLLoader mainWindowLoader = new FXMLLoader();
-            mainWindowLoader.setLocation(getClass().getResource("../controllers/main.fxml"));
+            mainWindowLoader.setLocation(getClass().getResource("/controllers/main.fxml"));
             Parent mainWindowRootNode = mainWindowLoader.load();
             Scene mainWindowScene = new Scene(mainWindowRootNode);
             MainWindowController mainWindowController = mainWindowLoader.getController();
@@ -145,6 +146,7 @@ public class App extends Application {
             mainWindowController.setClient(client);
             mainWindowController.setUserName(client.getUser()!=null?client.getUser().getLogin():"");
             mainWindowController.setPrimaryStage(primaryStage);
+
 
 
             primaryStage.setScene(mainWindowScene);
@@ -159,7 +161,40 @@ public class App extends Application {
 
 
         } catch (Exception e) {
+            System.out.println(e);
+            e.printStackTrace();
+        }
+    }*/
 
+    public void setMainWindow() {
+        try {
+            FXMLLoader mainWindowLoader = new FXMLLoader();
+            mainWindowLoader.setLocation(getClass().getResource("/controllers/main.fxml"));
+            Parent mainWindowRootNode = mainWindowLoader.load();
+            Scene mainWindowScene = new Scene(mainWindowRootNode);
+            MainWindowController1 mainWindowController = mainWindowLoader.getController();
+
+            mainWindowController.setClient(client);
+            mainWindowController.setUserName(client.getUser()!=null?client.getUser().getLogin():"");
+            mainWindowController.setPrimaryStage(primaryStage);
+            //mainWindowController.initFilter();
+            //mainWindowController.initLangs(resourceFactory);
+
+
+            primaryStage.setScene(mainWindowScene);
+            primaryStage.setResizable(true);
+            primaryStage.setOnCloseRequest((e) ->{
+                print("Main window close!!!");
+                client.close();
+            });
+            primaryStage.show();
+
+
+
+
+        } catch (Exception e) {
+            System.out.println(e);
+            e.printStackTrace();
         }
     }
 }
