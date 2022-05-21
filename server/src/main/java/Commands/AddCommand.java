@@ -1,6 +1,6 @@
 package Commands;
 
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
@@ -8,9 +8,9 @@ import exceptions.CommandException;
 import exceptions.InvalidDataException;
 
 public class AddCommand extends CommandImplements {
-    private CollectionManager<Product> collectionManager;
+    private ProductManager collectionManager;
 
-    public AddCommand(CollectionManager<Product> cm) {
+    public AddCommand(ProductManager cm) {
         super("add", CommandType.NORMAL);
         collectionManager = cm;
     }

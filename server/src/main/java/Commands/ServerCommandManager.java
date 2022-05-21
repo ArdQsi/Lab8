@@ -2,7 +2,7 @@ package Commands;
 
 import auth.User;
 import auth.UserManager;
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.Command;
 import commands.CommandManager;
 import commands.CommandType;
@@ -13,7 +13,6 @@ import data.Product;
 import exceptions.AuthException;
 import exceptions.CommandException;
 import exceptions.ConnectionException;
-import file.FileManager;
 import log.Log;
 import server.Server;
 
@@ -23,7 +22,7 @@ public class ServerCommandManager extends CommandManager {
 
     public ServerCommandManager(Server serv) {
         server = serv;
-        CollectionManager<Product> collectionManager = server.getCollectionManager();
+        ProductManager collectionManager = server.getCollectionManager();
         userManager = server.getUserManager();
         addCommand(new AddCommand(collectionManager));
         addCommand(new HelpCommand());

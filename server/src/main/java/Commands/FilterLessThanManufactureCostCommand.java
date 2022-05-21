@@ -1,6 +1,6 @@
 package Commands;
 
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
@@ -11,8 +11,8 @@ import exceptions.MissedCommandArgumentException;
 import java.util.List;
 
 public class FilterLessThanManufactureCostCommand extends CommandImplements {
-    private CollectionManager<Product> collectionManager;
-    public FilterLessThanManufactureCostCommand(CollectionManager<Product> cm) {
+    private ProductManager collectionManager;
+    public FilterLessThanManufactureCostCommand(ProductManager cm) {
         super("filter_less_than_manufacture_cost", CommandType.NORMAL);
         collectionManager = cm;
     }

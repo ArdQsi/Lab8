@@ -1,16 +1,16 @@
 package Commands;
 
 import auth.User;
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
 import exceptions.*;
 
 public class RemoveByIdCommand extends CommandImplements {
-    private CollectionManager<Product> collectionManager;
+    private ProductManager collectionManager;
 
-    public RemoveByIdCommand(CollectionManager<Product> cm) {
+    public RemoveByIdCommand(ProductManager cm) {
         super("remove_by_id", CommandType.NORMAL);
         collectionManager = cm;
     }

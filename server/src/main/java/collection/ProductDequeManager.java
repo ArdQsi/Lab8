@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.stream.Collectors;
 
-public class ProductDequeManager implements CollectionManager<Product> {
+public class ProductDequeManager extends ProductManagerImpl<ConcurrentLinkedDeque<Product>> {
     private Deque<Product> collection;
     private Set<Long> uniqueIds;
     private LocalDate initDate;
@@ -25,6 +25,10 @@ public class ProductDequeManager implements CollectionManager<Product> {
         uniqueIds = new ConcurrentSkipListSet<>();
         collection = new ConcurrentLinkedDeque<>();
         initDate = java.time.LocalDate.now();
+    }
+
+    public Set<Long> getUniqueIds() {
+        return uniqueIds;
     }
 
     public long generateNextId() {
@@ -41,7 +45,6 @@ public class ProductDequeManager implements CollectionManager<Product> {
 
     public void sort() {
         collection = collection.stream().sorted(new Product.SortingComparator()).collect(Collectors.toCollection(ConcurrentLinkedDeque::new));
-        //Collections.sort(collection, new Product.SortingComparator());
     }
 
     public Product getById(long id) {
@@ -55,6 +58,7 @@ public class ProductDequeManager implements CollectionManager<Product> {
         return product.get();
     }
 
+    @Override
     public Deque<Product> getCollection() {
         return collection;
     }

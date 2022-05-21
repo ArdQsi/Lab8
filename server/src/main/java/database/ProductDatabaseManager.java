@@ -315,6 +315,4 @@ public class ProductDatabaseManager extends ProductDequeManager {
         }
         super.addWithoutIdGeneration(product);
     }
-
-
 }

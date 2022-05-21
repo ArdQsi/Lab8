@@ -1,6 +1,6 @@
 package Commands;
 
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
@@ -9,9 +9,9 @@ import exceptions.EmptyCollectionException;
 import java.util.List;
 
 public class PrintUniqueOwnerCommand extends CommandImplements {
-    private CollectionManager<Product> collectionManager;
+    private ProductManager collectionManager;
 
-    public PrintUniqueOwnerCommand(CollectionManager<Product> cm) {
+    public PrintUniqueOwnerCommand(ProductManager cm) {
         super("print_unique_owner", CommandType.NORMAL);
         collectionManager = cm;
     }

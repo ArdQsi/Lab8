@@ -3,7 +3,7 @@ package server;
 import Commands.ServerCommandManager;
 import auth.User;
 import auth.UserManager;
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandType;
 import connection.*;
 import data.Product;
@@ -24,7 +24,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Server extends Thread {
-    private CollectionManager<Product> collectionManager;
+    private ProductManager collectionManager;
     private ServerCommandManager commandManager;
     private DatabaseHandler databaseHandler;
     private UserManager userManager;
@@ -166,7 +166,7 @@ public class Server extends Thread {
             Log.logger.error(e.getMessage());
         }
         System.out.println(commandManager.getCommand(request).getOperation().toString());
-        if (answerMsg.getCollectionOperation() != CollectionOperation.NONE && answerMsg.getStatus()==answerMsg.getStatus().FINE) {
+        if (answerMsg.getCollectionOperation() != CollectionOperation.NONE && answerMsg.getStatus()== Response.Status.FINE) {
             answerMsg.setStatus(Response.Status.BROADCAST);
             broadcast(answerMsg);
         } else {
@@ -219,7 +219,7 @@ public class Server extends Thread {
         }
     }
 
-    public CollectionManager<Product> getCollectionManager() {
+    public ProductManager getCollectionManager() {
         return collectionManager;
     }
 

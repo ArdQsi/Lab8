@@ -1,7 +1,7 @@
 package Commands;
 
 import auth.User;
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
@@ -14,7 +14,7 @@ import exceptions.MissedCommandArgumentException;
 public class RemoveLowerCommand extends CommandImplements {
     private final ProductDatabaseManager collectionManager;
 
-    public RemoveLowerCommand(CollectionManager<Product> cm) {
+    public RemoveLowerCommand(ProductManager cm) {
         super("remove_lower", CommandType.NORMAL);
         collectionManager = (ProductDatabaseManager) cm;
     }

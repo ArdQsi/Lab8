@@ -4,9 +4,7 @@ import client.Client;
 import controllers.ControllerLogin;
 import controllers.ControllerSignUp;
 import controllers.MainWindowController;
-import controllers.MainWindowController1;
 import exceptions.ConnectionException;
-import exceptions.InvalidPortException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +12,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ResourceBundle;
 import java.util.Scanner;
 
 import static io.ConsoleOutputter.print;
@@ -29,13 +26,15 @@ public class App extends Application {
     private static final String APP_TITTLE = "Product Manager";
 
     public static void main(String[] args) {
-        //resourceFactory = new ObservableResourceFactory();
+        resourceFactory = new ObservableResourceFactory();
         //resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
+        
         if (initialize(args)) {
             launch(args);
         } else {
             System.exit(0);
         }
+
     }
 
     public static boolean initialize(String[] args) {
@@ -64,6 +63,7 @@ public class App extends Application {
         } catch (ConnectionException e) {
 
         }
+        //client.consoleMode();
         return true;
     }
 
@@ -72,23 +72,18 @@ public class App extends Application {
     }
 
 
-    /*public void init() {
+    @Override
+    public void init() {
+        resourceFactory = new ObservableResourceFactory();
+        //resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
         try {
             client = new Client(address, port);
+            client.setResourceFactory(resourceFactory);
             client.connectionTest();
         } catch (ConnectionException e) {
             e.printStackTrace();
         }
-    }*/
-
-    /*@Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../controllers/login.fxml"));
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 700, 400));
-        primaryStage.show();
     }
-*/
 
 
     @Override
@@ -133,9 +128,9 @@ public class App extends Application {
             e.printStackTrace();
         }
     }
+    
 
-
-    /*public void setMainWindow() {
+    public void setMainWindow() {
         try {
             FXMLLoader mainWindowLoader = new FXMLLoader();
             mainWindowLoader.setLocation(getClass().getResource("/controllers/main.fxml"));
@@ -144,41 +139,11 @@ public class App extends Application {
             MainWindowController mainWindowController = mainWindowLoader.getController();
 
             mainWindowController.setClient(client);
-            mainWindowController.setUserName(client.getUser()!=null?client.getUser().getLogin():"");
+            mainWindowController.setUsername(client.getUser()!=null?client.getUser().getLogin():"");
             mainWindowController.setPrimaryStage(primaryStage);
-
-
-
-            primaryStage.setScene(mainWindowScene);
-            primaryStage.setResizable(true);
-            primaryStage.setOnCloseRequest((e) ->{
-                print("Main window close!!!");
-                client.close();
-            });
-            primaryStage.show();
-
-
-
-
-        } catch (Exception e) {
-            System.out.println(e);
-            e.printStackTrace();
-        }
-    }*/
-
-    public void setMainWindow() {
-        try {
-            FXMLLoader mainWindowLoader = new FXMLLoader();
-            mainWindowLoader.setLocation(getClass().getResource("/controllers/main.fxml"));
-            Parent mainWindowRootNode = mainWindowLoader.load();
-            Scene mainWindowScene = new Scene(mainWindowRootNode);
-            MainWindowController1 mainWindowController = mainWindowLoader.getController();
-
-            mainWindowController.setClient(client);
-            mainWindowController.setUserName(client.getUser()!=null?client.getUser().getLogin():"");
-            mainWindowController.setPrimaryStage(primaryStage);
-            //mainWindowController.initFilter();
+            mainWindowController.initFilter();
             //mainWindowController.initLangs(resourceFactory);
+            mainWindowController.setApp(this);
 
 
             primaryStage.setScene(mainWindowScene);

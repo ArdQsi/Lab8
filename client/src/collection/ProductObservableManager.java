@@ -3,21 +3,20 @@ package collection;
 import connection.CollectionOperation;
 import connection.Response;
 import controllers.MainWindowController;
-import controllers.MainWindowController1;
 import data.Product;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ProductObservableManager extends ProductManagerImpl<ObservableList<Product>> {
     private ObservableList<Product> collection;
     private Set<Long> uniqueIds;
-    private MainWindowController1 controller;
+    private MainWindowController controller;
 
     public ProductObservableManager() {
         collection = FXCollections.observableArrayList();
@@ -31,6 +30,7 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
     public void applyChanges(Response response) {
         CollectionOperation op = response.getCollectionOperation();
         Collection<Product> changes = response.getCollection();
+        ObservableList<Product> old = FXCollections.observableArrayList(collection);
 
         if (op == CollectionOperation.ADD) {
             for (Product product : changes) {
@@ -39,6 +39,7 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
         }
         if (op == CollectionOperation.REMOVE) {
             for (Product product : changes) {
+                Collections.copy(old,collection);
                 super.removeById(product.getId());
             }
         }
@@ -47,18 +48,18 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
                 super.updateById(product.getId(), product);
             }
         }
-        if (controller!=null && op!=CollectionOperation.NONE) {
+        if (controller!=null && op!=CollectionOperation.NONE && changes!=null&&!changes.isEmpty()) {
             Platform.runLater(()->{
                 controller.refreshTable();
             });
         }
     }
 
-    public void setController(MainWindowController1 c) {
+    public void setController(MainWindowController c) {
         controller = c;
     }
 
-    public MainWindowController1 getController() {
+    public MainWindowController getController() {
         return controller;
     }
     public ObservableList<Product> getCollection() {

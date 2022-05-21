@@ -8,6 +8,7 @@ import connection.*;
 import exceptions.*;
 import io.OutputManager;
 import org.omg.CORBA.DynAnyPackage.Invalid;
+import tools.ObservableResourceFactory;
 
 import java.io.*;
 import java.net.*;
@@ -28,6 +29,7 @@ public class Client extends Thread implements Closeable {
     private User user;
     private User attempt;
     private ProductObservableManager collectionManager;
+    private ObservableResourceFactory resourceFactory;
 
     private OutputManager outputManager;
     private volatile boolean receivedRequest;
@@ -127,11 +129,10 @@ public class Client extends Thread implements Closeable {
             try {
                 receivedRequest = false;
                 Response response = receive();
-
+                String msg = response.getMessage();
                 switch (response.getStatus()) {
                     case COLLECTION:
                         collectionManager.applyChanges(response);
-                        connected = true;
                         print("loaded!");
                         break;
                     case BROADCAST:
@@ -142,10 +143,17 @@ public class Client extends Thread implements Closeable {
                         user = attempt;
                         authSuccess = true;
                         break;
+                    case EXIT:
+                        connected = false;
+                        print("server shut down");
+                        break;
+                    case FINE:
+                        outputManager.info(msg);
+
                     case ERROR:
-                        outputManager.error(response.getMessage());
+                        outputManager.error(msg);
                     default:
-                        print(response.getMessage());
+                        print(msg);
                         receivedRequest = true;
                         break;
                 }
@@ -163,17 +171,17 @@ public class Client extends Thread implements Closeable {
             send(new CommandMsg().setStatus(Request.Status.CONNECTION_TEST));
             Response response = receive();
             connected = (response.getStatus() == Response.Status.FINE);
-        } catch (ConnectionException|InvalidDataException e) {
+        } catch (ConnectionException | InvalidDataException e) {
 
         }
     }
 
     public void processAuthentication(String login, String password, boolean register) {
-        attempt = new User(login,password);
+        attempt = new User(login, password);
         CommandMsg msg;
         if (register) {
             msg = new CommandMsg("register").setStatus(Request.Status.DEFAULT).setUser(attempt);
-        } else  {
+        } else {
             msg = new CommandMsg("login").setStatus(Request.Status.DEFAULT).setUser(attempt);
         }
         try {
@@ -187,7 +195,7 @@ public class Client extends Thread implements Closeable {
                 outputManager.error("wrong password");
 
             }
-        } catch (ConnectionException| InvalidDataException e) {
+        } catch (ConnectionException | InvalidDataException e) {
             connected = false;
         } catch (NullPointerException e) {
             outputManager.error("неудачная регистрация");
@@ -207,7 +215,7 @@ public class Client extends Thread implements Closeable {
     }
 
     public ProductObservableManager getProductManager() {
-        return  collectionManager;
+        return collectionManager;
     }
 
     public ClientCommandManager getCommandManager() {
@@ -222,9 +230,16 @@ public class Client extends Thread implements Closeable {
         outputManager = out;
     }
 
+    public ObservableResourceFactory getResourceFactory() {
+        return resourceFactory;
+    }
+
+    public void setResourceFactory(ObservableResourceFactory rf) {
+        resourceFactory = rf;
+    }
 
     public void close() {
-        try{
+        try {
             send(new CommandMsg().setStatus(Request.Status.EXIT));
         } catch (ConnectionException e) {
 

@@ -34,5 +34,5 @@ public interface ProductManager {
 
     void removeLower(Collection<Long> ids);
 
-    void deserializeCollection(String data);
+    void deserializeCollection();
 }

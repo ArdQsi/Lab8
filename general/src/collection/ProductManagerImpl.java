@@ -64,8 +64,6 @@ public abstract class ProductManagerImpl<T extends Collection<Product>> implemen
         return "Database of Product, size: " + getCollection().size() + ", initialization date: " + initDate.toString();
     }
 
-    public abstract Collection<Product> getCollection();
-
 
     public boolean chekID(long id) {
         return getUniqueIds().contains(id);
@@ -153,10 +151,12 @@ public abstract class ProductManagerImpl<T extends Collection<Product>> implemen
         }
     }
 
-
-    public void deserializeCollection(String data) {
+    @Override
+    public void deserializeCollection() {
 
     }
 
     abstract public Set<Long> getUniqueIds();
+
+    public abstract Collection<Product> getCollection();
 }

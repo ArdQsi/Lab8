@@ -2,6 +2,17 @@ package controllers;
 
 public class MainWindowController {
 
+    private App app;
+    private Tooltip shapeTooltip;
+    private TableFilter<Product> tableFilter;
+    private Client client;
+    private Stage askStage;
+    private Stage primaryStage;;
+    private Map<Integer, Text> textMap;
+    private ObservableResourceFactory resourceFactory;
+    private Map<String, Locale> localeMap;
+
+
     private Client client;
     private Stage primaryStage;
     private static ObservableResourceFactory resourceFactory;
@@ -181,7 +192,40 @@ public class MainWindowController {
         this.primaryStage = primaryStage;
     }
 
+    public void initFilter(){
+        tableFilter = new TableFilter<Product>(collection_table,client.getProductManager().getCollection(),resourceFactory);
+    }
 
+    public TableFilter<Product> getFilter(){
+        return tableFilter;
+    }
+    public TableColumn<Product,?> getNameColumn(){
+        return name_column;
+    }
 
+    public void refreshTable(){
+        collection_table.refresh();
+        tableFilter.updateFilters();
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+        collection_table.setItems(client.getProductManager().getCollection());
+        client.getProductManager().setController(this);
+        client.setResourceFactory(resourceFactory);
+    }
+
+    public void setUsername(String username) {
+        loginuser_field.setText(username);
+        loginuser_field1.setText(username);
+    }
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
+
+    public void setApp(App a){
+        app = a;
+    }
 }
 

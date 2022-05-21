@@ -1,7 +1,7 @@
 package Commands;
 
 import auth.User;
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
@@ -11,7 +11,7 @@ import exceptions.InvalidDataException;
 
 public class ClearCommand extends CommandImplements {
     private final ProductDatabaseManager collectionManager;
-    public ClearCommand(CollectionManager<Product> cm){
+    public ClearCommand(ProductManager cm){
         super("clear", CommandType.NORMAL);
         collectionManager = (ProductDatabaseManager) cm;
     }

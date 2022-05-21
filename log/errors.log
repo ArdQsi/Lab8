@@ -107,3 +107,6 @@
 [19:05:18.608 ERROR]  qq  register user qq already exist
 [19:06:01.614 ERROR]  qq  register user qq already exist
 [19:06:04.048 ERROR]  qq  register user qq already exist
+[00:54:57.358 ERROR]  hah  register user hah already exist
+[12:39:37.670 ERROR]  show no such user, or user login or password is incorrect
+[14:22:09.204 ERROR]  qq  login login or password is incorrect

@@ -1,16 +1,16 @@
 package Commands;
 
 import auth.User;
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
 import exceptions.*;
 
 public class UpdateCommand extends CommandImplements {
-    private CollectionManager<Product> collectionManager;
+    private ProductManager collectionManager;
 
-    public UpdateCommand(CollectionManager<Product> cm) {
+    public UpdateCommand(ProductManager cm) {
         super("update", CommandType.NORMAL);
         collectionManager = cm;
     }

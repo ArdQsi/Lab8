@@ -2177,3 +2177,220 @@ userLogin : "hah"
 [00:48:54.737 INFO ] sent response to /127.0.0.1:50954
 [00:48:55.120 INFO ] received request from /127.0.0.1:50954
 [00:48:55.121 INFO ] sent response to /127.0.0.1:50954
+[00:54:57.356 INFO ] received request from /127.0.0.1:60066
+[00:54:57.358 ERROR]  hah  register user hah already exist
+[00:54:57.359 INFO ] sent response to /127.0.0.1:60066
+[00:55:16.184 INFO ] received request from /127.0.0.1:49217
+[00:55:16.188 INFO ]  r  register user r successfully registered
+[00:55:16.189 INFO ] sent response to /127.0.0.1:49217
+[00:55:16.549 INFO ] received request from /127.0.0.1:49217
+[00:55:16.552 INFO ] sent response to /127.0.0.1:49217
+[01:18:52.201 INFO ] received request from /127.0.0.1:57483
+[01:18:52.203 INFO ]  qq  login login successful
+[01:18:52.204 INFO ] sent response to /127.0.0.1:57483
+[01:18:52.405 INFO ] received request from /127.0.0.1:57483
+[01:18:52.406 INFO ] sent response to /127.0.0.1:57483
+[01:19:15.652 INFO ] received request from /127.0.0.1:64257
+[01:19:15.654 INFO ]  qq  login login successful
+[01:19:15.656 INFO ] sent response to /127.0.0.1:64257
+[01:19:15.846 INFO ] received request from /127.0.0.1:64257
+[01:19:15.849 INFO ] sent response to /127.0.0.1:64257
+[01:37:16.772 INFO ] collection successfully loaded
+[01:37:16.790 INFO ] starting server
+[01:37:22.671 INFO ] received request from /127.0.0.1:56491
+[01:37:22.691 INFO ]  qq  login login successful
+[01:37:22.697 INFO ] sent response to /127.0.0.1:56491
+[01:37:22.874 INFO ] received request from /127.0.0.1:56491
+[01:37:22.888 INFO ] sent response to /127.0.0.1:56491
+[01:37:44.158 INFO ] received request from /127.0.0.1:56215
+[01:37:44.160 INFO ]  qq  login login successful
+[01:37:44.162 INFO ] sent response to /127.0.0.1:56215
+[01:37:44.908 INFO ] received request from /127.0.0.1:56215
+[01:37:44.916 INFO ] sent response to /127.0.0.1:56215
+[01:42:07.169 INFO ] collection successfully loaded
+[01:42:07.187 INFO ] starting server
+[01:42:13.686 INFO ] received request from /127.0.0.1:62068
+[01:42:13.712 INFO ]  qq  login login successful
+[01:42:13.717 INFO ] sent response to /127.0.0.1:62068
+[01:42:14.465 INFO ] received request from /127.0.0.1:62068
+[01:42:14.481 INFO ] sent response to /127.0.0.1:62068
+[01:43:40.284 INFO ] received request from /127.0.0.1:62068
+[01:43:40.286 INFO ] client /127.0.0.1:62068 shut down
+[13:26:57.346 INFO ] collection successfully loaded
+[13:26:57.362 INFO ] starting server
+[13:27:10.734 INFO ] received request from /127.0.0.1:60784
+[13:27:10.770 INFO ]  qq  login login successful
+[13:27:10.776 INFO ] sent response to /127.0.0.1:60784
+[13:27:11.580 INFO ] received request from /127.0.0.1:60784
+[13:27:11.601 INFO ] sent response to /127.0.0.1:60784
+[13:30:43.661 INFO ] received request from /127.0.0.1:54840
+[13:30:43.664 INFO ]  qq  login login successful
+[13:30:43.665 INFO ] sent response to /127.0.0.1:54840
+[13:30:44.390 INFO ] received request from /127.0.0.1:54840
+[13:30:44.394 INFO ] sent response to /127.0.0.1:54840
+[13:30:51.304 INFO ] received request from /127.0.0.1:54840
+[13:30:51.328 INFO ] client /127.0.0.1:54840 shut down
+[13:31:04.842 INFO ] received request from /127.0.0.1:54841
+[13:31:04.844 INFO ]  qq  login login successful
+[13:31:04.846 INFO ] sent response to /127.0.0.1:54841
+[13:31:05.613 INFO ] received request from /127.0.0.1:54841
+[13:31:05.621 INFO ] sent response to /127.0.0.1:54841
+[13:31:24.846 INFO ] received request from /127.0.0.1:54841
+[13:31:24.872 INFO ] client /127.0.0.1:54841 shut down
+[11:11:33.339 INFO ] collection successfully loaded
+[11:11:33.355 INFO ] starting server
+[11:20:57.429 INFO ] collection successfully loaded
+[11:20:57.445 INFO ] starting server
+[11:21:10.384 INFO ] received request from /127.0.0.1:54596
+[11:21:10.408 INFO ]  qq  login login successful
+[11:21:10.413 INFO ] sent response to /127.0.0.1:54596
+[11:21:11.216 INFO ] received request from /127.0.0.1:54596
+[11:21:11.236 INFO ] sent response to /127.0.0.1:54596
+[11:21:20.959 INFO ] received request from /127.0.0.1:54596
+[11:21:20.961 INFO ] client /127.0.0.1:54596 shut down
+[11:43:58.917 INFO ] received request from /127.0.0.1:54210
+[11:43:58.921 INFO ] sent response to /127.0.0.1:54210
+[11:44:02.972 INFO ] received request from /127.0.0.1:54210
+[11:44:02.976 INFO ]  qq  login login successful
+[11:44:02.978 INFO ] sent response to /127.0.0.1:54210
+[11:44:03.171 INFO ] received request from /127.0.0.1:54210
+[11:44:03.176 INFO ] sent response to /127.0.0.1:54210
+[12:23:46.825 INFO ] received request from /127.0.0.1:61925
+[12:23:46.828 INFO ] sent response to /127.0.0.1:61925
+[12:23:54.838 INFO ] received request from /127.0.0.1:61925
+[12:23:54.841 INFO ]  qq  login login successful
+[12:23:54.843 INFO ] sent response to /127.0.0.1:61925
+[12:23:55.022 INFO ] received request from /127.0.0.1:61925
+[12:23:55.025 INFO ] sent response to /127.0.0.1:61925
+[12:23:59.083 INFO ] received request from /127.0.0.1:61925
+[12:23:59.086 INFO ]  qq  login login successful
+[12:23:59.088 INFO ] sent response to /127.0.0.1:61925
+[12:24:12.124 INFO ] received request from /127.0.0.1:55488
+[12:24:12.126 INFO ] sent response to /127.0.0.1:55488
+[12:24:16.636 INFO ] received request from /127.0.0.1:55488
+[12:24:16.638 INFO ]  qq  login login successful
+[12:24:16.639 INFO ] sent response to /127.0.0.1:55488
+[12:24:16.822 INFO ] received request from /127.0.0.1:55488
+[12:24:16.827 INFO ] sent response to /127.0.0.1:55488
+[12:39:37.668 INFO ] received request from /127.0.0.1:57997
+[12:39:37.670 ERROR]  show no such user, or user login or password is incorrect
+[12:39:37.680 INFO ] sent response to /127.0.0.1:57997
+[12:39:45.438 INFO ] received request from /127.0.0.1:57997
+[12:39:45.440 INFO ]  qq  login login successful
+[12:39:45.441 INFO ] sent response to /127.0.0.1:57997
+[12:39:46.968 INFO ] received request from /127.0.0.1:57997
+[12:39:46.977 INFO ]  qq  show
+ [{
+id : "48",
+name : "cola",
+coordinates : {x : "3",} {y : "32"},
+creationDate : "2022-05-13",
+price : "2",
+manufactureCost : "432.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "ard",birthday : "2111-11-11T00:00",weight : "234.0",passportID : "2323423423443"},
+userLogin : "hah"
+}, {
+id : "49",
+name : "cola",
+coordinates : {x : "132",} {y : "11"},
+creationDate : "2022-05-13",
+price : "1",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1221-11-11T00:00",weight : "123213.0",passportID : "213213132132"},
+userLogin : "kek"
+}, {
+id : "50",
+name : "e",
+coordinates : {x : "1",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1232-12-11T00:00",weight : "132132.0",passportID : "123123123132"},
+userLogin : "hah"
+}, {
+id : "51",
+name : "cola",
+coordinates : {x : "3",} {y : "1"},
+creationDate : "2022-05-14",
+price : "1",
+manufactureCost : "11.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "hah",birthday : "2121-12-11T00:00",weight : "234234.0",passportID : "234234234234"},
+userLogin : "hah"
+}]
+[12:39:46.979 INFO ] sent response to /127.0.0.1:57997
+[13:22:05.080 INFO ] received request from /127.0.0.1:53979
+[13:22:05.082 INFO ] sent response to /127.0.0.1:53979
+[13:22:08.863 INFO ] received request from /127.0.0.1:53979
+[13:22:08.865 INFO ]  qq  login login successful
+[13:22:08.866 INFO ] sent response to /127.0.0.1:53979
+[13:22:08.947 INFO ] received request from /127.0.0.1:53979
+[13:22:08.949 INFO ] sent response to /127.0.0.1:53979
+[13:37:45.368 INFO ] received request from /127.0.0.1:57629
+[13:37:45.371 INFO ] sent response to /127.0.0.1:57629
+[13:37:53.408 INFO ] received request from /127.0.0.1:57629
+[13:37:53.409 INFO ]  qq  login login successful
+[13:37:53.410 INFO ] sent response to /127.0.0.1:57629
+[13:37:53.495 INFO ] received request from /127.0.0.1:57629
+[13:37:53.497 INFO ] sent response to /127.0.0.1:57629
+[13:41:57.622 INFO ] received request from /127.0.0.1:57349
+[13:41:57.623 INFO ] sent response to /127.0.0.1:57349
+[13:42:03.074 INFO ] received request from /127.0.0.1:57349
+[13:42:03.075 INFO ]  qq  login login successful
+[13:42:03.076 INFO ] sent response to /127.0.0.1:57349
+[13:42:03.162 INFO ] received request from /127.0.0.1:57349
+[13:42:03.164 INFO ] sent response to /127.0.0.1:57349
+[13:42:28.808 INFO ] received request from /127.0.0.1:57351
+[13:42:28.809 INFO ] sent response to /127.0.0.1:57351
+[13:42:32.084 INFO ] received request from /127.0.0.1:57351
+[13:42:32.085 INFO ]  qq  login login successful
+[13:42:32.086 INFO ] sent response to /127.0.0.1:57351
+[13:42:32.169 INFO ] received request from /127.0.0.1:57351
+[13:42:32.171 INFO ] sent response to /127.0.0.1:57351
+[13:42:46.476 INFO ] received request from /127.0.0.1:57354
+[13:42:46.477 INFO ] sent response to /127.0.0.1:57354
+[13:42:49.882 INFO ] received request from /127.0.0.1:57354
+[13:42:49.883 INFO ]  qq  login login successful
+[13:42:49.884 INFO ] sent response to /127.0.0.1:57354
+[13:42:50.251 INFO ] received request from /127.0.0.1:57354
+[13:42:50.252 INFO ] sent response to /127.0.0.1:57354
+[14:22:04.783 INFO ] received request from /127.0.0.1:65416
+[14:22:04.785 INFO ] sent response to /127.0.0.1:65416
+[14:22:09.202 INFO ] received request from /127.0.0.1:65416
+[14:22:09.204 ERROR]  qq  login login or password is incorrect
+[14:22:09.206 INFO ] sent response to /127.0.0.1:65416
+[14:23:12.540 INFO ] received request from /127.0.0.1:65420
+[14:23:12.542 INFO ] sent response to /127.0.0.1:65420
+[14:24:05.371 INFO ] received request from /127.0.0.1:54156
+[14:24:05.373 INFO ] sent response to /127.0.0.1:54156
+[14:24:14.317 INFO ] received request from /127.0.0.1:54156
+[14:24:14.319 INFO ]  qq  login login successful
+[14:24:14.320 INFO ] sent response to /127.0.0.1:54156
+[14:24:15.054 INFO ] received request from /127.0.0.1:54156
+[14:24:15.056 INFO ] sent response to /127.0.0.1:54156
+[14:48:13.516 INFO ] received request from /127.0.0.1:54525
+[14:48:13.519 INFO ] sent response to /127.0.0.1:54525
+[14:48:19.037 INFO ] received request from /127.0.0.1:54525
+[14:48:19.040 INFO ]  qq  login login successful
+[14:48:19.042 INFO ] sent response to /127.0.0.1:54525
+[14:48:19.826 INFO ] received request from /127.0.0.1:54525
+[14:48:19.833 INFO ] sent response to /127.0.0.1:54525
+[14:48:25.225 INFO ] received request from /127.0.0.1:54525
+[14:48:25.226 INFO ] client /127.0.0.1:54525 shut down
+[14:48:38.395 INFO ] received request from /127.0.0.1:52162
+[14:48:38.397 INFO ] sent response to /127.0.0.1:52162
+[14:48:41.146 INFO ] received request from /127.0.0.1:52162
+[14:48:41.148 INFO ]  qq  login login successful
+[14:48:41.149 INFO ] sent response to /127.0.0.1:52162
+[14:48:41.898 INFO ] received request from /127.0.0.1:52162
+[14:48:41.901 INFO ] sent response to /127.0.0.1:52162
+[14:52:08.335 INFO ] received request from /127.0.0.1:49329
+[14:52:08.339 INFO ] sent response to /127.0.0.1:49329
+[14:52:11.081 INFO ] received request from /127.0.0.1:49329
+[14:52:11.083 INFO ]  qq  login login successful
+[14:52:11.084 INFO ] sent response to /127.0.0.1:49329
+[14:52:11.830 INFO ] received request from /127.0.0.1:49329
+[14:52:11.832 INFO ] sent response to /127.0.0.1:49329

@@ -1,15 +1,15 @@
 package Commands;
 
-import collection.CollectionManager;
+import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
 import data.Product;
 import exceptions.InvalidDataException;
 
 public class InfoCommand extends CommandImplements {
-    private CollectionManager<Product> collectionManager;
+    private ProductManager collectionManager;
 
-    public InfoCommand(CollectionManager<Product> cm) {
+    public InfoCommand(ProductManager cm) {
         super("info", CommandType.NORMAL);
         collectionManager = cm;
     }
