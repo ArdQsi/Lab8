@@ -32,8 +32,8 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
         CollectionOperation op = response.getCollectionOperation();
         Collection<Product> changes = response.getCollection();
         ObservableList<Product> old = FXCollections.observableArrayList(collection);
-        System.out.println(changes.size());
-        System.out.println(changes.toString());
+        //System.out.println(changes.size());
+        //System.out.println(changes.toString());
 
 
         if (op == CollectionOperation.ADD) {
@@ -55,6 +55,7 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
         if (controller!=null && op!=CollectionOperation.NONE && changes!=null&&!changes.isEmpty()) {
             Platform.runLater(()->{
                 controller.refreshTable();
+                controller.refreshCanvas(op!=CollectionOperation.REMOVE? collection:old,changes,op);
             });
         }
     }

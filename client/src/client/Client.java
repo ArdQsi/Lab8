@@ -103,6 +103,12 @@ public class Client extends Thread implements Closeable {
     }
 
     public Response receive() throws ConnectionException, InvalidDataException {
+        try{
+            socket.setSoTimeout(500);
+        } catch (SocketException e) {
+
+        }
+
         ByteBuffer bytes = ByteBuffer.allocate(4096);
         DatagramPacket receivePacket = new DatagramPacket(bytes.array(), bytes.array().length);
         try {
@@ -180,8 +186,10 @@ public class Client extends Thread implements Closeable {
                         break;
                     case FINE:
                         outputManager.info(msg);
+                        break;
                     case ERROR:
                         outputManager.error(msg);
+                        break;
                     default:
                         print(msg);
                         receivedRequest = true;

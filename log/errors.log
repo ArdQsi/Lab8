@@ -170,3 +170,5 @@
 [00:30:52.805 ERROR]  qq  remove_by_id no such id 106
 [00:53:53.495 ERROR]  qq  login login or password is incorrect
 [02:27:50.142 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 4
+[12:59:13.616 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
+[13:39:10.128 ERROR]  qq  remove_by_id you don't have permission, element was created by hah

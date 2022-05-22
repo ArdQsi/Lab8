@@ -106,7 +106,7 @@ public class Server extends Thread {
         }
         if (request != null && request.getBroadcastAddress() != null) {
             activeClients.add(request.getBroadcastAddress());
-            Log.logger.trace("addend broadcast address " + request.getBroadcastAddress().toString());
+            Log.logger.trace("added broadcast address " + request.getBroadcastAddress().toString());
         }
         requestQueue.offer(new AbstractMap.SimpleEntry<>(clientAddress, request));
     }
@@ -144,13 +144,13 @@ public class Server extends Thread {
         try {
             InetSocketAddress client = request.getBroadcastAddress();
             if (request.getStatus() == Request.Status.EXIT) {
-                activeClients.remove(address);
+                activeClients.remove(client);
                 Log.logger.info("client " + address.toString() + " shut down");
                 return;
             }
             if (request.getStatus() == Request.Status.HELLO) {
                 answerMsg = new AnswerMsg().setStatus(Response.Status.COLLECTION).setCollectionOperation(CollectionOperation.ADD).setCollection(collectionManager.getCollection());
-                activeClients.add(address);
+                activeClients.add(client);
                 responseQueue.offer(new AbstractMap.SimpleEntry<>(address, answerMsg));
                 return;
             }

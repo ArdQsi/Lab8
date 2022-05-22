@@ -8,11 +8,12 @@ public class MainWindowController {
     private Client client;
     private Stage askStage;
     private Stage primaryStage;
-    ;
+    private Map<String, Color> userColorMap;
     private Map<Integer, Text> textMap;
     private ObservableResourceFactory resourceFactory;
     private Map<String, Locale> localeMap;
     Product product;
+
 
 
 
@@ -483,10 +484,53 @@ public class MainWindowController {
         return product;
     }
 
-    public void fillMap(){
+    long rand = 1821L;
+    Random random = new Random(rand);
+    public void refreshCanvas(ObservableList<Product> collection, Collection<Product> changes, CollectionOperation op) {
+        for (Product product: changes) {
+            if (!userColorMap.containsKey(product.getUserLogin())) {
+                //userColorMap.put(product.getUserLogin(),Color.color((int) (Math.random()*255),(int) (Math.random()*255),(int) (Math.random()*255)));
+                userColorMap.put(product.getUserLogin(),Color.color(random.nextDouble(),random.nextDouble(),random.nextDouble()));
+            }
+            if (op==CollectionOperation.ADD) {
+                addToCanvas(product);
+            }
+
+
+
+        }
+    }
+
+    public void addToCanvas(Product pr) {
+        double size = Math.min(pr.getPrice()/100, 50);
+        if(size<6)size=6;
+        Circle circle = new Circle(size,userColorMap.get(pr.getUserLogin()));
+        circle.translateXProperty().bind(canvas_plane.widthProperty().divide(2).add(pr.getCoordinates().getX()));
+        circle.translateYProperty().bind(canvas_plane.heightProperty().divide(2).subtract(pr.getCoordinates().getY()));
+        circle.setStroke(Color.BLACK);
+        circle.setOnMouseClicked(event -> {
+            Group group = new Group();
+            Button button = new Button("Редактировать");
+            button.setLayoutX(370);
+            button.setLayoutY(250);
+            Stage stage = new Stage();
+            Label label = new Label(pr.toString());
+            group.getChildren().add(button);
+            group.getChildren().add(label);
+            Scene scene = new Scene(group);
+            stage.setScene(scene);
+            stage.setWidth(900);
+            stage.setHeight(350);
+            stage.show();
+        });
+        canvas_plane.getChildren().add(circle);
+
+    }
+
+    /*public void fillMap(){
         int k = 8;
-        for(Product pr: ProductObservableManager.produsts){
-            System.out.println(ProductObservableManager.produsts.size());
+        for(Product pr: ProductObservableManager.products){
+            System.out.println(ProductObservableManager.products.size());
             if(pr.getPrice()<100){
                 k=8;
             }
@@ -517,6 +561,6 @@ public class MainWindowController {
             });
             canvas_plane.getChildren().add(circle);
         }
-    }
+    }*/
 }
 
