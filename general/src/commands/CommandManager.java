@@ -91,10 +91,7 @@ public abstract class CommandManager implements Commandable, Closeable {
     public Response runCommand(Request msg) {
         AnswerMsg res = new AnswerMsg();
         try {
-            Command cmd = getCommand(msg);
-            cmd.setArgument(msg);
-            res =(AnswerMsg) cmd.run();
-            res.setCollectionOperation(cmd.getOperation());
+            res = (AnswerMsg) runCommandUnsafe(msg);
         } catch (ExitException e) {
             res.setStatus(Response.Status.EXIT);
         } catch (CommandException | InvalidDataException | ConnectionException | FileException | CollectionException e) {
@@ -102,6 +99,7 @@ public abstract class CommandManager implements Commandable, Closeable {
         }
         return res;
     }
+
 
     public void setInputManager(InputManager in) {
         inputManager = in;
@@ -140,6 +138,16 @@ public abstract class CommandManager implements Commandable, Closeable {
 
     public void close() {
         setRunning(false);
+    }
+
+    public Response runCommandUnsafe(Request msg) throws CommandException, InvalidDataException, ConnectionException, CollectionException, FileException {
+        AnswerMsg res = new AnswerMsg();
+        Command cmd = getCommand(msg);
+        cmd.setArgument(msg);
+        res = (AnswerMsg) cmd.run();
+        res.setCollectionOperation(cmd.getOperation());
+
+        return res;
     }
 }
 

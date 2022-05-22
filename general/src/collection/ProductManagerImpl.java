@@ -89,10 +89,11 @@ public abstract class ProductManagerImpl<T extends Collection<Product>> implemen
         Optional<Product> product = getCollection().stream()
                 .filter(w -> w.getId() == id)
                 .findFirst();
-        if (product.isPresent()) {
-            getCollection().remove(product.get());
-            getUniqueIds().remove(id);
+        if (!product.isPresent()) {
+            throw new NoSuchIdException(id);
         }
+        getCollection().remove(product.get());
+        getUniqueIds().remove(id);
     }
 
 

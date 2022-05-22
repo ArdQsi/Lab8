@@ -1,11 +1,14 @@
 package main;
 
 import client.Client;
+import collection.ProductObservableManager;
+import io.OutputterUI;
 import controllers.ControllerLogin;
 import controllers.ControllerSignUp;
 import controllers.MainWindowController;
 import exceptions.ConnectionException;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -22,11 +25,12 @@ public class App extends Application {
     static int port;
     private Stage primaryStage;
     private static ObservableResourceFactory resourceFactory;
-    private static final String BUNDLE = "bundles.gui";
+    public static final String BUNDLE = "bundles.gui";
     private static final String APP_TITTLE = "Product Manager";
+    private OutputterUI outputter;
 
     public static void main(String[] args) {
-        resourceFactory = new ObservableResourceFactory();
+        //resourceFactory = new ObservableResourceFactory();
         //resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
         
         if (initialize(args)) {
@@ -74,12 +78,16 @@ public class App extends Application {
 
     @Override
     public void init() {
+
         resourceFactory = new ObservableResourceFactory();
-        //resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
+        //resourceFactory.setResources(ResourceBundle.getBundle("bundles.gui"));
+        outputter = new OutputterUI(resourceFactory);
+
         try {
             client = new Client(address, port);
             client.setResourceFactory(resourceFactory);
             client.connectionTest();
+            client.setOutputManager(outputter);
         } catch (ConnectionException e) {
             e.printStackTrace();
         }
@@ -128,7 +136,7 @@ public class App extends Application {
             e.printStackTrace();
         }
     }
-    
+
 
     public void setMainWindow() {
         try {
@@ -152,7 +160,7 @@ public class App extends Application {
                 print("Main window close!!!");
                 client.close();
             });
-            primaryStage.show();
+            //primaryStage.show();
 
 
 
@@ -161,5 +169,9 @@ public class App extends Application {
             System.out.println(e);
             e.printStackTrace();
         }
+    }
+
+    public OutputterUI getOutputManager() {
+        return outputter;
     }
 }

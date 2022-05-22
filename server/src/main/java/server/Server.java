@@ -92,7 +92,6 @@ public class Server extends Thread {
         try {
             clientAddress = (InetSocketAddress) channel.receive(buffer);
             if (clientAddress == null) return;
-            if (!activeClients.contains(clientAddress)) activeClients.add(clientAddress);
             Log.logger.info("received request from " + clientAddress);
         } catch (ClosedChannelException e) {
             throw new ClosedConnectionException();
@@ -105,7 +104,18 @@ public class Server extends Thread {
         } catch (ClassNotFoundException | ClassCastException | IOException e) {
             throw new InvalidReceivedDataException();
         }
+        if (request != null && request.getBroadcastAddress() != null) {
+            activeClients.add(request.getBroadcastAddress());
+            Log.logger.trace("addend broadcast address " + request.getBroadcastAddress().toString());
+        }
         requestQueue.offer(new AbstractMap.SimpleEntry<>(clientAddress, request));
+    }
+
+    private void broadcast(Response response, InetSocketAddress currentAddress) {
+        Log.logger.trace("broadcasting changes");
+        for (InetSocketAddress client : activeClients) {
+            if (!currentAddress.equals(client)) responseQueue.offer(new AbstractMap.SimpleEntry<>(client, response));
+        }
     }
 
     public void broadcast(Response response) {
@@ -132,6 +142,7 @@ public class Server extends Thread {
     private void handlerRequest(InetSocketAddress address, Request request) {
         AnswerMsg answerMsg = new AnswerMsg();
         try {
+            InetSocketAddress client = request.getBroadcastAddress();
             if (request.getStatus() == Request.Status.EXIT) {
                 activeClients.remove(address);
                 Log.logger.info("client " + address.toString() + " shut down");
@@ -165,13 +176,13 @@ public class Server extends Thread {
             answerMsg.error(e.getMessage());
             Log.logger.error(e.getMessage());
         }
-        System.out.println(commandManager.getCommand(request).getOperation().toString());
-        if (answerMsg.getCollectionOperation() != CollectionOperation.NONE && answerMsg.getStatus()== Response.Status.FINE) {
+        //System.out.println(commandManager.getCommand(request).getOperation().toString());
+        if (answerMsg.getCollectionOperation() != CollectionOperation.NONE && answerMsg.getStatus() == Response.Status.FINE) {
             answerMsg.setStatus(Response.Status.BROADCAST);
-            broadcast(answerMsg);
-        } else {
-            responseQueue.offer(new AbstractMap.SimpleEntry<>(address, answerMsg));
+            broadcast(answerMsg, request.getBroadcastAddress());
         }
+        responseQueue.offer(new AbstractMap.SimpleEntry<>(address, answerMsg));
+
     }
 
     public void run() {
@@ -211,6 +222,15 @@ public class Server extends Thread {
 
     public void close() {
         try {
+            broadcast(new AnswerMsg().setStatus(Response.Status.EXIT));
+            while (responseQueue.size() > 0) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+
+                }
+            }
+
             running = false;
             databaseHandler.closeConnection();
             channel.close();

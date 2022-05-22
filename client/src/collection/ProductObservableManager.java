@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -31,6 +32,9 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
         CollectionOperation op = response.getCollectionOperation();
         Collection<Product> changes = response.getCollection();
         ObservableList<Product> old = FXCollections.observableArrayList(collection);
+        System.out.println(changes.size());
+        System.out.println(changes.toString());
+
 
         if (op == CollectionOperation.ADD) {
             for (Product product : changes) {

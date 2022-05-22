@@ -12,7 +12,6 @@ import exceptions.DatabaseException;
 import exceptions.InvalidDataException;
 import exceptions.InvalidEnumException;
 import log.Log;
-import utils.DateConvertor;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,7 +19,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -257,17 +256,22 @@ public class ProductDatabaseManager extends ProductDequeManager {
         removeLower(ids);
     }
 
-    public void clear(User user) {
+    public Collection<Product> clear(User user) {
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
-        Set<Long> ids = new HashSet<>();
+        //Set<Long> ids = new HashSet<>();
+        Set<Product> removed = new HashSet<>();
+
         String query = "DELETE FROM PRODUCTS WHERE user_login=? RETURNING id;";
         try (PreparedStatement preparedStatement = databaseHandler.getPreparedStatement(query)) {
             preparedStatement.setString(1, user.getLogin());
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                Long id = resultSet.getLong(resultSet.findColumn("id"));
-                ids.add(id);
+//                Long id = resultSet.getLong(resultSet.findColumn("id"));
+//                ids.add(id);
+                Long id = resultSet.getLong(1);
+                removed.add(getById(id));
+                removeById(id);
             }
         } catch (SQLException | CollectionException e) {
             databaseHandler.rollback();
@@ -275,7 +279,8 @@ public class ProductDatabaseManager extends ProductDequeManager {
         } finally {
             databaseHandler.setNormalMode();
         }
-        removeAll(ids);
+//        removeAll(ids);
+        return removed;
     }
 
     @Override

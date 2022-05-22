@@ -38,7 +38,7 @@ public class ServerCommandManager extends CommandManager {
         addCommand(new FilterLessThanManufactureCostCommand(collectionManager));
         addCommand(new RemoveLowerCommand(collectionManager));
         addCommand(new RemoveGreaterCommand(collectionManager));
-        addCommand(new ExecuteScriptCommand(this));
+        //addCommand(new ExecuteScriptCommand(this));
     }
 
     public Server getServer() {
@@ -85,6 +85,8 @@ public class ServerCommandManager extends CommandManager {
                 break;
             case AUTH_SUCCESS:
                 if (isGeneratedByServer) server.setHostUser(user);
+                Log.logger.info(message + res.getMessage());
+                break;
             default:
                 Log.logger.info(message + " " + res.getMessage());
                 break;

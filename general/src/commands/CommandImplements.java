@@ -41,6 +41,7 @@ public abstract class CommandImplements implements Command {
         return "";
     }
 
+    @Override
     public Response run() throws InvalidDataException, CommandException, FileException, ConnectionException, CollectionException {
         AnswerMsg res = new AnswerMsg();
         res.info(execute());

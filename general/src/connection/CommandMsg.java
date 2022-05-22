@@ -4,6 +4,7 @@ import auth.User;
 import data.Product;
 
 import java.io.Serializable;
+import java.net.InetSocketAddress;
 
 
 public class CommandMsg implements Request {
@@ -12,6 +13,7 @@ public class CommandMsg implements Request {
     private Product product;
     private User user;
     private Request.Status status;
+    private InetSocketAddress address;
 
     public CommandMsg(String commandName, String commandStringArgument, Product product) {
         this.commandName = commandName;
@@ -81,5 +83,14 @@ public class CommandMsg implements Request {
 
     public User getUser() {
         return user;
+    }
+
+    public InetSocketAddress getBroadcastAddress() {
+        return address;
+    }
+
+    public CommandMsg setBroadcastAddress(InetSocketAddress address) {
+        this.address = address;
+        return this;
     }
 }

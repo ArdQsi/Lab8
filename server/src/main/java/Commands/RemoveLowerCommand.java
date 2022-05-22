@@ -4,12 +4,17 @@ import auth.User;
 import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
+import connection.AnswerMsg;
+import connection.Response;
 import data.Product;
 import database.ProductDatabaseManager;
 import exceptions.AuthException;
 import exceptions.EmptyCollectionException;
 import exceptions.InvalidDataException;
 import exceptions.MissedCommandArgumentException;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class RemoveLowerCommand extends CommandImplements {
     private final ProductDatabaseManager collectionManager;
@@ -20,7 +25,7 @@ public class RemoveLowerCommand extends CommandImplements {
     }
 
     @Override
-    public String execute() throws InvalidDataException, AuthException {
+    public Response run() throws InvalidDataException, AuthException {
         if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
         if (!hasStringArg()) throw new MissedCommandArgumentException();
         User user = getArgument().getUser();
@@ -28,7 +33,8 @@ public class RemoveLowerCommand extends CommandImplements {
             long id = Long.parseLong(getStringArg());
 
             collectionManager.removeLower(id, user);
-            return "Elements with id lower than " + id + " was successfully deleted by " + user.getLogin();
+            Product product = collectionManager.getCollection().iterator().next();
+            return new AnswerMsg().info("Elements with id lower than \" + id + \" was successfully deleted by \" + user.getLogin()").setCollection(Arrays.asList(product));
 
         } catch (NumberFormatException e) {
             throw new InvalidDataException("id must be number");

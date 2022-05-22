@@ -7,13 +7,11 @@ import connection.*;
 
 import exceptions.*;
 import io.OutputManager;
-import org.omg.CORBA.DynAnyPackage.Invalid;
 import tools.ObservableResourceFactory;
 
 import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
-import java.util.Observable;
 
 
 import static io.ConsoleOutputter.print;
@@ -30,8 +28,11 @@ public class Client extends Thread implements Closeable {
     private User attempt;
     private ProductObservableManager collectionManager;
     private ObservableResourceFactory resourceFactory;
-
     private OutputManager outputManager;
+    private DatagramSocket broadcastSocket;
+    private InetSocketAddress host;
+
+
     private volatile boolean receivedRequest;
     private volatile boolean authSuccess;
     private boolean connected;
@@ -80,6 +81,8 @@ public class Client extends Thread implements Closeable {
 
         try {
             socket = new DatagramSocket();
+            broadcastSocket = new DatagramSocket();
+            host = new InetSocketAddress(InetAddress.getByName("localhost"), broadcastSocket.getLocalPort());
         } catch (IOException var4) {
             throw new ConnectionException("cannot open socket");
         }
@@ -87,6 +90,7 @@ public class Client extends Thread implements Closeable {
 
     public void send(Request request) throws ConnectionException {
         try {
+            request.setBroadcastAddress(host);
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(4096);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
             objectOutputStream.writeObject(request);
@@ -116,19 +120,46 @@ public class Client extends Thread implements Closeable {
         }
     }
 
+    private Response receiveBroadcast() throws ConnectionException, InvalidDataException{
+
+        ByteBuffer bytes = ByteBuffer.allocate(4096);
+        DatagramPacket receivePacket = new DatagramPacket(bytes.array(), bytes.array().length);
+        try {
+            broadcastSocket.receive(receivePacket);
+        } catch (IOException e) {
+            throw new ConnectionException("something went wrong while receiving response");
+        }
+        connected=true;
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(new ByteArrayInputStream(bytes.array()));
+            return (Response) objectInputStream.readObject();
+        } catch (ClassNotFoundException | ClassCastException | IOException e) {
+            throw new InvalidReceivedDataException();
+        }
+    }
+
+    public void setAuthSuccess(boolean f) {
+        authSuccess =f;
+    }
+
     @Override
     public void run() {
         Request hello = new CommandMsg();
         hello.setStatus(Request.Status.HELLO);
         try {
             send(hello);
-        } catch (ConnectionException e) {
+            Response response = receive();
+            if (response.getStatus()==Response.Status.COLLECTION && response.getCollection()!=null &&
+            response.getCollectionOperation() == CollectionOperation.ADD) {
+                collectionManager.applyChanges(response);
+            }
+        } catch (ConnectionException|InvalidDataException e) {
             printErr("cannot load collection from server");
         }
         while (running) {
             try {
                 receivedRequest = false;
-                Response response = receive();
+                Response response = receiveBroadcast();
                 String msg = response.getMessage();
                 switch (response.getStatus()) {
                     case COLLECTION:
@@ -136,7 +167,7 @@ public class Client extends Thread implements Closeable {
                         print("loaded!");
                         break;
                     case BROADCAST:
-                        print("broadcast!");
+                        print("caught broadcast!");
                         collectionManager.applyChanges(response);
                         break;
                     case AUTH_SUCCESS:
@@ -145,11 +176,10 @@ public class Client extends Thread implements Closeable {
                         break;
                     case EXIT:
                         connected = false;
-                        print("server shut down");
+                        outputManager.error("Server Shut Down");
                         break;
                     case FINE:
                         outputManager.info(msg);
-
                     case ERROR:
                         outputManager.error(msg);
                     default:
@@ -248,5 +278,7 @@ public class Client extends Thread implements Closeable {
         commandManager.close();
         socket.close();
     }
+
+
 }
 
