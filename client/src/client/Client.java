@@ -285,6 +285,8 @@ public class Client extends Thread implements Closeable {
         running = false;
         commandManager.close();
         socket.close();
+        broadcastSocket.close();
+        currentThread().interrupt();
     }
 
 

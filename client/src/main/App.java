@@ -61,7 +61,7 @@ public class App extends Application {
             print(e.getMessage());
             return false;
         }*/
-        port = 8080;
+        port = 8081;
         try {
             client = new Client(address, port);
         } catch (ConnectionException e) {
@@ -160,7 +160,7 @@ public class App extends Application {
                 print("Main window close!!!");
                 client.close();
             });
-            //primaryStage.show();
+             primaryStage.show();
 
 
 

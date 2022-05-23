@@ -15,7 +15,7 @@ public class MainWindowController {
     Product product;
     private Map<Shape, Long> shapeMap;
     private long idInField;
-    private Map<Long,Circle> circleMap;
+    private Map<Long, Circle> circleMap;
     private FileChooser fileChooser;
     private ResourceBundle resourceBundle;
 
@@ -273,22 +273,21 @@ public class MainWindowController {
     @FXML
     private void removeByIdOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
-        if (product != null){
+        if (product != null) {
             client.getCommandManager().runCommand(new CommandMsg("remove_by_id").setArgument(Long.toString(product.getId())));
-        }
-        else{
+        } else {
             client.getCommandManager().runCommand(new CommandMsg("remove_by_id").setArgument(Long.toString(idInField)));
         }
     }
 
     @FXML
     public void printUniqueOwnerOnAction() {
-          Response response = proccessAction(new CommandMsg("print_unique_owner"));
-          Stage stage = new Stage();
-          Label label = new Label(response.getMessage());
-          Scene scene = new Scene(label);
-          stage.setScene(scene);
-          stage.show();
+        Response response = proccessAction(new CommandMsg("print_unique_owner"));
+        Stage stage = new Stage();
+        Label label = new Label(response.getMessage());
+        Scene scene = new Scene(label);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -298,10 +297,10 @@ public class MainWindowController {
         Response msg = null;
         try {
             msg = client.getCommandManager().runFile(selectedFile);
-        } catch (FileException|InvalidDataException|ConnectionException|CollectionException|CommandException e) {
+        } catch (FileException | InvalidDataException | ConnectionException | CollectionException | CommandException e) {
             app.getOutputManager().error(e.getMessage());
         }
-        if (msg!=null) {
+        if (msg != null) {
             System.out.println(msg.getMessage());
             if (msg.getStatus() == Response.Status.FINE) app.getOutputManager().info(msg.getMessage());
             else if (msg.getStatus() == Response.Status.ERROR) app.getOutputManager().error(msg.getMessage());
@@ -313,8 +312,7 @@ public class MainWindowController {
         Product product = collection_table.getSelectionModel().getSelectedItem();
         if (product != null) {
             proccessAction(new CommandMsg("update").setArgument(Long.toString(product.getId())).setProduct(readProduct()));
-        }
-        else{
+        } else {
             proccessAction(new CommandMsg("update").setArgument(Long.toString(idInField)));
         }
     }
@@ -330,10 +328,9 @@ public class MainWindowController {
     @FXML
     public void removeLowerOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
-        if (product != null){
+        if (product != null) {
             client.getCommandManager().runCommand(new CommandMsg("remove_lower").setArgument(Long.toString(product.getId())));
-        }
-        else {
+        } else {
             client.getCommandManager().runCommand(new CommandMsg("remove_lower").setArgument(Long.toString(idInField)));
         }
 
@@ -342,7 +339,7 @@ public class MainWindowController {
     @FXML
     public void removeGreaterOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
-        if (product != null){
+        if (product != null) {
             client.getCommandManager().runCommand(new CommandMsg("remove_greater").setArgument(Long.toString(product.getId())));
         }
     }
@@ -365,7 +362,11 @@ public class MainWindowController {
         primaryStage.setScene(signUpWindowScene);
         primaryStage.setResizable(false);
         primaryStage.show();
-        primaryStage.setOnCloseRequest(windowEvent -> System.exit(0));
+        primaryStage.setOnCloseRequest((e) -> {
+            print("Main window close!!!");
+            client.close();
+        });
+
 
     }
 
@@ -556,7 +557,7 @@ public class MainWindowController {
             }
             if (op == CollectionOperation.ADD) {
                 addToCanvas(product);
-            }else if (op == CollectionOperation.REMOVE) {
+            } else if (op == CollectionOperation.REMOVE) {
                 removeFromCanvas(product.getId());
             } else if (op == CollectionOperation.UPDATE) {
                 removeFromCanvas(product.getId());

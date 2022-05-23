@@ -42,6 +42,7 @@ public class ControllerLogin {
 
     @FXML
     void initialize() {
+        //client.interrupt();
         loginButton.setOnAction(event -> {
             //loginButton.getScene().getWindow().hide();
             String loginText = loginField.getText().trim();
@@ -53,7 +54,11 @@ public class ControllerLogin {
             }
             if (client.isAuthSuccess()) {
                 app.setMainWindow();
-                client.start();
+                try {
+                    client.start();
+                } catch (IllegalThreadStateException e) {
+
+                }
             } else {
                 System.out.println("Неверный логин или пароль");
             }
