@@ -26,13 +26,13 @@ public interface ProductManager {
 
     void addIfMin(Product product);
 
-    void removeGreater(Collection<Long> ids);
+    List<Product> removeGreater(Collection<Long> ids);
 
     List<Product> filterLessThanManufactureCost(Float cost);
 
     List<String> getUniqueOwner();
 
-    void removeLower(Collection<Long> ids);
+    List<Product> removeLower(Collection<Long> ids);
 
     void deserializeCollection();
 }

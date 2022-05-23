@@ -38,7 +38,7 @@ public class ServerCommandManager extends CommandManager {
         addCommand(new FilterLessThanManufactureCostCommand(collectionManager));
         addCommand(new RemoveLowerCommand(collectionManager));
         addCommand(new RemoveGreaterCommand(collectionManager));
-        //addCommand(new ExecuteScriptCommand(this));
+        addCommand(new ExecuteScriptCommand(this));
     }
 
     public Server getServer() {

@@ -141,7 +141,8 @@ public class App extends Application {
     public void setMainWindow() {
         try {
             FXMLLoader mainWindowLoader = new FXMLLoader();
-            mainWindowLoader.setLocation(getClass().getResource("/controllers/main.fxml"));
+            mainWindowLoader.setResources(ResourceBundle.getBundle("bundles.GuiLabels",new Locale("ru")));
+            mainWindowLoader.setLocation(getClass().getResource("../controllers/main.fxml"));
             Parent mainWindowRootNode = mainWindowLoader.load();
             Scene mainWindowScene = new Scene(mainWindowRootNode);
             MainWindowController mainWindowController = mainWindowLoader.getController();
@@ -152,7 +153,6 @@ public class App extends Application {
             mainWindowController.initFilter();
             //mainWindowController.initLangs(resourceFactory);
             mainWindowController.setApp(this);
-
 
             primaryStage.setScene(mainWindowScene);
             primaryStage.setResizable(true);

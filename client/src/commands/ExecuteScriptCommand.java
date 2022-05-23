@@ -1,9 +1,6 @@
 package commands;
 
-import exceptions.CommandException;
-import exceptions.FileException;
-import exceptions.MissedCommandArgumentException;
-import exceptions.RecursiveScriptException;
+import exceptions.*;
 
 public class ExecuteScriptCommand extends CommandImplements {
     private ClientCommandManager commandManager;
@@ -13,7 +10,7 @@ public class ExecuteScriptCommand extends CommandImplements {
     }
 
     @Override
-    public String execute() {
+    public String execute()  throws FileException, InvalidDataException, ConnectionException {
         if(!hasStringArg()) throw new MissedCommandArgumentException();
         if (commandManager.getStack().contains(getStringArg())) throw new RecursiveScriptException();
         commandManager.getStack().push(getStringArg());

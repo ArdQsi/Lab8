@@ -21,6 +21,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class ProductDatabaseManager extends ProductDequeManager {
@@ -212,7 +213,7 @@ public class ProductDatabaseManager extends ProductDequeManager {
         super.updateById(id, product);
     }
 
-    public void removeGreater(long id, User user) {
+    public List<Product> removeGreater(long id, User user) {
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
         Set<Long> ids = new HashSet<>();
@@ -231,10 +232,10 @@ public class ProductDatabaseManager extends ProductDequeManager {
         } finally {
             databaseHandler.setNormalMode();
         }
-        removeGreater(ids);
+        return removeGreater(ids);
     }
 
-    public void removeLower(long id, User user) {
+    public List<Product> removeLower(long id, User user) {
         databaseHandler.setCommitMode();
         databaseHandler.setSavepoint();
         Set<Long> ids = new HashSet<>();
@@ -253,7 +254,7 @@ public class ProductDatabaseManager extends ProductDequeManager {
         } finally {
             databaseHandler.setNormalMode();
         }
-        removeLower(ids);
+        return removeLower(ids);
     }
 
     public Collection<Product> clear(User user) {

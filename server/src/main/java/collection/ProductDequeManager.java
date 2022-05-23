@@ -1,16 +1,11 @@
 package collection;
 
 import data.Product;
-import database.ProductDatabaseManager;
 import exceptions.CannotAddException;
 import exceptions.EmptyCollectionException;
-import exceptions.FileException;
 import exceptions.NoSuchIdException;
-import file.FileManager;
-import utils.DateConvertor;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentSkipListSet;
@@ -116,27 +111,25 @@ public class ProductDequeManager extends ProductManagerImpl<ConcurrentLinkedDequ
         collection.add(newProduct);
     }
 
-    public void removeGreater(Collection<Long> ids) {
+    public List<Product> removeGreater(Collection<Long> ids) {
+        List<Product> list = new LinkedList<>();
         if (collection.isEmpty()) throw new EmptyCollectionException();
-        Iterator<Long> iterator = ids.iterator();
-        while (iterator.hasNext()) {
-            Long id = iterator.next();
-            collection.removeIf(product -> product.getId() == id);
-            iterator.remove();
+        for (Long ides: ids) {
+            list.add(getById(ides));
+            collection.remove(getById(ides));
         }
+        return list;
     }
 
-    public void removeLower(Collection<Long> ids) {
+    public List<Product> removeLower(Collection<Long> ids) {
+        List<Product> list = new LinkedList();
         if (collection.isEmpty()) throw new EmptyCollectionException();
-        Iterator<Long> iterator = ids.iterator();
-        while (iterator.hasNext()) {
-            Long id = iterator.next();
-            collection.removeIf(product -> product.getId() == id);
-            iterator.remove();
+        for(Long ides: ids){
+            list.add(getById(ides));
+            collection.remove(getById(ides));
         }
+        return list;
     }
-
-
 
 
     public List<Product> filterLessThanManufactureCost(Float cost) {

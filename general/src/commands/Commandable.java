@@ -2,7 +2,9 @@ package commands;
 
 import connection.Request;
 import connection.Response;
+import exceptions.ConnectionException;
 import exceptions.FileException;
+import exceptions.InvalidDataException;
 
 public interface Commandable {
     void addCommand(Command cmd);
@@ -23,5 +25,5 @@ public interface Commandable {
 
     void consoleMode();
 
-    void fileMode(String path) throws FileException;
+    Response fileMode(String path) throws FileException, InvalidDataException, ConnectionException;
 }

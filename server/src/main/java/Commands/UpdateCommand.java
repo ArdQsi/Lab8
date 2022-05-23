@@ -4,19 +4,24 @@ import auth.User;
 import collection.ProductManager;
 import commands.CommandImplements;
 import commands.CommandType;
+import connection.AnswerMsg;
+import connection.CollectionOperation;
+import connection.Response;
 import data.Product;
 import exceptions.*;
+
+import java.util.Arrays;
 
 public class UpdateCommand extends CommandImplements {
     private ProductManager collectionManager;
 
     public UpdateCommand(ProductManager cm) {
-        super("update", CommandType.NORMAL);
+        super("update", CommandType.NORMAL, CollectionOperation.UPDATE);
         collectionManager = cm;
     }
 
     @Override
-    public String execute() throws InvalidDataException, AuthException {
+    public Response run() throws InvalidDataException, AuthException {
         User user = getArgument().getUser();
         if (collectionManager.getCollection().isEmpty()) throw new EmptyCollectionException();
         if (!hasStringArg()) throw new MissedCommandArgumentException();
@@ -27,10 +32,10 @@ public class UpdateCommand extends CommandImplements {
             String owner = collectionManager.getById(id).getUserLogin();
             String login = user.getLogin();
             if (login == null || !login.equals(owner)) {
-                throw new AuthException("you don't have permission, element was created by " + owner);
+                throw new PermissinException(owner);
             }
             collectionManager.updateById(id, getProductArg());
-            return "element with id: " + Long.toString(id) + " updated";
+            return new AnswerMsg().info("element with id: " + id + " updated").setCollection(Arrays.asList(getProductArg())).setCollectionOperation(CollectionOperation.UPDATE);
         } catch (NumberFormatException e) {
             throw new InvalidDataException("id must be number");
         }

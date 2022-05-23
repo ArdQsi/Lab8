@@ -18,9 +18,9 @@ import static io.ConsoleOutputter.print;
 
 public abstract class CommandManager implements Commandable, Closeable {
     private Map<String, Command> map;
-    private InputManager inputManager;
-    private boolean isRunning;
-    private String currentScriptFileName;
+    protected InputManager inputManager;
+    protected boolean isRunning;
+    protected String currentScriptFileName;
     private static Stack<String> callStack = new Stack<>();
 
     public Stack<String> getStack() {
@@ -76,17 +76,26 @@ public abstract class CommandManager implements Commandable, Closeable {
         }
     }
 
-    public void fileMode(String path1) throws FileException {
+    public Response fileMode(String path1) throws FileException, InvalidDataException, ConnectionException {
+        currentScriptFileName = path1;
         inputManager = new FileInputManager(path1);
         isRunning = true;
-        while(isRunning && inputManager.getScanner().hasNextLine()) {
+        Response answerMsg = new AnswerMsg();
+        while(isRunning && inputManager.hasNextLine()) {
             CommandMsg commandMsg = inputManager.readCommand();
-            Response answerMsg = runCommand(commandMsg);
+            answerMsg = runCommand(commandMsg);
             if(answerMsg.getStatus() == Response.Status.EXIT) {
                 close();
+                break;
+            }
+            if (answerMsg.getStatus() == Response.Status.ERROR) {
+                break;
             }
         }
+        return answerMsg;
     }
+
+
 
     public Response runCommand(Request msg) {
         AnswerMsg res = new AnswerMsg();

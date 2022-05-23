@@ -13,6 +13,11 @@ public class MainWindowController {
     private ObservableResourceFactory resourceFactory;
     private Map<String, Locale> localeMap;
     Product product;
+    private Map<Shape, Long> shapeMap;
+    private long idInField;
+    private Map<Long,Circle> circleMap;
+    private FileChooser fileChooser;
+    private ResourceBundle resourceBundle;
 
 
 
@@ -197,19 +202,19 @@ public class MainWindowController {
     }
 
 
-
     public void initLangs(ObservableResourceFactory resourceFactory) {
         this.resourceFactory = resourceFactory;
         for (String localeName : localeMap.keySet()) {
             if (localeMap.get(localeName).equals(resourceFactory.getResources().getLocale()))
                 language_box.getSelectionModel().select(localeName);
         }
-        if (language_box.getSelectionModel().getSelectedItem().isEmpty()){
-            if(localeMap.containsValue(Locale.getDefault())) language_box.getSelectionModel().select(MapUtils.getKeyByValue(localeMap,Locale.getDefault()));
+        if (language_box.getSelectionModel().getSelectedItem().isEmpty()) {
+            if (localeMap.containsValue(Locale.getDefault()))
+                language_box.getSelectionModel().select(MapUtils.getKeyByValue(localeMap, Locale.getDefault()));
             else language_box.getSelectionModel().selectFirst();
         }
 
-        language_box.setOnAction((event) ->{
+        language_box.setOnAction((event) -> {
             Locale locale = localeMap.get(language_box.getValue());
             resourceFactory.setResources(ResourceBundle.getBundle
                     (App.BUNDLE, locale));
@@ -223,9 +228,9 @@ public class MainWindowController {
         resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, localeMap.get(language_box.getSelectionModel().getSelectedItem())));
         id_column.textProperty().bind(resourceFactory.getStringBinding("IdColumn"));
         name_column.textProperty().bind(resourceFactory.getStringBinding("name_column"));
-       coordinateX_column.textProperty().bind(resourceFactory.getStringBinding("coordinateX_column"));
-       coordinateY_column.textProperty().bind(resourceFactory.getStringBinding("coordinateY_column"));
-       price_column.textProperty().bind(resourceFactory.getStringBinding("price_column"));
+        coordinateX_column.textProperty().bind(resourceFactory.getStringBinding("coordinateX_column"));
+        coordinateY_column.textProperty().bind(resourceFactory.getStringBinding("coordinateY_column"));
+        price_column.textProperty().bind(resourceFactory.getStringBinding("price_column"));
     }
 
     public void initFilter() {
@@ -268,67 +273,110 @@ public class MainWindowController {
     @FXML
     private void removeByIdOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
-        if (product != null)
+        if (product != null){
             client.getCommandManager().runCommand(new CommandMsg("remove_by_id").setArgument(Long.toString(product.getId())));
-        collection_table.refresh();
+        }
+        else{
+            client.getCommandManager().runCommand(new CommandMsg("remove_by_id").setArgument(Long.toString(idInField)));
+        }
     }
 
     @FXML
     public void printUniqueOwnerOnAction() {
-        Label start = new Label();
-        Stage stage = new Stage();
-        Label nameLabel = new Label();
-        TextField textField = new TextField();
-        Button button = new Button();
-        button.textProperty().bind(resourceFactory.getStringBinding("Enter"));
-        button.setOnAction(event -> {
-            String arg = textField.getText();
-            if (arg!=null && !arg.equals("")) {
-                proccessAction(new CommandMsg("print_unique_owner"));
-            }
-        });
-
-
+          Response response = proccessAction(new CommandMsg("print_unique_owner"));
+          Stage stage = new Stage();
+          Label label = new Label(response.getMessage());
+          Scene scene = new Scene(label);
+          stage.setScene(scene);
+          stage.show();
     }
 
     @FXML
-    public void executeScriptOnAction(ActionEvent actionEvent) {
+    public void executeScriptOnAction() {
+        File selectedFile = fileChooser.showOpenDialog(primaryStage);
+        if (selectedFile == null) return;
+        Response msg = null;
+        try {
+            msg = client.getCommandManager().runFile(selectedFile);
+        } catch (FileException|InvalidDataException|ConnectionException|CollectionException|CommandException e) {
+            app.getOutputManager().error(e.getMessage());
+        }
+        if (msg!=null) {
+            System.out.println(msg.getMessage());
+            if (msg.getStatus() == Response.Status.FINE) app.getOutputManager().info(msg.getMessage());
+            else if (msg.getStatus() == Response.Status.ERROR) app.getOutputManager().error(msg.getMessage());
+        }
     }
 
     @FXML
     public void updateIdOnAction(ActionEvent actionEvent) {
+        Product product = collection_table.getSelectionModel().getSelectedItem();
+        if (product != null) {
+            proccessAction(new CommandMsg("update").setArgument(Long.toString(product.getId())).setProduct(readProduct()));
+        }
+        else{
+            proccessAction(new CommandMsg("update").setArgument(Long.toString(idInField)));
+        }
     }
 
     @FXML
-    public void addIfMinOnAction(ActionEvent actionEvent) {
+    public void addIfMinOnAction() {
+        Product product = readProduct();
+        if (product != null) {
+            proccessAction(new CommandMsg("add_if_min").setProduct(product));
+        }
+    }
 
-            Product product = readProduct();
-            if (product!= null) {
-                proccessAction(new CommandMsg("add_if_min").setProduct(product));
-            }
-
+    @FXML
+    public void removeLowerOnAction() {
+        Product product = collection_table.getSelectionModel().getSelectedItem();
+        if (product != null){
+            client.getCommandManager().runCommand(new CommandMsg("remove_lower").setArgument(Long.toString(product.getId())));
+        }
+        else {
+            client.getCommandManager().runCommand(new CommandMsg("remove_lower").setArgument(Long.toString(idInField)));
+        }
 
     }
 
     @FXML
-    public void removeLowerOnAction(ActionEvent actionEvent) {
-
-        //proccessAction(new CommandMsg("remove_lower"));
+    public void removeGreaterOnAction() {
+        Product product = collection_table.getSelectionModel().getSelectedItem();
+        if (product != null){
+            client.getCommandManager().runCommand(new CommandMsg("remove_greater").setArgument(Long.toString(product.getId())));
+        }
     }
 
     @FXML
-    public void removeGreaterOnAction(ActionEvent actionEvent) {
-    }
+    public void exitOnAction() {
+        FXMLLoader loginWindowLoader = new FXMLLoader();
+        loginWindowLoader.setLocation(getClass().getResource("../controllers/login.fxml"));
+        try {
+            loginWindowLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Parent signUpWindowRootNode = loginWindowLoader.getRoot();
+        Scene signUpWindowScene = new Scene(signUpWindowRootNode);
+        ControllerLogin controllerLogin = loginWindowLoader.getController();
+        controllerLogin.setApp(app);
+        controllerLogin.setClient(client);
+        controllerLogin.initLangs(resourceFactory);
+        primaryStage.setScene(signUpWindowScene);
+        primaryStage.setResizable(false);
+        primaryStage.show();
+        primaryStage.setOnCloseRequest(windowEvent -> System.exit(0));
 
-    @FXML
-    public void exitOnAction(ActionEvent actionEvent) {
     }
 
     @FXML
     public void infoOnAction() {
-//        Label start = new Label();
-//        Stage stage = new Stage();
-//        proccessAction(new CommandMsg("info"));
+        Stage stage = new Stage();
+        Response response = proccessAction(new CommandMsg("info"));
+        Label label = new Label(response.getMessage());
+        Scene scene = new Scene(label);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -484,29 +532,53 @@ public class MainWindowController {
         return product;
     }
 
+    public void setProduct(Product product) {
+        name_field.setText(product.getName());
+        coordinateX_field.setText(product.getCoordinates().getX() + "");
+        coordinateY_field.setText(product.getCoordinates().getY() + "");
+        price_field.setText(product.getPrice() + "");
+        manufacture_cost_field.setText(product.getManufactureCost() + "");
+        unit_of_measure_field.setText(product.getUnitOfMeasure() + "");
+        person_name_field.setText(product.getOwner().getPersonName());
+        person_birthday_field.setText(product.getOwner().getBirthday() + "");
+        person_weight_field.setText(product.getOwner().getWeight() + "");
+        person_passport_id_field.setText(product.getOwner().getPassportID());
+    }
+
     long rand = 1821L;
     Random random = new Random(rand);
+
     public void refreshCanvas(ObservableList<Product> collection, Collection<Product> changes, CollectionOperation op) {
-        for (Product product: changes) {
+        for (Product product : changes) {
             if (!userColorMap.containsKey(product.getUserLogin())) {
                 //userColorMap.put(product.getUserLogin(),Color.color((int) (Math.random()*255),(int) (Math.random()*255),(int) (Math.random()*255)));
-                userColorMap.put(product.getUserLogin(),Color.color(random.nextDouble(),random.nextDouble(),random.nextDouble()));
+                userColorMap.put(product.getUserLogin(), Color.color(random.nextDouble(), random.nextDouble(), random.nextDouble()));
             }
-            if (op==CollectionOperation.ADD) {
+            if (op == CollectionOperation.ADD) {
+                addToCanvas(product);
+            }else if (op == CollectionOperation.REMOVE) {
+                removeFromCanvas(product.getId());
+            } else if (op == CollectionOperation.UPDATE) {
+                removeFromCanvas(product.getId());
                 addToCanvas(product);
             }
-
-
-
         }
+
+    }
+
+    private void removeFromCanvas(Long id) {
+        canvas_plane.getChildren().remove(circleMap.get(id));
+        circleMap.remove(id);
     }
 
     public void addToCanvas(Product pr) {
-        double size = Math.min(pr.getPrice()/100, 50);
-        if(size<6)size=6;
-        Circle circle = new Circle(size,userColorMap.get(pr.getUserLogin()));
-        circle.translateXProperty().bind(canvas_plane.widthProperty().divide(2).add(pr.getCoordinates().getX()));
-        circle.translateYProperty().bind(canvas_plane.heightProperty().divide(2).subtract(pr.getCoordinates().getY()));
+        double size = Math.min(pr.getPrice() / 100, 15);
+        if (size < 6) size = 6;
+        Circle circle = new Circle(size, userColorMap.get(pr.getUserLogin()));
+        //circle.translateXProperty().bind(canvas_plane.widthProperty().divide(2).add(pr.getCoordinates().getX()));
+        //circle.translateYProperty().bind(canvas_plane.heightProperty().divide(2).subtract(pr.getCoordinates().getY()));
+        circle.setCenterX(pr.getCoordinates().getX() * 1.6);
+        circle.setCenterY(pr.getCoordinates().getY() * 2.1);
         circle.setStroke(Color.BLACK);
         circle.setOnMouseClicked(event -> {
             Group group = new Group();
@@ -522,6 +594,8 @@ public class MainWindowController {
             stage.setWidth(900);
             stage.setHeight(350);
             stage.show();
+            //shapeMap.put(circle, pr.getId());
+            //textMap.put(pr.getId(),"fd");
         });
         canvas_plane.getChildren().add(circle);
 

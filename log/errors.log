@@ -172,3 +172,36 @@
 [02:27:50.142 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 4
 [12:59:13.616 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
 [13:39:10.128 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
+[16:28:05.954 ERROR]  qq  update you don't have permission, element was created by kek
+[17:48:04.979 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 200
+[18:00:56.234 ERROR]  qq  remove_by_id you don't have permission, element was created by kek
+[18:01:05.770 ERROR]  qq  remove_by_id you don't have permission, element was created by kek
+[18:54:29.321 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 5
+[19:03:30.222 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
+[19:30:54.954 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
+[19:32:57.595 ERROR]  qq  remove_by_id you don't have permission, element was created by Jack
+[19:33:02.048 ERROR]  qq  update you don't have permission, element was created by Jack
+[19:59:40.687 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
+[19:59:55.913 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
+[23:18:38.509 ERROR]  qq  remove_lower element #219 not found
+[23:20:58.569 ERROR]  qq  remove_lower element #224 not found
+[23:33:20.428 ERROR]  qq  remove_lower element #229 not found
+[23:34:08.776 ERROR]  qq  remove_lower element #233 not found
+[23:35:29.627 ERROR]  qq  remove_lower element #235 not found
+[23:42:10.399 ERROR]  qq  remove_lower element #237 not found
+[23:56:15.509 ERROR]  qq  remove_lower element #240 not found
+[00:02:54.699 ERROR]  qq  remove_lower element #243 not found
+[00:05:48.327 ERROR]  qq  remove_lower element #246 not found
+[00:11:23.157 ERROR]  qq  remove_lower element #248 not found
+[00:14:56.561 ERROR]  qq  remove_lower element #251 not found
+[00:17:55.231 ERROR]  qq  remove_lower element #256 not found
+[00:20:46.038 ERROR]  qq  remove_lower element #257 not found
+[00:23:37.158 ERROR]  qq  remove_lower element #260 not found
+[00:23:43.675 ERROR]  qq  remove_lower element #262 not found
+[00:24:27.193 ERROR]  qq  remove_lower element #263 not found
+[00:27:00.608 ERROR]  qq  remove_lower element #266 not found
+[00:35:19.541 ERROR]  qq  remove_lower element #269 not found
+[00:51:47.401 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 1000
+[00:54:35.006 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 3
+[02:24:32.586 ERROR]  qqq  register user qqq already exist
+[02:24:38.706 ERROR]  qqqqq  register user qqqqq already exist

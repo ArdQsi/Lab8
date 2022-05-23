@@ -8,6 +8,9 @@ import java.util.Collection;
 public interface Response extends Serializable {
     String getMessage();
 
+
+    Long getIds();
+
     Status getStatus();
 
     enum Status {
@@ -21,5 +24,6 @@ public interface Response extends Serializable {
 
     CollectionOperation getCollectionOperation();
 
-    public Collection<Product> getCollection();
+    Collection<Product> getCollection();
+
 }

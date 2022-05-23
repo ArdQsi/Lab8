@@ -114,7 +114,7 @@ public abstract class ProductManagerImpl<T extends Collection<Product>> implemen
     }
 
 
-    public void removeGreater(Collection<Long> ids) {
+    public List<Product> removeGreater(Collection<Long> ids) {
         if (getCollection().isEmpty()) throw new EmptyCollectionException();
         Iterator<Long> iterator = ids.iterator();
         while (iterator.hasNext()) {
@@ -122,6 +122,7 @@ public abstract class ProductManagerImpl<T extends Collection<Product>> implemen
             getCollection().removeIf(product -> product.getId() == id);
             iterator.remove();
         }
+        return null;
     }
 
 
@@ -142,7 +143,7 @@ public abstract class ProductManagerImpl<T extends Collection<Product>> implemen
         return owner;
     }
 
-    public void removeLower(Collection<Long> ids) {
+    public List<Product> removeLower(Collection<Long> ids) {
         if (getCollection().isEmpty()) throw new EmptyCollectionException();
         Iterator<Long> iterator = ids.iterator();
         while (iterator.hasNext()) {
@@ -150,6 +151,7 @@ public abstract class ProductManagerImpl<T extends Collection<Product>> implemen
             getCollection().removeIf(product -> product.getId() == id);
             iterator.remove();
         }
+        return null;
     }
 
     @Override

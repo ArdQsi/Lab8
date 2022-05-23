@@ -20,6 +20,15 @@ public class DateConvertor {
             .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
             .toFormatter();
 
+    private static DateTimeFormatter localDateFormat =  new DateTimeFormatterBuilder().appendPattern("dd/MM/yyyy")
+            .parseDefaulting(ChronoField.HOUR_OF_DAY, 0)
+            .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+            .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+            .toFormatter();
+
+
+
+
     /**
      * Convert String to LocalDateTime
      * @param s date in String from user input
@@ -42,5 +51,11 @@ public class DateConvertor {
     public static String dateToString(LocalDateTime date) {
         return localDateFormatter.format(date);
     }
+
+    public static String dateToString1(LocalDateTime date) {
+        return localDateFormat.format(date);
+    }
+
+
 }
 

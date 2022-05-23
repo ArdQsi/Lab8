@@ -2,10 +2,7 @@ package file;
 
 import com.opencsv.CSVWriter;
 import data.Product;
-import exceptions.EmptyPathException;
-import exceptions.FileException;
-import exceptions.FileNotExistsException;
-import exceptions.FileWrongPermissionException;
+import exceptions.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -17,73 +14,152 @@ import java.util.LinkedList;
 
 public class FileManager{
     private String path;
-    private String path1;
+    private File file;
 
-    /**
-     * Constructor, just save variable
-     */
-    public FileManager() {path = System.getenv().get("Lab6");}
-
-    /**
-     * Constructor, just save the path to the script file
-     * @param path1
-     */
-    public FileManager(String path1) {
-        this.path1 = path1;
+    public FileManager(String pth) {
+        path = pth;
     }
 
-    /**
-     * Read commands from a file
-     * @return string of commands
-     */
+    public FileManager(File f) {
+        file = f;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public void setFile(File f) {
+        file = f;
+    }
+
+    public FileManager() {
+        path = null;
+    }
+
     public String read() throws FileException {
+        if (file==null) {
+            if (path == null) throw new EmptyPathException();
+            InputStreamReader reader = null;
+
+            File f = new File(path);
+            return readFile(f);
+        } else {
+            return readFile(file);
+        }
+    }
+
+    private String readFile(File f) throws FileException {
         String str = "";
-        try{
-            if (path1 == null) throw new EmptyPathException();
-            File file = new File(path1);
-            if(!file.exists()) throw new FileNotExistsException();
-            if(!file.canRead()) throw new FileWrongPermissionException("cannot read file");
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line = bufferedReader.readLine();
-            while (line != null) {
-                str+=line+"\n";
-                line = bufferedReader.readLine();
+        try {
+            InputStreamReader reader = null;
+            if (!f.exists()) throw new FileNotExistsException();
+            if (!f.canRead()) throw new FileWrongPermissionException("");
+            InputStream inputStream = new FileInputStream(f);
+            reader = new InputStreamReader(inputStream);
+            int currectSymbol;
+            while ((currectSymbol = reader.read())!=-1) {
+                str += ((char) currectSymbol);
             }
-        } catch (IOException e){
+            reader.close();
+        } catch (IOException e) {
             throw new FileException("cannot read file");
         }
         return str;
     }
 
-    /**
-     * Write data in csv to file
-     * @param arrayList
-     */
-    public void writeToCSV(ArrayList<String[]> arrayList){
+    private void create(File file) throws CannotCreateFileException {
         try {
-            FileWriter fileWriter = new FileWriter(path);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            CSVWriter csvWriter = new CSVWriter(bufferedWriter, ',','\0' ,'\0' ,"\n");
-            for (String[] out : arrayList) {
-                csvWriter.writeNext(out);
-            }
-            csvWriter.flush();
+            boolean success = file.createNewFile();
+            if (!success) throw new CannotCreateFileException();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new CannotCreateFileException();
         }
     }
 
-    /**
-     * Reads the element's data and puts it into a ArrayList<String[]>
-     * @param linkedList
-     * @return element in ArrayList<String[]>
-     */
-    public ArrayList<String[]> getElement(LinkedList<Product> linkedList) {
-        ArrayList<String[]> arrayList = new ArrayList<>();
-        linkedList.forEach(x -> arrayList.add(x.getDataCollection()));
-        return arrayList;
+    public void write(String str) throws FileException {
+        try {
+            if (path == null) throw  new EmptyPathException();
+            File file = new  File(path);
+
+            if (!file.exists()) {
+                create(file);
+            }
+            if (!file.canWrite()) throw new FileWrongPermissionException("cannot write in file");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            writer.write(str);
+            writer.close();
+
+        } catch (IOException e) {
+            throw new FileException("unable to read file");
+        }
     }
+
+//    /**
+//     * Constructor, just save variable
+//     * @param file
+//     */
+//    public FileManager(File file) {path = System.getenv().get("Lab6");}
+//
+//    /**
+//     * Constructor, just save the path to the script file
+//     * @param path1
+//     */
+//    public FileManager(String path1) {
+//        this.path1 = path1;
+//    }
+//
+//    /**
+//     * Read commands from a file
+//     * @return string of commands
+//     */
+//    public String read() throws FileException {
+//        String str = "";
+//        try{
+//            if (path1 == null) throw new EmptyPathException();
+//            File file = new File(path1);
+//            if(!file.exists()) throw new FileNotExistsException();
+//            if(!file.canRead()) throw new FileWrongPermissionException("cannot read file");
+//            FileReader fileReader = new FileReader(file);
+//            BufferedReader bufferedReader = new BufferedReader(fileReader);
+//            String line = bufferedReader.readLine();
+//            while (line != null) {
+//                str+=line+"\n";
+//                line = bufferedReader.readLine();
+//            }
+//        } catch (IOException e){
+//            throw new FileException("cannot read file");
+//        }
+//        return str;
+//    }
+//
+//    /**
+//     * Write data in csv to file
+//     * @param arrayList
+//     */
+//    public void writeToCSV(ArrayList<String[]> arrayList){
+//        try {
+//            FileWriter fileWriter = new FileWriter(path);
+//            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+//            CSVWriter csvWriter = new CSVWriter(bufferedWriter, ',','\0' ,'\0' ,"\n");
+//            for (String[] out : arrayList) {
+//                csvWriter.writeNext(out);
+//            }
+//            csvWriter.flush();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    /**
+//     * Reads the element's data and puts it into a ArrayList<String[]>
+//     * @param linkedList
+//     * @return element in ArrayList<String[]>
+//     */
+//    public ArrayList<String[]> getElement(LinkedList<Product> linkedList) {
+//        ArrayList<String[]> arrayList = new ArrayList<>();
+//        linkedList.forEach(x -> arrayList.add(x.getDataCollection()));
+//        return arrayList;
+//    }
 
 //    /**
 //     * Read file and add product to collection

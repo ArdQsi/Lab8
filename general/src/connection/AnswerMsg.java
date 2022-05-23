@@ -3,12 +3,14 @@ package connection;
 import data.Product;
 
 import java.util.Collection;
+import java.util.List;
 
 public class AnswerMsg implements Response {
     private String msg;
     private Status status;
     private Collection<Product> collection;
     private CollectionOperation collectionOperation;
+    private long id;
 
     public AnswerMsg() {
         msg = "";
@@ -50,6 +52,10 @@ public class AnswerMsg implements Response {
         collection = c;
         return this;
     }
+    public AnswerMsg setId(long c) {
+        id = c;
+        return this;
+    }
 
     public Collection<Product> getCollection(){
         return collection;
@@ -57,6 +63,11 @@ public class AnswerMsg implements Response {
 
     public String getMessage() {
         return msg;
+    }
+
+    @Override
+    public Long getIds() {
+        return null;
     }
 
     public Status getStatus() {
