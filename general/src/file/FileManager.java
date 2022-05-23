@@ -67,12 +67,12 @@ public class FileManager{
         return str;
     }
 
-    private void create(File file) throws CannotCreateFileException {
+    private void create(File file) throws CannotCreateException {
         try {
             boolean success = file.createNewFile();
-            if (!success) throw new CannotCreateFileException();
+            if (!success) throw new CannotCreateException();
         } catch (IOException e) {
-            throw new CannotCreateFileException();
+            throw new CannotCreateException();
         }
     }
 

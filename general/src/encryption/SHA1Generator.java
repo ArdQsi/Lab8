@@ -1,10 +1,11 @@
 package encryption;
 
 import exceptions.EncryptionException;
-import org.apache.commons.codec.binary.Hex;
+
 
 import java.security.MessageDigest;
 
+import org.apache.commons.codec.binary.Hex;
 
 public class SHA1Generator {
     public static String hash(String text) throws EncryptionException {
