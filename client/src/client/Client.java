@@ -7,6 +7,7 @@ import connection.*;
 
 import exceptions.*;
 import io.OutputManager;
+import io.OutputterUI;
 import tools.ObservableResourceFactory;
 
 import java.io.*;
@@ -255,6 +256,8 @@ public class Client extends Thread implements Closeable {
     public ProductObservableManager getProductManager() {
         return collectionManager;
     }
+
+
 
     public ClientCommandManager getCommandManager() {
         return commandManager;

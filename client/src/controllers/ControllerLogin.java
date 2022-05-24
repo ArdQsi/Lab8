@@ -50,7 +50,7 @@ public class ControllerLogin {
             if (!loginText.equals("") && !passwordText.equals("")) {
                 client.processAuthentication(loginText, passwordText, false);
             } else {
-                System.out.println("Не введен логин или пароль");
+                app.getOutputter().error("не введен логин или пароль");
             }
             if (client.isAuthSuccess()) {
                 app.setMainWindow();
@@ -60,7 +60,7 @@ public class ControllerLogin {
 
                 }
             } else {
-                System.out.println("Неверный логин или пароль");
+                app.getOutputter().error("неверный логин");
             }
         });
 
@@ -78,7 +78,4 @@ public class ControllerLogin {
         this.client = client;
     }
 
-    public void initLangs(ObservableResourceFactory r) {
-        resourceFactory = r;
-    }
 }

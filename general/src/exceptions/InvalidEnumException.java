@@ -5,6 +5,6 @@ package exceptions;
  */
 public class InvalidEnumException extends InvalidDataException{
     public InvalidEnumException() {
-        super("wrong constant");
+        super("wrong constant (must be KILOGRAMS, METERS, SQUARE_METERS, MILLILITERS");
     }
 }

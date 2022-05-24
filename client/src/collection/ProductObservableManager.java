@@ -31,9 +31,9 @@ public class ProductObservableManager extends ProductManagerImpl<ObservableList<
     public void applyChanges(Response response) {
         CollectionOperation op = response.getCollectionOperation();
         Collection<Product> changes = response.getCollection();
+        products = changes;
+        answer=true;
         ObservableList<Product> old = FXCollections.observableArrayList(collection);
-
-
 
         if (op == CollectionOperation.ADD) {
             for (Product product : changes) {

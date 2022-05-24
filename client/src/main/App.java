@@ -2,6 +2,7 @@ package main;
 
 import client.Client;
 import collection.ProductObservableManager;
+import io.OutputManager;
 import io.OutputterUI;
 import controllers.ControllerLogin;
 import controllers.ControllerSignUp;
@@ -25,20 +26,23 @@ public class App extends Application {
     static int port;
     private Stage primaryStage;
     private static ObservableResourceFactory resourceFactory;
-    public static final String BUNDLE = "bundles.gui";
-    private static final String APP_TITTLE = "Product Manager";
     private OutputterUI outputter;
+    private OutputManager outputManager;
+    public static String BUNDLE = "bundles.GuiLabels";
 
     public static void main(String[] args) {
-        //resourceFactory = new ObservableResourceFactory();
-        //resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
-        
+        resourceFactory = new ObservableResourceFactory();
+        resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
         if (initialize(args)) {
             launch(args);
         } else {
             System.exit(0);
         }
 
+    }
+
+    public OutputManager getOutputManager() {
+        return outputManager;
     }
 
     public static boolean initialize(String[] args) {
@@ -80,7 +84,7 @@ public class App extends Application {
     public void init() {
 
         resourceFactory = new ObservableResourceFactory();
-        //resourceFactory.setResources(ResourceBundle.getBundle("bundles.gui"));
+        resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
         outputter = new OutputterUI(resourceFactory);
 
         try {
@@ -105,15 +109,13 @@ public class App extends Application {
             ControllerLogin controllerLogin = loginWindowLoader.getController();
             controllerLogin.setApp(this);
             controllerLogin.setClient(client);
-            controllerLogin.initLangs(resourceFactory);
-
             stage.setTitle("LOGIN");
             stage.setScene(loginWindowScene);
             stage.setResizable(false);
             stage.show();
 
         } catch (Exception e) {
-
+            getOutputter().error("f");
         }
     }
 
@@ -127,11 +129,9 @@ public class App extends Application {
             ControllerSignUp controllerSignUp = signUpWindowLoader.getController();
             controllerSignUp.setApp(this);
             controllerSignUp.setClient(client);
-            controllerSignUp.initLangs(resourceFactory);
             primaryStage.setScene(signUpWindowScene);
             primaryStage.setResizable(false);
             primaryStage.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -146,12 +146,11 @@ public class App extends Application {
             Parent mainWindowRootNode = mainWindowLoader.load();
             Scene mainWindowScene = new Scene(mainWindowRootNode);
             MainWindowController mainWindowController = mainWindowLoader.getController();
+            mainWindowController.initLangs(resourceFactory);
 
             mainWindowController.setClient(client);
             mainWindowController.setUsername(client.getUser()!=null?client.getUser().getLogin():"");
             mainWindowController.setPrimaryStage(primaryStage);
-            mainWindowController.initFilter();
-            //mainWindowController.initLangs(resourceFactory);
             mainWindowController.setApp(this);
 
             primaryStage.setScene(mainWindowScene);
@@ -162,16 +161,13 @@ public class App extends Application {
             });
              primaryStage.show();
 
-
-
-
         } catch (Exception e) {
             System.out.println(e);
             e.printStackTrace();
         }
     }
 
-    public OutputterUI getOutputManager() {
+    public OutputterUI getOutputter() {
         return outputter;
     }
 }

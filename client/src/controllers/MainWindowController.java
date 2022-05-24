@@ -4,7 +4,6 @@ public class MainWindowController {
 
     private App app;
     private Tooltip shapeTooltip;
-    private TableFilter<Product> tableFilter;
     private Client client;
     private Stage askStage;
     private Stage primaryStage;
@@ -225,20 +224,36 @@ public class MainWindowController {
     }
 
     private void bindGuiLanguage() {
-        resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, localeMap.get(language_box.getSelectionModel().getSelectedItem())));
+        commands_text.textProperty().bind(resourceFactory.getStringBinding("commands"));
+        add_an_element_text.textProperty().bind(resourceFactory.getStringBinding("add_an_element"));
+        tabMain.textProperty().bind(resourceFactory.getStringBinding("main_tab"));
+        tabMap.textProperty().bind(resourceFactory.getStringBinding("map_tab"));
+        collection_map_text.textProperty().bind(resourceFactory.getStringBinding("collection_map"));
         id_column.textProperty().bind(resourceFactory.getStringBinding("IdColumn"));
-        name_column.textProperty().bind(resourceFactory.getStringBinding("name_column"));
-        coordinateX_column.textProperty().bind(resourceFactory.getStringBinding("coordinateX_column"));
-        coordinateY_column.textProperty().bind(resourceFactory.getStringBinding("coordinateY_column"));
-        price_column.textProperty().bind(resourceFactory.getStringBinding("price_column"));
-    }
-
-    public void initFilter() {
-        tableFilter = new TableFilter<Product>(collection_table, client.getProductManager().getCollection(), resourceFactory);
-    }
-
-    public TableFilter<Product> getFilter() {
-        return tableFilter;
+        print_unique_owner_but.textProperty().bind(resourceFactory.getStringBinding("PrintUniqueOwnerButton"));
+        exit_but.textProperty().bind(resourceFactory.getStringBinding("ExitButton"));
+        execute_script_but.textProperty().bind(resourceFactory.getStringBinding("ExecuteScriptButton"));
+        update_id_but.textProperty().bind(resourceFactory.getStringBinding("UpdateIdButton"));
+        add_if_min_but.textProperty().bind(resourceFactory.getStringBinding("AddIfMinButton"));
+        remove_lower_but.textProperty().bind(resourceFactory.getStringBinding("RemoveLowerButton"));
+        remove_greater_but.textProperty().bind(resourceFactory.getStringBinding("RemoveGreaterButton"));
+//        resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, localeMap.get(language_box.getSelectionModel().getSelectedItem())));
+        name_column.textProperty().bind(resourceFactory.getStringBinding("NameColumn"));
+        coordinateX_column.textProperty().bind(resourceFactory.getStringBinding("CoordinateXColumn"));
+        coordinateY_column.textProperty().bind(resourceFactory.getStringBinding("CoordinateYColumn"));
+        price_column.textProperty().bind(resourceFactory.getStringBinding("PriceColumn"));
+        date_column.textProperty().bind(resourceFactory.getStringBinding("DateColumn"));
+        manufacture_cost_column.textProperty().bind(resourceFactory.getStringBinding("ManufactureCostColumn"));
+        unit_of_measure_column.textProperty().bind(resourceFactory.getStringBinding("UnitOfMeasureColumn"));
+        p_name_column.textProperty().bind(resourceFactory.getStringBinding("PersonNameColumn"));
+        p_birthday_column.textProperty().bind(resourceFactory.getStringBinding("PersonBirthdayColumn"));
+        p_weight_column.textProperty().bind(resourceFactory.getStringBinding("PersonWeightColumn"));
+        p_passport_id_column.textProperty().bind(resourceFactory.getStringBinding("PersonPassportIdColumn"));
+        user_login_column.textProperty().bind(resourceFactory.getStringBinding("UserLoginColumn"));
+        info_but.textProperty().bind(resourceFactory.getStringBinding("InfoButton"));
+        remove_by_id_but.textProperty().bind(resourceFactory.getStringBinding("RemoveByIdButton"));
+        clear_but.textProperty().bind(resourceFactory.getStringBinding("ClearButton"));
+        add_but.textProperty().bind(resourceFactory.getStringBinding("add_an_element"));
     }
 
     public TableColumn<Product, ?> getNameColumn() {
@@ -247,7 +262,7 @@ public class MainWindowController {
 
     public void refreshTable() {
         collection_table.refresh();
-        tableFilter.updateFilters();
+        //tableFilter.updateFilters();
     }
 
     public void setClient(Client client) {
@@ -282,12 +297,7 @@ public class MainWindowController {
 
     @FXML
     public void printUniqueOwnerOnAction() {
-        Response response = proccessAction(new CommandMsg("print_unique_owner"));
-        Stage stage = new Stage();
-        Label label = new Label(response.getMessage());
-        Scene scene = new Scene(label);
-        stage.setScene(scene);
-        stage.show();
+        proccessAction(new CommandMsg("print_unique_owner"));
     }
 
     @FXML
@@ -298,12 +308,15 @@ public class MainWindowController {
         try {
             msg = client.getCommandManager().runFile(selectedFile);
         } catch (FileException | InvalidDataException | ConnectionException | CollectionException | CommandException e) {
-            app.getOutputManager().error(e.getMessage());
+            //app.getOutputManager().error(e.getMessage());
+            app.getOutputter().error(e.getMessage());
         }
         if (msg != null) {
             System.out.println(msg.getMessage());
-            if (msg.getStatus() == Response.Status.FINE) app.getOutputManager().info(msg.getMessage());
-            else if (msg.getStatus() == Response.Status.ERROR) app.getOutputManager().error(msg.getMessage());
+            if (msg.getStatus() == Response.Status.FINE) app.getOutputter().info(msg.getMessage());
+                //if (msg.getStatus() == Response.Status.FINE) app.getOutputManager().info(msg.getMessage());
+                //else if (msg.getStatus() == Response.Status.ERROR) app.getOutputManager().error(msg.getMessage());
+            else if (msg.getStatus() == Response.Status.ERROR) app.getOutputter().error(msg.getMessage());
         }
     }
 
@@ -358,7 +371,6 @@ public class MainWindowController {
         ControllerLogin controllerLogin = loginWindowLoader.getController();
         controllerLogin.setApp(app);
         controllerLogin.setClient(client);
-        controllerLogin.initLangs(resourceFactory);
         primaryStage.setScene(signUpWindowScene);
         primaryStage.setResizable(false);
         primaryStage.show();
@@ -366,18 +378,11 @@ public class MainWindowController {
             print("Main window close!!!");
             client.close();
         });
-
-
     }
 
     @FXML
     public void infoOnAction() {
-        Stage stage = new Stage();
-        Response response = proccessAction(new CommandMsg("info"));
-        Label label = new Label(response.getMessage());
-        Scene scene = new Scene(label);
-        stage.setScene(scene);
-        stage.show();
+        proccessAction(new CommandMsg("info"));
     }
 
     @FXML
@@ -386,8 +391,11 @@ public class MainWindowController {
     }
 
     @FXML
-    public void addOnAction(ActionEvent actionEvent) {
-        proccessAction(new CommandMsg("add").setProduct(readProduct()));
+    public void addOnAction() {
+        if (flag) {
+            Product product = readProduct();
+            proccessAction(new CommandMsg("add").setProduct(product));
+        }
     }
 
     public Response proccessAction(Request request) {
@@ -402,7 +410,7 @@ public class MainWindowController {
         Pattern pattern = Pattern.compile("\\d");
         Matcher matcher = pattern.matcher(s);
         if (s.equals("")) {
-            throw new EmptyStringException("name_empty_exception");
+            throw new EmptyStringException("name empty exception");
         }
         if (matcher.find()) throw new StringException();
         return s;
@@ -413,9 +421,11 @@ public class MainWindowController {
         try {
             x = Long.parseLong(coordinateX_field.getText());
         } catch (NumberFormatException e) {
-            throw new InvalidNumberException("x_coordinate_format_exception");
+            throw new InvalidNumberException("x coordinate format exception");
         }
-        if (x > 658) throw new InvalidNumberException("x_must_be_less_than_658");
+        if (x > 658) {
+            throw new InvalidNumberException("x_must_be_less_than_658");
+        }
         return x;
     }
 
@@ -524,11 +534,17 @@ public class MainWindowController {
             UnitOfMeasure unitOfMeasure = readUnitOfMeasure();
             Person owner = readOwner();
             product = new Product(name, coords, price, manufactureCost, unitOfMeasure, owner);
-
+            flag = true;
         } catch (EmptyStringException | StringException | InvalidNumberException | InvalidEnumException e) {
+            //app.getOutputManager().error(e.getMessage());
+            app.getOutputter().error(e.getMessage());
             app.getOutputManager().error(e.getMessage());
+
         } catch (InvalidDataException e) {
+            //app.getOutputManager().error(e.getMessage());
+            app.getOutputter().error(e.getMessage());
             app.getOutputManager().error(e.getMessage());
+
         }
         return product;
     }
@@ -552,7 +568,6 @@ public class MainWindowController {
     public void refreshCanvas(ObservableList<Product> collection, Collection<Product> changes, CollectionOperation op) {
         for (Product product : changes) {
             if (!userColorMap.containsKey(product.getUserLogin())) {
-                //userColorMap.put(product.getUserLogin(),Color.color((int) (Math.random()*255),(int) (Math.random()*255),(int) (Math.random()*255)));
                 userColorMap.put(product.getUserLogin(), Color.color(random.nextDouble(), random.nextDouble(), random.nextDouble()));
             }
             if (op == CollectionOperation.ADD) {
@@ -572,15 +587,15 @@ public class MainWindowController {
         circleMap.remove(id);
     }
 
+
     public void addToCanvas(Product pr) {
         double size = Math.min(pr.getPrice() / 100, 15);
         if (size < 6) size = 6;
         Circle circle = new Circle(size, userColorMap.get(pr.getUserLogin()));
-        //circle.translateXProperty().bind(canvas_plane.widthProperty().divide(2).add(pr.getCoordinates().getX()));
-        //circle.translateYProperty().bind(canvas_plane.heightProperty().divide(2).subtract(pr.getCoordinates().getY()));
         circle.setCenterX(pr.getCoordinates().getX() * 1.6);
         circle.setCenterY(pr.getCoordinates().getY() * 2.1);
         circle.setStroke(Color.BLACK);
+
         circle.setOnMouseClicked(event -> {
             Group group = new Group();
             Button button = new Button("Редактировать");
@@ -595,47 +610,61 @@ public class MainWindowController {
             stage.setWidth(900);
             stage.setHeight(350);
             stage.show();
-            //shapeMap.put(circle, pr.getId());
-            //textMap.put(pr.getId(),"fd");
         });
         canvas_plane.getChildren().add(circle);
 
     }
 
-    /*public void fillMap(){
-        int k = 8;
-        for(Product pr: ProductObservableManager.products){
-            System.out.println(ProductObservableManager.products.size());
-            if(pr.getPrice()<100){
-                k=8;
+    private void filter_view() {
+        filtr_view.setOnMouseClicked(event -> {
+            Stage stage = new Stage();
+            FXMLLoader filterWindowLoader = new FXMLLoader();
+            filterWindowLoader.setLocation(getClass().getResource("../controllers/filter.fxml"));
+            try {
+                filterWindowLoader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            if(pr.getPrice()>100&&pr.getPrice()<300)
-            {
-                k=15;
-            }
-            if(pr.getPrice()>300)
-            {
-                k=20;
-            }
-            Circle circle = new Circle(pr.getCoordinates().getY(),(int)(pr.getCoordinates().getX()),k,Color.rgb((int) (Math.random()*255), (int) (Math.random()*255), (int) (Math.random()*255)));
-            circle.setStroke(Color.BLACK);
-            circle.setOnMouseClicked(event -> {
-                Group group = new Group();
-                Button button = new Button("Редактировать");
-                button.setLayoutX(370);
-                button.setLayoutY(250);
-                Stage stage = new Stage();
-                Label label = new Label(pr.toString());
-                group.getChildren().add(button);
-                group.getChildren().add(label);
-                Scene scene = new Scene(group);
-                stage.setScene(scene);
-                stage.setWidth(900);
-                stage.setHeight(350);
-                stage.show();
+            Parent filterRootNode = filterWindowLoader.getRoot();
+            Scene filterWindowScene = new Scene(filterRootNode);
+            FilterController filterController = filterWindowLoader.getController();
+            filterController.setCollection(client.getProductManager().getCollection());
+            filterController.setMainWindowController(this);
+            filterController.setApp(app);
+            stage.setScene(filterWindowScene);
+            stage.setResizable(false);
+            stage.show();
+            stage.setOnCloseRequest((e) -> {
+                collection_table.setItems(client.getProductManager().getCollection());
             });
-            canvas_plane.getChildren().add(circle);
-        }
-    }*/
+        });
+    }
+
+    public ObservableResourceFactory getResourceFactory() {
+        return resourceFactory;
+    }
+
+    private void initCanvas() {
+        ZoomOperator zoomOperator = new ZoomOperator();
+        canvas_plane.setOnScroll(new EventHandler<ScrollEvent>() {
+            @Override
+            public void handle(ScrollEvent event) {
+                double zoomFactor = 1.5;
+                if (event.getDeltaY() <= 0) {
+                    zoomFactor = 1 / zoomFactor;
+                }
+
+                double x = 20;
+                double y = 20;
+                if ((event.getDeltaY() <= 0 && (zoomOperator.getBounds().getHeight() <= 100 || zoomOperator.getBounds().getWidth() <= 100)))
+                    return;
+                zoomOperator.zoom(canvas_plane, zoomFactor, x, y);
+            }
+        });
+        //zoomOperator.draggable(canvas_plane);
+        canvas_plane.setMinHeight(20);
+        canvas_plane.setMinWidth(20);
+    }
 }
+
 

@@ -35,20 +35,21 @@ public class ControllerSignUp {
     void initialize() {
         signUpInButton.setOnAction(event -> {
             signUpInButton.getScene().getWindow().hide();
-            try {
+            //try {
                 String loginText = loginField.getText().trim();
                 String passwordText = passwordField.getText().trim();
                 if (!loginText.equals("") && !passwordText.equals("")) {
                     client.processAuthentication(loginText, passwordText, true);
                 } else {
-                    System.out.println("Введите логин и пароль");
+                    app.getOutputter().error("введите логин и пароль");
                 }
                 if (client.isAuthSuccess()) {
                     app.setMainWindow();
                     client.start();
                 }
-            } catch (NullPointerException e) {
-                System.out.println("этот пользователь уже зарегистрирован");
+           // } catch (NullPointerException e) {
+            else {
+                app.getOutputter().error("этот пользователь уже зарегистрирован");
             }
 
         });
@@ -62,9 +63,6 @@ public class ControllerSignUp {
         this.client = client;
     }
 
-    public void initLangs(ObservableResourceFactory r) {
-        resourceFactory = r;
-    }
 
 }
 

@@ -205,3 +205,35 @@
 [00:54:35.006 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 3
 [02:24:32.586 ERROR]  qqq  register user qqq already exist
 [02:24:38.706 ERROR]  qqqqq  register user qqqqq already exist
+[04:24:34.658 ERROR]  qq  remove_by_id no such id 309
+[19:26:30.627 ERROR]  qq  login login or password is incorrect
+[19:46:45.593 ERROR]  qq  remove_by_id you don't have permission, element was created by hah
+[19:51:28.061 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 1000
+[19:51:34.009 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 1000
+[19:51:35.840 ERROR]  qq  update you don't have permission, element was created by hah
+[19:58:34.158 ERROR] wrong command
+[19:58:34.161 ERROR] wrong command
+[19:59:17.645 ERROR] wrong command
+[19:59:17.647 ERROR] wrong command
+[19:59:25.039 ERROR] wrong command
+[19:59:25.041 ERROR] wrong command
+[20:00:03.816 ERROR] wrong command
+[20:00:03.819 ERROR] wrong command
+[20:00:09.699 ERROR] wrong command
+[20:00:09.702 ERROR] wrong command
+[20:00:49.342 ERROR] wrong command
+[23:15:59.703 ERROR]  ert  remove_by_id you don't have permission, element was created by hah
+[00:27:21.582 ERROR]  qq  remove_by_id you don't have permission, element was created by Jack
+[22:43:04.954 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 1000
+[22:49:49.026 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 1000
+[22:49:52.955 ERROR]  qq  add_if_min unable to add, min price is 1 current price is 1000
+[01:55:45.671 ERROR]  йй  login login or password is incorrect
+[01:56:05.644 ERROR]  qq  login login or password is incorrect
+[01:56:19.993 ERROR]  qqqqqqq  login login or password is incorrect
+[01:57:43.982 ERROR]  qq  register user qq already exist
+[01:57:55.376 ERROR]  qq  register user qq already exist
+[01:58:21.692 ERROR]  qq  register user qq already exist
+[01:58:55.848 ERROR]  qqq  register user qqq already exist
+[01:59:17.024 ERROR]  qq  register user qq already exist
+[02:00:30.353 ERROR]  qq  register user qq already exist
+[02:04:19.343 ERROR]  qq  register user qq already exist
