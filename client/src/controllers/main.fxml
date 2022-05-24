@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1300.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainWindowController">
+    <tabs>
+        <Tab fx:id="tabMain" text="%main_tab">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2E3348;">
+                    <children>
+                        <AnchorPane layoutY="66.0" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #fafafa;">
+                            <children>
+                                <TableView fx:id="collection_table" layoutX="13.0" layoutY="9.0" prefHeight="317.0" prefWidth="1270.0">
+                                    <columns>
+                                        <TableColumn fx:id="id_column" prefWidth="54.999969482421875" text="Id" />
+                                        <TableColumn fx:id="name_column" prefWidth="114.0" text="name" />
+                                        <TableColumn fx:id="coordinateX_column" prefWidth="48.000030517578125" text="x" />
+                                        <TableColumn fx:id="coordinateY_column" prefWidth="46.0" text="y" />
+                                        <TableColumn fx:id="date_column" prefWidth="120.0" text="date" />
+                                        <TableColumn fx:id="price_column" prefWidth="74.0" text="price" />
+                                        <TableColumn fx:id="manufacture_cost_column" prefWidth="135.0" text="manufacture_cost" />
+                                        <TableColumn fx:id="unit_of_measure_column" prefWidth="150.0" text="unit_of_measure" />
+                                        <TableColumn fx:id="p_name_column" prefWidth="101.0" text="p_name" />
+                                        <TableColumn fx:id="p_birthday_column" prefWidth="115.0" text="p_birthday" />
+                                        <TableColumn fx:id="p_weight_column" prefWidth="89.0" text="p_weight" />
+                                        <TableColumn fx:id="p_passport_id_column" prefWidth="109.0" text="p_passport_id" />
+                                        <TableColumn fx:id="user_login_column" prefWidth="112.0" text="user_login" />
+                                    </columns>
+                                </TableView>
+                                <Pane layoutX="14.0" layoutY="337.0" prefHeight="396.0" prefWidth="1270.0" style="-fx-background-color: #2E3348; -fx-border-color: #fafafa;">
+                                    <children>
+                                        <Label fx:id="add_an_element_text" layoutX="104.0" text="%add_an_element" textFill="#fafafa">
+                                            <font>
+                                                <Font name="System Bold" size="23.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="129.0" layoutY="41.0" text="name:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="79.0" layoutY="76.0" text="coordinate X:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="81.0" layoutY="111.0" text="coordinate Y:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="136.0" layoutY="146.0" text="price:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="46.0" layoutY="181.0" text="manufacture_cost:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="56.0" layoutY="216.0" text="unit_of_measure:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="76.0" layoutY="251.0" text="person_name:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="57.0" layoutY="286.0" text="person_birthday:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="68.0" layoutY="321.0" text="person_weight:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="35.0" layoutY="356.0" text="person_passport_id:" textFill="WHITE">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="name_field" layoutX="203.0" layoutY="38.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="coordinateX_field" layoutX="203.0" layoutY="73.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="coordinateY_field" layoutX="203.0" layoutY="108.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="price_field" layoutX="203.0" layoutY="143.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="manufacture_cost_field" layoutX="203.0" layoutY="178.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="unit_of_measure_field" layoutX="203.0" layoutY="213.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="person_name_field" layoutX="203.0" layoutY="248.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="person_birthday_field" layoutX="203.0" layoutY="283.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="person_weight_field" layoutX="203.0" layoutY="318.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <TextField fx:id="person_passport_id_field" layoutX="203.0" layoutY="353.0" prefHeight="31.0" prefWidth="206.0" />
+                                        <Label fx:id="commands_text" layoutX="805.0" layoutY="11.0" text="%commands" textFill="#fafafa">
+                                            <font>
+                                                <Font name="System Bold" size="31.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="print_unique_owner_but" layoutX="769.0" layoutY="84.0" mnemonicParsing="false" onAction="#printUniqueOwnerOnAction" prefHeight="47.0" prefWidth="216.0" text="print unique owner">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="execute_script_but" layoutX="1028.0" layoutY="84.0" mnemonicParsing="false" onAction="#executeScriptOnAction" prefHeight="47.0" prefWidth="216.0" text="execute script">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="update_id_but" layoutX="471.0" layoutY="187.0" mnemonicParsing="false" onAction="#updateIdOnAction" prefHeight="59.0" prefWidth="258.0" text="update id">
+                                            <font>
+                                                <Font name="System Bold" size="24.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="add_if_min_but" layoutX="471.0" layoutY="285.0" mnemonicParsing="false" onAction="#addIfMinOnAction" prefHeight="59.0" prefWidth="258.0" text="add if min">
+                                            <font>
+                                                <Font name="System Bold" size="24.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="remove_lower_but" layoutX="769.0" layoutY="157.0" mnemonicParsing="false" onAction="#removeLowerOnAction" prefHeight="47.0" prefWidth="216.0" text="remove lower">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="remove_greater_but" layoutX="769.0" layoutY="227.0" mnemonicParsing="false" onAction="#removeGreaterOnAction" prefHeight="47.0" prefWidth="216.0" text="remove greater">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="exit_but" layoutX="769.0" layoutY="297.0" mnemonicParsing="false" onAction="#exitOnAction" prefHeight="47.0" prefWidth="216.0" text="exit">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="info_but" layoutX="1028.0" layoutY="155.0" mnemonicParsing="false" onAction="#infoOnAction" prefHeight="47.0" prefWidth="216.0" text="info">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="remove_by_id_but" layoutX="1028.0" layoutY="227.0" mnemonicParsing="false" onAction="#removeByIdOnAction" prefHeight="47.0" prefWidth="216.0" text="remove by id">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="clear_but" layoutX="1028.0" layoutY="298.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="47.0" prefWidth="216.0" text="clear">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="add_but" layoutX="471.0" layoutY="86.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="59.0" prefWidth="258.0" text="add">
+                                            <font>
+                                                <Font name="System Bold" size="24.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="1238.0" layoutY="8.0">
+                            <image>
+                                <Image url="@picture/user.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="loginuser_field" alignment="CENTER_RIGHT" layoutX="888.0" layoutY="13.0" prefHeight="38.0" prefWidth="330.0" text="userlogin" textAlignment="RIGHT" textFill="#fafafa">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="language_box" layoutX="21.0" layoutY="15.0" prefHeight="31.0" prefWidth="155.0" promptText="%language" />
+                        <ImageView fx:id="filtr_view" fitHeight="38.0" fitWidth="36.0" layoutX="196.0" layoutY="14.0">
+                            <image>
+                                <Image url="@picture/filtr.png" />
+                            </image>
+                        </ImageView>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tabMap" text="%map_tab">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2E3348;">
+                    <children>
+                        <Pane layoutY="66.0" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #fafafa;">
+                            <children>
+                                <Pane layoutX="41.0" layoutY="42.0" prefHeight="576.0" prefWidth="1219.0" style="-fx-background-color: #2E3348;">
+                                    <children>
+                                        <Pane layoutX="22.0" layoutY="26.0" prefHeight="525.0" prefWidth="1173.0" style="-fx-background-color: #fafafa;">
+                                            <children>
+                                                <Pane fx:id="canvas_plane" layoutX="58.0" layoutY="42.0" prefHeight="446.0" prefWidth="1052.0" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                        <Label fx:id="collection_map_text" layoutX="524.0" layoutY="9.0" text="%collection_map" textFill="#fafafa">
+                            <font>
+                                <Font name="System Bold" size="30.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="1238.0" layoutY="8.0">
+                            <image>
+                                <Image url="@picture/user.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="loginuser_field1" alignment="CENTER_RIGHT" layoutX="888.0" layoutY="13.0" prefHeight="38.0" prefWidth="330.0" text="userlogin" textAlignment="RIGHT" textFill="#fafafa">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="831.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FilterController">
+    <children>
+        <TextField fx:id="filter_field" layoutX="40.0" layoutY="104.0" prefHeight="55.0" prefWidth="430.0" promptText="Значение поиска" />
+        <ComboBox fx:id="box_column_filter" layoutX="522.0" layoutY="110.0" prefHeight="44.0" prefWidth="270.0" promptText="Колонка" />
+        <Button fx:id="filter_button" layoutX="312.0" layoutY="213.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="210.0" text="Применить">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Button>
+        <Label fx:id="collection_filter_text" alignment="CENTER" contentDisplay="TOP" layoutX="55.0" layoutY="21.0" prefHeight="44.0" prefWidth="725.0" text="Фильтрация коллекции" textAlignment="CENTER" textFill="#fafafa">
+            <font>
+                <Font name="System Bold" size="29.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
