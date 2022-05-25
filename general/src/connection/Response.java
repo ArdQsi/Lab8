@@ -13,7 +13,19 @@ public interface Response extends Serializable {
 
     Status getStatus();
 
-    enum Status {
+    void setStatus(AnswerMsg status);
+
+    void setStatuss(Status status);
+
+    AnswerMsg setCollectionOperation(CollectionOperation op);
+
+    void setCollectionOperations(CollectionOperation op);
+
+    CollectionOperation getCollectionOperation();
+
+    //void setStatuss(Status status);
+
+    enum Status  {
         ERROR,
         FINE,
         EXIT,
@@ -22,7 +34,6 @@ public interface Response extends Serializable {
         COLLECTION
     }
 
-    CollectionOperation getCollectionOperation();
 
     Collection<Product> getCollection();
 

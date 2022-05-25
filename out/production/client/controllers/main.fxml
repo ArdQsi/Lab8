@@ -181,6 +181,11 @@
                             </font>
                         </Label>
                         <ComboBox fx:id="language_box" layoutX="21.0" layoutY="15.0" prefHeight="31.0" prefWidth="155.0" promptText="%language" />
+                        <ImageView fx:id="help_but" fitHeight="43.0" fitWidth="43.0" layoutX="247.0" layoutY="11.0">
+                            <image>
+                                <Image url="@picture/help.png" />
+                            </image>
+                        </ImageView>
                         <ImageView fx:id="filtr_view" fitHeight="38.0" fitWidth="36.0" layoutX="196.0" layoutY="14.0">
                             <image>
                                 <Image url="@picture/filtr.png" />

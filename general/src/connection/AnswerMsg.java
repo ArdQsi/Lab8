@@ -3,7 +3,6 @@ package connection;
 import data.Product;
 
 import java.util.Collection;
-import java.util.List;
 
 public class AnswerMsg implements Response {
     private String msg;
@@ -16,6 +15,9 @@ public class AnswerMsg implements Response {
         msg = "";
         status = Status.FINE;
         collectionOperation = CollectionOperation.NONE;
+    }
+    public void setStatuss(Status status) {
+        this.status = status;
     }
 
     public AnswerMsg clear() {
@@ -44,9 +46,14 @@ public class AnswerMsg implements Response {
         return this;
     }
 
+    public void setCollectionOperations(CollectionOperation op) {
+
+    }
+
     public CollectionOperation getCollectionOperation() {
         return collectionOperation;
     }
+
 
     public AnswerMsg setCollection(Collection<Product> c) {
         collection = c;
@@ -71,6 +78,15 @@ public class AnswerMsg implements Response {
     }
 
     public Status getStatus() {
+        return status;
+    }
+
+
+    public void setStatus(AnswerMsg status) {
+
+    }
+
+    public Status getStatuss() {
         return status;
     }
 

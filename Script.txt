@@ -1,13 +1,13 @@
+info
 add
-a
-150
-100
-1000
-1
-KILOGRAMS
-r
-11/11/1111
+cola
+32
+56
+3224
 12
-21312123213213
+KILOGRAMS
+new
+11/11/2021
+32
+4242423324243
 execute_script C:\Users\Roman\Lab8\Script.txt
-

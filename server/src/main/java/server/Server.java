@@ -39,6 +39,7 @@ public class Server extends Thread {
     private volatile boolean running;
     private Selector selector;
     private User hostUser;
+    final int INCREMENT = 4096;
 
     public Server(int port, Properties properties) throws ConnectionException, DatabaseException {
         init(port, properties);
@@ -86,29 +87,45 @@ public class Server extends Thread {
     }
 
     public void receive() throws ConnectionException, InvalidDataException {
-        ByteBuffer buffer = ByteBuffer.allocate(4096);
+        ByteBuffer buffer = ByteBuffer.allocate(INCREMENT);
         Request request = null;
         InetSocketAddress clientAddress = null;
         try {
             clientAddress = (InetSocketAddress) channel.receive(buffer);
             if (clientAddress == null) return;
-            Log.logger.info("received request from " + clientAddress);
+            Log.logger.info("received request from " + clientAddress.toString());
         } catch (ClosedChannelException e) {
             throw new ClosedConnectionException();
         } catch (IOException e) {
             throw new ConnectionException("something went wrong during receiving request");
         }
         try {
+            StringBuilder stringBuilder = new StringBuilder();
             ObjectInputStream objectInputStream = new ObjectInputStream(new ByteArrayInputStream(buffer.array()));
-            request = (Request) objectInputStream.readObject();
-        } catch (ClassNotFoundException | ClassCastException | IOException e) {
+            RequestWrapper req = (RequestWrapper) objectInputStream.readObject();
+            if (req.getIsBoolean()) {
+                    request = req.getRequest();
+                    request.setBroadcastAddress(req.getBroadcastAddress());
+                    request.setStatus(req.getStatus());
+            } else {
+                do {
+                    stringBuilder.append(req.getRequest());
+                    channel.receive(buffer);
+                    req = (RequestWrapper) objectInputStream.readObject();
+                    request.setStatus(req.getStatus());
+                    request.setBroadcastAddress(req.getBroadcastAddress());
+                } while (!req.getIsBoolean());
+                request = new RequestWrapper(stringBuilder.toString());
+            }
+            if (request != null && request.getBroadcastAddress() != null) {
+                activeClients.add(request.getBroadcastAddress());
+                Log.logger.trace("added broadcast address " + request.getBroadcastAddress().toString());
+            }
+            requestQueue.offer(new AbstractMap.SimpleEntry<>(clientAddress, request));
+
+        } catch (ClassNotFoundException | IOException e) {
             throw new InvalidReceivedDataException();
         }
-        if (request != null && request.getBroadcastAddress() != null) {
-            activeClients.add(request.getBroadcastAddress());
-            Log.logger.trace("added broadcast address " + request.getBroadcastAddress().toString());
-        }
-        requestQueue.offer(new AbstractMap.SimpleEntry<>(clientAddress, request));
     }
 
     private void broadcast(Response response, InetSocketAddress currentAddress) {
@@ -128,12 +145,43 @@ public class Server extends Thread {
     public void send(InetSocketAddress clientAddress, Response response) throws ConnectionException {
         if (clientAddress == null) throw new InvalidAddressException("not found client address");
         try {
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(4096);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
-            objectOutputStream.writeObject(response);
-            this.channel.send(ByteBuffer.wrap(byteArrayOutputStream.toByteArray()), clientAddress);
-            Log.logger.info("sent response to " + clientAddress);
-            byteArrayOutputStream.close();
+            byte[] data = response.toString().getBytes();
+            int position = 0;
+            int limit = INCREMENT;
+            System.out.println("f");
+
+
+            for (int capacity = 0; data.length >= capacity; limit += 4096) {
+                byte[] window = Arrays.copyOfRange(data, position, limit);
+                capacity += limit - position;
+                ResponseWrapper responseWrapper;
+                if (capacity >= data.length) {
+                    responseWrapper = new ResponseWrapper(response, true);
+                    responseWrapper.setStatus(response.getStatus());
+                    System.out.println(response.getStatus());
+                    System.out.println(response.getStatus());
+                    System.out.println(response.getStatus());
+                    System.out.println(response.getCollectionOperation());
+                    responseWrapper.setCollectionOperations(response.getCollectionOperation());
+                    System.out.println(responseWrapper.getStatus());
+                    System.out.println(response.getStatus());
+                    System.out.println(responseWrapper.getCollectionOperations());
+                } else {
+                    responseWrapper = new ResponseWrapper(window, false);
+                    System.out.println("ytn");
+                }
+                System.out.println("h");
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(4096);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
+                objectOutputStream.writeObject(responseWrapper);
+                this.channel.send(ByteBuffer.wrap(byteArrayOutputStream.toByteArray()), clientAddress);
+                Log.logger.info("sent response to " + clientAddress);
+                byteArrayOutputStream.close();
+                position = limit;
+                if (data.length == 0) break;
+                System.out.println("отправил");
+            }
+
         } catch (IOException e) {
             throw new ConnectionException("something went wrong during sending response");
         }
@@ -147,6 +195,7 @@ public class Server extends Thread {
                 activeClients.remove(client);
                 Log.logger.info("client " + address.toString() + " shut down");
                 return;
+
             }
             if (request.getStatus() == Request.Status.HELLO) {
                 answerMsg = new AnswerMsg().setStatus(Response.Status.COLLECTION).setCollectionOperation(CollectionOperation.ADD).setCollection(collectionManager.getCollection());
@@ -176,7 +225,6 @@ public class Server extends Thread {
             answerMsg.error(e.getMessage());
             Log.logger.error(e.getMessage());
         }
-        //System.out.println(commandManager.getCommand(request).getOperation().toString());
         if (answerMsg.getCollectionOperation() != CollectionOperation.NONE && answerMsg.getStatus() == Response.Status.FINE) {
             answerMsg.setStatus(Response.Status.BROADCAST);
             broadcast(answerMsg, request.getBroadcastAddress());

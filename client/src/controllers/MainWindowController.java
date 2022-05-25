@@ -205,14 +205,12 @@ public class MainWindowController {
         this.resourceFactory = resourceFactory;
         for (String localeName : localeMap.keySet()) {
             if (localeMap.get(localeName).equals(resourceFactory.getResources().getLocale()))
-                language_box.getSelectionModel().select(localeName);
+               language_box.getSelectionModel().select(localeName);
         }
-        if (language_box.getSelectionModel().getSelectedItem().isEmpty()) {
-            if (localeMap.containsValue(Locale.getDefault()))
-                language_box.getSelectionModel().select(MapUtils.getKeyByValue(localeMap, Locale.getDefault()));
-            else language_box.getSelectionModel().selectFirst();
-        }
-
+        //language_box.setValue("English");
+//        if (language_box.getSelectionModel().getSelectedItem().isEmpty()) {
+//            language_box.getSelectionModel().select("English");
+//        }
         language_box.setOnAction((event) -> {
             Locale locale = localeMap.get(language_box.getValue());
             resourceFactory.setResources(ResourceBundle.getBundle
@@ -220,10 +218,10 @@ public class MainWindowController {
             //DateConverter.setPattern(resourceFactory.getRawString("DateFormat"));
             collection_table.refresh();
         });
-        bindGuiLanguage();
     }
 
     private void bindGuiLanguage() {
+        //resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, localeMap.get(language_box.getSelectionModel().getSelectedItem())));
         commands_text.textProperty().bind(resourceFactory.getStringBinding("commands"));
         add_an_element_text.textProperty().bind(resourceFactory.getStringBinding("add_an_element"));
         tabMain.textProperty().bind(resourceFactory.getStringBinding("main_tab"));
@@ -237,7 +235,6 @@ public class MainWindowController {
         add_if_min_but.textProperty().bind(resourceFactory.getStringBinding("AddIfMinButton"));
         remove_lower_but.textProperty().bind(resourceFactory.getStringBinding("RemoveLowerButton"));
         remove_greater_but.textProperty().bind(resourceFactory.getStringBinding("RemoveGreaterButton"));
-//        resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, localeMap.get(language_box.getSelectionModel().getSelectedItem())));
         name_column.textProperty().bind(resourceFactory.getStringBinding("NameColumn"));
         coordinateX_column.textProperty().bind(resourceFactory.getStringBinding("CoordinateXColumn"));
         coordinateY_column.textProperty().bind(resourceFactory.getStringBinding("CoordinateYColumn"));
@@ -253,7 +250,7 @@ public class MainWindowController {
         info_but.textProperty().bind(resourceFactory.getStringBinding("InfoButton"));
         remove_by_id_but.textProperty().bind(resourceFactory.getStringBinding("RemoveByIdButton"));
         clear_but.textProperty().bind(resourceFactory.getStringBinding("ClearButton"));
-        add_but.textProperty().bind(resourceFactory.getStringBinding("add_an_element"));
+        add_but.textProperty().bind(resourceFactory.getStringBinding("addButton"));
     }
 
     public TableColumn<Product, ?> getNameColumn() {

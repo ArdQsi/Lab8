@@ -7,12 +7,13 @@ import connection.*;
 
 import exceptions.*;
 import io.OutputManager;
-import io.OutputterUI;
 import tools.ObservableResourceFactory;
 
 import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
+import java.nio.channels.ClosedChannelException;
+import java.util.Arrays;
 
 
 import static io.ConsoleOutputter.print;
@@ -91,35 +92,67 @@ public class Client extends Thread implements Closeable {
 
     public void send(Request request) throws ConnectionException {
         try {
-            request.setBroadcastAddress(host);
-            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(4096);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
-            objectOutputStream.writeObject(request);
-            DatagramPacket requestPacket = new DatagramPacket(byteArrayOutputStream.toByteArray(), byteArrayOutputStream.size(), address);
-            socket.send(requestPacket);
-            byteArrayOutputStream.close();
+            byte[] data = request.toString().getBytes();
+            int position = 0;
+            int limit = INCREMENT;
+
+            for (int capacity = 0; data.length > capacity; limit += 4096) {
+                byte[] window = Arrays.copyOfRange(data, position, limit);
+                capacity += limit - position;
+                RequestWrapper requestWrapper;
+
+                if (capacity >= data.length) {
+                    requestWrapper = new RequestWrapper(request, true);
+                    requestWrapper.setBroadcastAddress(host);
+                    requestWrapper.setStatus(request.getStatus());
+                } else {
+                    requestWrapper = new RequestWrapper(window, false);
+                    requestWrapper.setBroadcastAddress(host);
+                    requestWrapper.setStatus(request.getStatus());
+                }
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(INCREMENT);
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
+                objectOutputStream.writeObject(requestWrapper);
+                DatagramPacket requestPacket = new DatagramPacket(byteArrayOutputStream.toByteArray(), byteArrayOutputStream.size(), address);
+                socket.send(requestPacket);
+                byteArrayOutputStream.close();
+                position = limit;
+            }
         } catch (IOException var10) {
             throw new ConnectionException("something went wrong while sending request");
         }
     }
 
     public Response receive() throws ConnectionException, InvalidDataException {
-        try{
-            socket.setSoTimeout(500);
-        } catch (SocketException e) {
-
-        }
-
-        ByteBuffer bytes = ByteBuffer.allocate(4096);
+        ByteBuffer bytes = ByteBuffer.allocate(INCREMENT);
         DatagramPacket receivePacket = new DatagramPacket(bytes.array(), bytes.array().length);
+        Response response;
         try {
             socket.receive(receivePacket);
         } catch (IOException e) {
             throw new ConnectionException("something went wrong while receiving response");
         }
         try {
+            StringBuilder stringBuilder = new StringBuilder();
             ObjectInputStream objectInputStream = new ObjectInputStream(new ByteArrayInputStream(bytes.array()));
-            return (Response) objectInputStream.readObject();
+            ResponseWrapper responseWrapper = (ResponseWrapper) objectInputStream.readObject();
+            if (responseWrapper.getIsBoolean()) {
+                response = responseWrapper.getResponse();
+                response.setStatuss(responseWrapper.getStatus());
+                response.setCollectionOperations(responseWrapper.getCollectionOperations());
+                return response;
+            } else {
+                do {
+                    stringBuilder.append(responseWrapper.getResponse());
+                    socket.receive(receivePacket);
+                    responseWrapper = (ResponseWrapper) objectInputStream.readObject();
+                } while(!responseWrapper.getIsBoolean());
+                stringBuilder.append(responseWrapper.getResponse());
+                response = new ResponseWrapper(stringBuilder.toString());
+                response.setStatuss(responseWrapper.getStatus());
+                response.setCollectionOperations(responseWrapper.getCollectionOperations());
+                return response;
+            }
         } catch (ClassCastException | ClassNotFoundException var8) {
             throw new InvalidReceivedDataException();
         } catch (IOException var9) {
@@ -127,26 +160,45 @@ public class Client extends Thread implements Closeable {
         }
     }
 
-    private Response receiveBroadcast() throws ConnectionException, InvalidDataException{
-
-        ByteBuffer bytes = ByteBuffer.allocate(4096);
+    private Response receiveBroadcast() throws ConnectionException, InvalidDataException {
+        ByteBuffer bytes = ByteBuffer.allocate(INCREMENT);
         DatagramPacket receivePacket = new DatagramPacket(bytes.array(), bytes.array().length);
+        Response response;
         try {
             broadcastSocket.receive(receivePacket);
         } catch (IOException e) {
             throw new ConnectionException("something went wrong while receiving response");
         }
-        connected=true;
         try {
+            StringBuilder stringBuilder = new StringBuilder();
             ObjectInputStream objectInputStream = new ObjectInputStream(new ByteArrayInputStream(bytes.array()));
-            return (Response) objectInputStream.readObject();
-        } catch (ClassNotFoundException | ClassCastException | IOException e) {
+            ResponseWrapper responseWrapper = (ResponseWrapper) objectInputStream.readObject();
+            if (responseWrapper.getIsBoolean()) {
+                response = responseWrapper.getResponse();
+                response.setStatuss(responseWrapper.getStatus());
+                response.setCollectionOperations(responseWrapper.getCollectionOperations());
+                return response;
+            } else {
+                do {
+                    stringBuilder.append(responseWrapper.getResponse());
+                    broadcastSocket.receive(receivePacket);
+                    responseWrapper = (ResponseWrapper) objectInputStream.readObject();
+                } while(!responseWrapper.getIsBoolean());
+                stringBuilder.append(responseWrapper.getResponse());
+                response = new ResponseWrapper(stringBuilder.toString());
+                response.setStatuss(responseWrapper.getStatus());
+                response.setCollectionOperations(responseWrapper.getCollectionOperations());
+                return response;
+            }
+        } catch (ClassCastException | ClassNotFoundException var8) {
             throw new InvalidReceivedDataException();
+        } catch (IOException var9) {
+            throw new ClosedConnectionException();
         }
     }
 
     public void setAuthSuccess(boolean f) {
-        authSuccess =f;
+        authSuccess = f;
     }
 
     @Override
@@ -156,11 +208,11 @@ public class Client extends Thread implements Closeable {
         try {
             send(hello);
             Response response = receive();
-            if (response.getStatus()==Response.Status.COLLECTION && response.getCollection()!=null &&
-            response.getCollectionOperation() == CollectionOperation.ADD) {
+            if (response.getStatus() == Response.Status.COLLECTION && response.getCollection() != null &&
+                    response.getCollectionOperation() == CollectionOperation.ADD) {
                 collectionManager.applyChanges(response);
             }
-        } catch (ConnectionException|InvalidDataException e) {
+        } catch (ConnectionException | InvalidDataException e) {
             printErr("cannot load collection from server");
         }
         while (running) {
@@ -256,7 +308,6 @@ public class Client extends Thread implements Closeable {
     public ProductObservableManager getProductManager() {
         return collectionManager;
     }
-
 
 
     public ClientCommandManager getCommandManager() {

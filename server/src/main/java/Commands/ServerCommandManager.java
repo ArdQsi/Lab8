@@ -35,7 +35,6 @@ public class ServerCommandManager extends CommandManager {
         addCommand(new ClearCommand(collectionManager));
         addCommand(new AddIfMinCommand(collectionManager));
         addCommand(new PrintUniqueOwnerCommand(collectionManager));
-        addCommand(new FilterLessThanManufactureCostCommand(collectionManager));
         addCommand(new RemoveLowerCommand(collectionManager));
         addCommand(new RemoveGreaterCommand(collectionManager));
         addCommand(new ExecuteScriptCommand(this));
@@ -53,7 +52,6 @@ public class ServerCommandManager extends CommandManager {
         boolean isGeneratedByServer = (msg.getStatus() != Request.Status.RECEIVED_BY_SERVER);
         try {
             Command cmd = getCommand(msg);
-            // разрешить выполнять специальные команды без авторизации
             if (cmd.getType() != CommandType.AUTH && cmd.getType() != CommandType.SPECIAL) {
                 if (isGeneratedByServer) {
                     user = server.getHostUser();

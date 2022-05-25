@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.net.InetSocketAddress;
 
 
-public class CommandMsg implements Request {
+public class CommandMsg implements Request,Serializable {
     private String commandName;
     private String commandStringArgument;
     private Product product;

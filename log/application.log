@@ -30647,3 +30647,2495 @@ userLogin : "qq"
 [02:04:19.342 TRACE] added broadcast address localhost/127.0.0.1:49359
 [02:04:19.343 ERROR]  qq  register user qq already exist
 [02:04:19.344 INFO ] sent response to /127.0.0.1:49358
+[12:09:06.643 INFO ] received request from /127.0.0.1:52301
+[12:09:06.652 TRACE] added broadcast address localhost/127.0.0.1:52302
+[12:09:06.653 INFO ] sent response to /127.0.0.1:52301
+[12:09:10.599 INFO ] received request from /127.0.0.1:52301
+[12:09:10.601 TRACE] added broadcast address localhost/127.0.0.1:52302
+[12:09:10.605 INFO ]  qq  loginlogin successful
+[12:09:10.606 INFO ] sent response to /127.0.0.1:52301
+[12:09:11.091 INFO ] received request from /127.0.0.1:52301
+[12:09:11.093 TRACE] added broadcast address localhost/127.0.0.1:52302
+[12:09:11.095 INFO ] sent response to /127.0.0.1:52301
+[12:09:13.955 INFO ] received request from /127.0.0.1:52301
+[12:09:13.957 TRACE] added broadcast address localhost/127.0.0.1:52302
+[12:09:13.977 INFO ]  qq  add
+ Added element: 
+id : "438",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[12:09:13.978 TRACE] broadcasting changes
+[12:09:13.981 INFO ] sent response to /127.0.0.1:52301
+[12:09:13.981 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:13.327 INFO ] received request from /127.0.0.1:51625
+[12:36:13.328 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:13.328 INFO ] sent response to /127.0.0.1:51625
+[12:36:15.963 INFO ] received request from /127.0.0.1:51625
+[12:36:15.964 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:15.965 INFO ]  qq  loginlogin successful
+[12:36:15.966 INFO ] sent response to /127.0.0.1:51625
+[12:36:16.430 INFO ] received request from /127.0.0.1:51625
+[12:36:16.431 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:16.433 INFO ] sent response to /127.0.0.1:51625
+[12:36:17.852 INFO ] received request from /127.0.0.1:51625
+[12:36:17.854 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:17.856 INFO ]  qq  add
+ Added element: 
+id : "439",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[12:36:17.856 TRACE] broadcasting changes
+[12:36:17.858 INFO ] sent response to /127.0.0.1:51625
+[12:36:17.858 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:17.858 INFO ] sent response to localhost/127.0.0.1:52302
+[12:36:19.770 INFO ] received request from /127.0.0.1:51625
+[12:36:19.772 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:19.782 INFO ]  qq  add
+ Added element: 
+id : "440",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[12:36:19.782 TRACE] broadcasting changes
+[12:36:19.784 INFO ] sent response to localhost/127.0.0.1:52302
+[12:36:19.784 INFO ] sent response to /127.0.0.1:51625
+[12:36:19.784 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:21.540 INFO ] received request from /127.0.0.1:51625
+[12:36:21.541 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:21.558 INFO ]  qq  remove_lower Elements with id lower than 440 was successfully deleted by qq
+[12:36:21.558 TRACE] broadcasting changes
+[12:36:21.561 INFO ] sent response to localhost/127.0.0.1:52302
+[12:36:21.562 INFO ] sent response to /127.0.0.1:51625
+[12:36:21.562 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:23.626 INFO ] received request from /127.0.0.1:51625
+[12:36:23.628 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:23.640 INFO ]  qq  add
+ Added element: 
+id : "441",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[12:36:23.640 TRACE] broadcasting changes
+[12:36:23.642 INFO ] sent response to localhost/127.0.0.1:52302
+[12:36:23.643 INFO ] sent response to /127.0.0.1:51625
+[12:36:23.643 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:24.022 INFO ] received request from /127.0.0.1:51625
+[12:36:24.023 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:24.034 INFO ]  qq  add
+ Added element: 
+id : "442",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[12:36:24.034 TRACE] broadcasting changes
+[12:36:24.036 INFO ] sent response to /127.0.0.1:51625
+[12:36:24.036 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:24.036 INFO ] sent response to localhost/127.0.0.1:52302
+[12:36:25.991 INFO ] received request from /127.0.0.1:51625
+[12:36:25.991 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:25.992 INFO ]  qq  info Database of Product, size: 8, initialization date: 2022-05-25
+[12:36:25.993 INFO ] sent response to /127.0.0.1:51625
+[12:36:28.054 INFO ] received request from /127.0.0.1:51625
+[12:36:28.055 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:28.067 INFO ]  qq  print_unique_owner
+ r, 1221-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 12.0, 13212321132312321
+r, 1111-11-11T00:00, 2.0, 13212321132312321
+
+[12:36:28.069 INFO ] sent response to /127.0.0.1:51625
+[12:36:31.460 INFO ] received request from /127.0.0.1:51625
+[12:36:31.461 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:31.463 INFO ]  qq  add
+ Added element: 
+id : "443",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[12:36:31.463 TRACE] broadcasting changes
+[12:36:31.464 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:31.464 INFO ] sent response to localhost/127.0.0.1:52302
+[12:36:31.464 INFO ] sent response to /127.0.0.1:51625
+[12:36:36.431 INFO ] received request from /127.0.0.1:51625
+[12:36:36.432 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:36.432 INFO ]  qq  loginlogin successful
+[12:36:36.433 INFO ] sent response to /127.0.0.1:51625
+[12:36:38.133 INFO ] received request from /127.0.0.1:51625
+[12:36:38.134 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:38.144 INFO ]  qq  add
+ Added element: 
+id : "444",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[12:36:38.144 TRACE] broadcasting changes
+[12:36:38.145 INFO ] sent response to localhost/127.0.0.1:52302
+[12:36:38.146 INFO ] sent response to localhost/127.0.0.1:49359
+[12:36:38.146 INFO ] sent response to /127.0.0.1:51625
+[12:36:40.029 INFO ] received request from /127.0.0.1:51625
+[12:36:40.030 TRACE] added broadcast address localhost/127.0.0.1:51626
+[12:36:40.030 INFO ] client /127.0.0.1:51625 shut down
+[12:43:32.486 INFO ] received request from /127.0.0.1:57220
+[12:43:32.489 ERROR] wrong command
+[12:43:32.490 INFO ] sent response to /127.0.0.1:57220
+[12:43:34.911 INFO ] received request from /127.0.0.1:57220
+[12:43:34.912 ERROR] wrong command
+[12:43:34.912 INFO ] sent response to /127.0.0.1:57220
+[12:43:38.983 INFO ] received request from /127.0.0.1:57220
+[12:43:38.984 ERROR] wrong command
+[12:43:38.985 INFO ] sent response to /127.0.0.1:57220
+[12:43:47.461 INFO ] received request from /127.0.0.1:57220
+[12:43:47.462 ERROR] wrong command
+[12:43:47.463 INFO ] sent response to /127.0.0.1:57220
+[14:46:06.918 INFO ] collection successfully loaded
+[14:46:06.929 INFO ] starting server
+[14:46:11.747 INFO ] received request from /127.0.0.1:60531
+[14:46:11.770 INFO ] sent response to /127.0.0.1:60531
+[14:46:15.655 INFO ] received request from /127.0.0.1:60531
+[14:46:15.658 INFO ]  qq  loginlogin successful
+[14:46:15.659 INFO ] sent response to /127.0.0.1:60531
+[14:46:16.132 INFO ] received request from /127.0.0.1:60531
+[15:18:28.951 INFO ] collection successfully loaded
+[15:18:28.960 INFO ] starting server
+[15:18:31.918 INFO ] received request from /127.0.0.1:52483
+[15:18:31.944 INFO ] sent response to /127.0.0.1:52483
+[15:18:34.241 INFO ] received request from /127.0.0.1:52483
+[15:18:34.246 INFO ]  qq  loginlogin successful
+[15:18:34.247 INFO ] sent response to /127.0.0.1:52483
+[15:18:34.922 INFO ] received request from /127.0.0.1:52483
+[15:34:23.634 INFO ] collection successfully loaded
+[15:34:23.643 INFO ] starting server
+[15:34:26.125 INFO ] received request from /127.0.0.1:61626
+[15:34:26.149 INFO ] sent response to /127.0.0.1:61626
+[15:34:28.120 INFO ] received request from /127.0.0.1:61626
+[15:34:28.124 INFO ]  qq  loginlogin successful
+[15:34:28.125 INFO ] sent response to /127.0.0.1:61626
+[15:34:28.702 INFO ] received request from /127.0.0.1:61626
+[15:39:59.946 INFO ] collection successfully loaded
+[15:39:59.956 INFO ] starting server
+[15:40:03.844 INFO ] received request from /127.0.0.1:64996
+[15:40:03.863 INFO ] sent response to /127.0.0.1:64996
+[15:40:05.970 INFO ] received request from /127.0.0.1:64996
+[15:40:05.975 INFO ]  qq  loginlogin successful
+[15:40:05.976 INFO ] sent response to /127.0.0.1:64996
+[15:40:06.541 INFO ] received request from /127.0.0.1:64996
+[16:13:03.737 INFO ] collection successfully loaded
+[16:13:03.747 INFO ] starting server
+[16:13:09.200 INFO ] received request from /127.0.0.1:54662
+[16:13:09.213 TRACE] added broadcast address localhost/127.0.0.1:54663
+[16:13:09.219 INFO ] sent response to /127.0.0.1:54662
+[16:13:11.426 INFO ] received request from /127.0.0.1:54662
+[16:13:11.427 TRACE] added broadcast address localhost/127.0.0.1:54663
+[16:13:11.430 INFO ]  qq  loginlogin successful
+[16:13:11.431 INFO ] sent response to /127.0.0.1:54662
+[16:13:11.894 INFO ] received request from /127.0.0.1:54662
+[16:13:11.895 TRACE] added broadcast address localhost/127.0.0.1:54663
+[16:13:11.918 INFO ] sent response to /127.0.0.1:54662
+[16:13:49.606 INFO ] received request from /127.0.0.1:49518
+[16:13:49.607 TRACE] added broadcast address localhost/127.0.0.1:49519
+[16:13:49.608 INFO ] sent response to /127.0.0.1:49518
+[16:13:52.232 INFO ] received request from /127.0.0.1:49518
+[16:13:52.233 TRACE] added broadcast address localhost/127.0.0.1:49519
+[16:13:52.235 INFO ]  qq  loginlogin successful
+[16:13:52.236 INFO ] sent response to /127.0.0.1:49518
+[16:13:52.822 INFO ] received request from /127.0.0.1:49518
+[16:13:52.823 TRACE] added broadcast address localhost/127.0.0.1:49519
+[16:13:52.826 INFO ] sent response to /127.0.0.1:49518
+[16:13:55.609 INFO ] received request from /127.0.0.1:49518
+[16:13:55.610 TRACE] added broadcast address localhost/127.0.0.1:49519
+[16:13:55.624 INFO ]  qq  clear collection cleared
+[16:13:55.625 TRACE] broadcasting changes
+[16:13:55.626 INFO ] sent response to localhost/127.0.0.1:54663
+[16:13:55.627 INFO ] sent response to /127.0.0.1:49518
+[16:13:59.180 INFO ] received request from /127.0.0.1:49518
+[16:13:59.181 TRACE] added broadcast address localhost/127.0.0.1:49519
+[16:13:59.188 INFO ]  qq  add
+ Added element: 
+id : "445",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[16:13:59.188 TRACE] broadcasting changes
+[16:13:59.191 INFO ] sent response to localhost/127.0.0.1:54663
+[16:13:59.191 INFO ] sent response to /127.0.0.1:49518
+[16:18:58.587 INFO ] received request from /127.0.0.1:49518
+[16:18:58.588 TRACE] added broadcast address localhost/127.0.0.1:49519
+[16:18:58.593 INFO ]  qq  print_unique_owner
+ r, 1221-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 12.0, 13212321132312321
+r, 1111-11-11T00:00, 2.0, 13212321132312321
+
+[16:18:58.594 INFO ] sent response to /127.0.0.1:49518
+[16:20:46.213 INFO ] collection successfully loaded
+[16:20:46.224 INFO ] starting server
+[16:20:50.838 INFO ] received request from /127.0.0.1:50061
+[16:20:50.864 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:20:50.871 INFO ] sent response to /127.0.0.1:50061
+[16:20:54.896 INFO ] received request from /127.0.0.1:50061
+[16:20:54.898 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:20:54.900 INFO ]  qq  loginlogin successful
+[16:20:54.901 INFO ] sent response to /127.0.0.1:50061
+[16:20:55.469 INFO ] received request from /127.0.0.1:50061
+[16:20:55.470 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:20:55.484 INFO ] sent response to /127.0.0.1:50061
+[16:21:00.855 INFO ] received request from /127.0.0.1:50061
+[16:21:00.857 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:21:00.872 INFO ]  qq  add
+ Added element: 
+id : "446",
+name : "d",
+coordinates : {x : "150",} {y : "60"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "2.0",passportID : "13212321132312321"},
+userLogin : "qq"
+
+[16:21:00.873 TRACE] broadcasting changes
+[16:21:00.875 INFO ] sent response to /127.0.0.1:50061
+[16:21:07.070 INFO ] received request from /127.0.0.1:50061
+[16:21:07.071 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:21:07.074 INFO ]  qq  print_unique_owner
+ r, 1221-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 2.0, 13212321132312321
+r, 1111-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 12.0, 13212321132312321
+
+[16:21:07.075 INFO ] sent response to /127.0.0.1:50061
+[16:21:11.059 INFO ] received request from /127.0.0.1:50061
+[16:21:11.060 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:21:11.061 INFO ]  qq  print_unique_owner
+ r, 1221-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 2.0, 13212321132312321
+r, 1111-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 12.0, 13212321132312321
+
+[16:21:11.062 INFO ] sent response to /127.0.0.1:50061
+[16:21:39.926 INFO ] received request from /127.0.0.1:50061
+[16:21:39.927 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:21:39.928 INFO ]  qq  print_unique_owner
+ r, 1221-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 2.0, 13212321132312321
+r, 1111-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 12.0, 13212321132312321
+
+[16:21:39.929 INFO ] sent response to /127.0.0.1:50061
+[16:21:52.507 INFO ] received request from /127.0.0.1:50061
+[16:21:52.508 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:21:52.509 INFO ]  qq  print_unique_owner
+ r, 1221-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 2.0, 13212321132312321
+r, 1111-11-11T00:00, 123213.0, 213213132132
+r, 1111-11-11T00:00, 12.0, 13212321132312321
+
+[16:21:52.510 INFO ] sent response to /127.0.0.1:50061
+[16:22:04.253 INFO ] received request from /127.0.0.1:50061
+[16:22:04.254 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:22:04.268 INFO ]  qq  clear collection cleared
+[16:22:04.268 TRACE] broadcasting changes
+[16:22:04.270 INFO ] sent response to /127.0.0.1:50061
+[16:22:14.845 INFO ] received request from /127.0.0.1:50061
+[16:22:14.846 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:22:14.847 ERROR]  ert  login login or password is incorrect
+[16:22:14.848 INFO ] sent response to /127.0.0.1:50061
+[16:22:19.639 INFO ] received request from /127.0.0.1:50061
+[16:22:19.640 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:22:19.641 INFO ]  ert  loginlogin successful
+[16:22:19.642 INFO ] sent response to /127.0.0.1:50061
+[16:22:23.317 INFO ] received request from /127.0.0.1:50061
+[16:22:23.318 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:22:23.329 INFO ]  ert  clear collection cleared
+[16:22:23.329 TRACE] broadcasting changes
+[16:22:23.331 INFO ] sent response to /127.0.0.1:50061
+[16:22:32.614 INFO ] received request from /127.0.0.1:50061
+[16:22:32.615 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:22:32.617 INFO ]  hah  loginlogin successful
+[16:22:32.619 INFO ] sent response to /127.0.0.1:50061
+[16:22:35.215 INFO ] received request from /127.0.0.1:50061
+[16:22:35.216 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:22:35.228 INFO ]  hah  clear collection cleared
+[16:22:35.228 TRACE] broadcasting changes
+[16:22:35.229 INFO ] sent response to /127.0.0.1:50061
+[16:23:59.004 INFO ] received request from /127.0.0.1:50061
+[16:23:59.005 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:23:59.007 INFO ]  hah  add
+ Added element: 
+id : "447",
+name : "cola",
+coordinates : {x : "80",} {y : "23"},
+creationDate : "2022-05-25",
+price : "80",
+manufactureCost : "50.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "hah",birthday : "2021-11-11T00:00",weight : "69.0",passportID : "40163299032"},
+userLogin : "hah"
+
+[16:23:59.008 TRACE] broadcasting changes
+[16:23:59.009 INFO ] sent response to /127.0.0.1:50061
+[16:24:18.449 INFO ] received request from /127.0.0.1:50061
+[16:24:18.451 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:24:18.453 INFO ]  kek  loginlogin successful
+[16:24:18.454 INFO ] sent response to /127.0.0.1:50061
+[16:25:02.584 INFO ] received request from /127.0.0.1:50061
+[16:25:02.585 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:25:02.596 INFO ]  kek  add
+ Added element: 
+id : "448",
+name : "cola",
+coordinates : {x : "200",} {y : "100"},
+creationDate : "2022-05-25",
+price : "70",
+manufactureCost : "40.0",
+unitOfMeasure : "MILLILITERS",
+owner : {personName : "r",birthday : "2021-11-11T00:00",weight : "123.0",passportID : "213213132132"},
+userLogin : "kek"
+
+[16:25:02.596 TRACE] broadcasting changes
+[16:25:02.597 INFO ] sent response to /127.0.0.1:50061
+[16:25:07.051 INFO ] received request from /127.0.0.1:50061
+[16:25:07.051 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:25:07.055 INFO ]  kek  remove_lower Elements with id lower than 448 was successfully deleted by kek
+[16:25:07.056 TRACE] broadcasting changes
+[16:25:07.057 INFO ] sent response to /127.0.0.1:50061
+[16:25:15.882 INFO ] received request from /127.0.0.1:50061
+[16:25:15.883 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:25:15.884 INFO ]  Jack  loginlogin successful
+[16:25:15.885 INFO ] sent response to /127.0.0.1:50061
+[16:25:54.026 INFO ] received request from /127.0.0.1:50061
+[16:25:54.027 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:25:54.037 INFO ]  Jack  add
+ Added element: 
+id : "449",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "Jack"
+
+[16:25:54.037 TRACE] broadcasting changes
+[16:25:54.039 INFO ] sent response to /127.0.0.1:50061
+[16:26:07.207 INFO ] received request from /127.0.0.1:50061
+[16:26:07.208 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:26:07.210 INFO ]  qq  loginlogin successful
+[16:26:07.211 INFO ] sent response to /127.0.0.1:50061
+[16:26:59.681 INFO ] received request from /127.0.0.1:50061
+[16:26:59.682 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:26:59.685 INFO ]  qq  add
+ Added element: 
+id : "450",
+name : "sugar",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "500.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "Jack",birthday : "2022-12-11T00:00",weight : "95.0",passportID : "23432234234"},
+userLogin : "qq"
+
+[16:26:59.685 TRACE] broadcasting changes
+[16:26:59.686 INFO ] sent response to /127.0.0.1:50061
+[16:27:05.564 INFO ] received request from /127.0.0.1:50061
+[16:27:05.565 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:27:05.575 INFO ]  qq  add
+ Added element: 
+id : "451",
+name : "sugar",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "500.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "Jack",birthday : "2022-12-11T00:00",weight : "95.0",passportID : "23432234234"},
+userLogin : "qq"
+
+[16:27:05.575 TRACE] broadcasting changes
+[16:27:05.576 INFO ] sent response to /127.0.0.1:50061
+[16:27:05.876 INFO ] received request from /127.0.0.1:50061
+[16:27:05.877 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:27:05.887 INFO ]  qq  add
+ Added element: 
+id : "452",
+name : "sugar",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "500.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "Jack",birthday : "2022-12-11T00:00",weight : "95.0",passportID : "23432234234"},
+userLogin : "qq"
+
+[16:27:05.888 TRACE] broadcasting changes
+[16:27:05.889 INFO ] sent response to /127.0.0.1:50061
+[16:27:06.041 INFO ] received request from /127.0.0.1:50061
+[16:27:06.042 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:27:06.044 INFO ]  qq  add
+ Added element: 
+id : "453",
+name : "sugar",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "500.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "Jack",birthday : "2022-12-11T00:00",weight : "95.0",passportID : "23432234234"},
+userLogin : "qq"
+
+[16:27:06.044 TRACE] broadcasting changes
+[16:27:06.045 INFO ] sent response to /127.0.0.1:50061
+[16:27:46.265 INFO ] received request from /127.0.0.1:50061
+[16:27:46.266 TRACE] added broadcast address localhost/127.0.0.1:50062
+[16:27:46.266 INFO ] client /127.0.0.1:50061 shut down
+[16:27:57.605 INFO ] collection successfully loaded
+[16:27:57.617 INFO ] starting server
+[16:28:10.891 INFO ] received request from /127.0.0.1:64881
+[16:28:10.903 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:28:10.909 INFO ] sent response to /127.0.0.1:64881
+[16:28:13.212 INFO ] received request from /127.0.0.1:64881
+[16:28:13.215 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:28:13.217 INFO ]  qq  loginlogin successful
+[16:28:13.218 INFO ] sent response to /127.0.0.1:64881
+[16:28:13.804 INFO ] received request from /127.0.0.1:64881
+[16:28:13.805 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:28:13.817 INFO ] sent response to /127.0.0.1:64881
+[16:28:25.025 INFO ] received request from /127.0.0.1:64881
+[16:28:25.026 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:28:25.041 INFO ]  qq  add
+ Added element: 
+id : "454",
+name : "sugar",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "500.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "Jack",birthday : "2022-12-11T00:00",weight : "95.0",passportID : "23432234234"},
+userLogin : "qq"
+
+[16:28:25.042 TRACE] broadcasting changes
+[16:28:25.044 INFO ] sent response to /127.0.0.1:64881
+[16:28:29.900 INFO ] received request from /127.0.0.1:64881
+[16:28:29.901 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:28:29.913 INFO ]  qq  remove_by_id element with id 454 removed
+[16:28:29.914 TRACE] broadcasting changes
+[16:28:29.915 INFO ] sent response to /127.0.0.1:64881
+[16:28:42.354 INFO ] received request from /127.0.0.1:64881
+[16:28:42.356 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:28:42.359 INFO ]  qq  add
+ Added element: 
+id : "455",
+name : "sugar",
+coordinates : {x : "250",} {y : "100"},
+creationDate : "2022-05-25",
+price : "10000",
+manufactureCost : "500.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "Jack",birthday : "2022-12-11T00:00",weight : "95.0",passportID : "23432234234"},
+userLogin : "qq"
+
+[16:28:42.359 TRACE] broadcasting changes
+[16:28:42.360 INFO ] sent response to /127.0.0.1:64881
+[16:29:41.320 INFO ] received request from /127.0.0.1:64881
+[16:29:41.321 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:29:41.324 INFO ]  qq  print_unique_owner
+ r, 1111-11-11T00:00, 123213.0, 213213132132
+hah, 2021-11-11T00:00, 69.0, 40163299032
+r, 2021-11-11T00:00, 123.0, 213213132132
+r, 2022-12-11T00:00, 100.0, 213213132132
+Jack, 2022-12-11T00:00, 95.0, 23432234234
+
+[16:29:41.325 INFO ] sent response to /127.0.0.1:64881
+[16:29:59.918 INFO ] received request from /127.0.0.1:64881
+[16:29:59.919 TRACE] added broadcast address localhost/127.0.0.1:64882
+[16:29:59.920 INFO ] client /127.0.0.1:64881 shut down
+[16:30:05.719 INFO ] received request from /127.0.0.1:59820
+[16:30:05.720 TRACE] added broadcast address localhost/127.0.0.1:59821
+[16:30:05.721 INFO ] sent response to /127.0.0.1:59820
+[16:30:07.741 INFO ] received request from /127.0.0.1:59820
+[16:30:07.742 TRACE] added broadcast address localhost/127.0.0.1:59821
+[16:30:07.743 INFO ]  qq  loginlogin successful
+[16:30:07.743 INFO ] sent response to /127.0.0.1:59820
+[16:30:08.243 INFO ] received request from /127.0.0.1:59820
+[16:30:08.244 TRACE] added broadcast address localhost/127.0.0.1:59821
+[16:30:08.246 INFO ] sent response to /127.0.0.1:59820
+[16:32:50.499 INFO ] received request from /127.0.0.1:59820
+[16:32:50.501 TRACE] added broadcast address localhost/127.0.0.1:59821
+[16:32:50.503 INFO ]  qq  print_unique_owner
+ r, 1111-11-11T00:00, 123213.0, 213213132132
+hah, 2021-11-11T00:00, 69.0, 40163299032
+r, 2021-11-11T00:00, 123.0, 213213132132
+r, 2022-12-11T00:00, 100.0, 213213132132
+Jack, 2022-12-11T00:00, 95.0, 23432234234
+
+[16:32:50.505 INFO ] sent response to /127.0.0.1:59820
+[16:36:30.090 INFO ] received request from /127.0.0.1:59820
+[16:36:30.090 TRACE] added broadcast address localhost/127.0.0.1:59821
+[16:36:30.091 INFO ] client /127.0.0.1:59820 shut down
+[16:36:39.030 INFO ] received request from /127.0.0.1:53608
+[16:36:39.031 TRACE] added broadcast address localhost/127.0.0.1:53609
+[16:36:39.033 INFO ] sent response to /127.0.0.1:53608
+[16:36:42.886 INFO ] received request from /127.0.0.1:53608
+[16:36:42.887 TRACE] added broadcast address localhost/127.0.0.1:53609
+[16:36:42.888 INFO ]  qq  loginlogin successful
+[16:36:42.890 INFO ] sent response to /127.0.0.1:53608
+[16:36:43.595 INFO ] received request from /127.0.0.1:53608
+[16:36:43.601 TRACE] added broadcast address localhost/127.0.0.1:53609
+[16:36:43.604 INFO ] sent response to /127.0.0.1:53608
+[16:37:58.833 INFO ] received request from /127.0.0.1:53608
+[16:37:58.834 TRACE] added broadcast address localhost/127.0.0.1:53609
+[16:37:58.834 INFO ] client /127.0.0.1:53608 shut down
+[16:38:02.949 INFO ] received request from /127.0.0.1:60243
+[16:38:02.950 TRACE] added broadcast address localhost/127.0.0.1:60244
+[16:38:02.951 INFO ] sent response to /127.0.0.1:60243
+[16:38:04.931 INFO ] received request from /127.0.0.1:60243
+[16:38:04.932 TRACE] added broadcast address localhost/127.0.0.1:60244
+[16:38:04.933 INFO ]  qq  loginlogin successful
+[16:38:04.933 INFO ] sent response to /127.0.0.1:60243
+[16:38:05.418 INFO ] received request from /127.0.0.1:60243
+[16:38:05.419 TRACE] added broadcast address localhost/127.0.0.1:60244
+[16:38:05.422 INFO ] sent response to /127.0.0.1:60243
+[16:46:37.795 INFO ] received request from /127.0.0.1:54097
+[16:46:37.797 TRACE] added broadcast address localhost/127.0.0.1:54098
+[16:46:37.798 INFO ] sent response to /127.0.0.1:54097
+[16:46:39.887 INFO ] received request from /127.0.0.1:54097
+[16:46:39.887 TRACE] added broadcast address localhost/127.0.0.1:54098
+[16:46:39.889 INFO ]  qq  loginlogin successful
+[16:46:39.889 INFO ] sent response to /127.0.0.1:54097
+[16:46:40.399 INFO ] received request from /127.0.0.1:54097
+[16:46:40.400 TRACE] added broadcast address localhost/127.0.0.1:54098
+[16:46:40.401 INFO ] sent response to /127.0.0.1:54097
+[16:48:16.835 INFO ] received request from /127.0.0.1:60225
+[16:48:16.836 TRACE] added broadcast address localhost/127.0.0.1:60226
+[16:48:16.837 INFO ] sent response to /127.0.0.1:60225
+[16:48:18.782 INFO ] received request from /127.0.0.1:60225
+[16:48:18.782 TRACE] added broadcast address localhost/127.0.0.1:60226
+[16:48:18.784 INFO ]  qq  loginlogin successful
+[16:48:18.785 INFO ] sent response to /127.0.0.1:60225
+[16:48:19.267 INFO ] received request from /127.0.0.1:60225
+[16:48:19.267 TRACE] added broadcast address localhost/127.0.0.1:60226
+[16:48:19.269 INFO ] sent response to /127.0.0.1:60225
+[16:49:31.254 INFO ] received request from /127.0.0.1:60758
+[16:49:31.255 TRACE] added broadcast address localhost/127.0.0.1:60759
+[16:49:31.256 INFO ] sent response to /127.0.0.1:60758
+[16:49:33.687 INFO ] received request from /127.0.0.1:60758
+[16:49:33.688 TRACE] added broadcast address localhost/127.0.0.1:60759
+[16:49:33.690 INFO ]  qq  loginlogin successful
+[16:49:33.691 INFO ] sent response to /127.0.0.1:60758
+[16:49:34.393 INFO ] received request from /127.0.0.1:60758
+[16:49:34.396 TRACE] added broadcast address localhost/127.0.0.1:60759
+[16:49:34.397 INFO ] sent response to /127.0.0.1:60758
+[16:51:26.148 INFO ] received request from /127.0.0.1:58934
+[16:51:26.149 TRACE] added broadcast address localhost/127.0.0.1:58935
+[16:51:26.150 INFO ] sent response to /127.0.0.1:58934
+[16:51:28.138 INFO ] received request from /127.0.0.1:58934
+[16:51:28.139 TRACE] added broadcast address localhost/127.0.0.1:58935
+[16:51:28.140 INFO ]  qq  loginlogin successful
+[16:51:28.142 INFO ] sent response to /127.0.0.1:58934
+[16:51:28.641 INFO ] received request from /127.0.0.1:58934
+[16:51:28.642 TRACE] added broadcast address localhost/127.0.0.1:58935
+[16:51:28.644 INFO ] sent response to /127.0.0.1:58934
+[16:51:52.418 INFO ] received request from /127.0.0.1:58934
+[16:51:52.419 TRACE] added broadcast address localhost/127.0.0.1:58935
+[16:51:52.419 INFO ] client /127.0.0.1:58934 shut down
+[16:51:54.919 INFO ] received request from /127.0.0.1:62958
+[16:51:54.920 TRACE] added broadcast address localhost/127.0.0.1:62959
+[16:51:54.921 INFO ] sent response to /127.0.0.1:62958
+[16:51:56.916 INFO ] received request from /127.0.0.1:62958
+[16:51:56.917 TRACE] added broadcast address localhost/127.0.0.1:62959
+[16:51:56.918 INFO ]  qq  loginlogin successful
+[16:51:56.919 INFO ] sent response to /127.0.0.1:62958
+[16:51:57.406 INFO ] received request from /127.0.0.1:62958
+[16:51:57.407 TRACE] added broadcast address localhost/127.0.0.1:62959
+[16:51:57.409 INFO ] sent response to /127.0.0.1:62958
+[16:52:34.020 INFO ] received request from /127.0.0.1:62964
+[16:52:34.021 TRACE] added broadcast address localhost/127.0.0.1:62965
+[16:52:34.023 INFO ] sent response to /127.0.0.1:62964
+[16:52:35.952 INFO ] received request from /127.0.0.1:62964
+[16:52:35.953 TRACE] added broadcast address localhost/127.0.0.1:62965
+[16:52:35.954 INFO ]  qq  loginlogin successful
+[16:52:35.955 INFO ] sent response to /127.0.0.1:62964
+[16:52:36.419 INFO ] received request from /127.0.0.1:62964
+[16:52:36.420 TRACE] added broadcast address localhost/127.0.0.1:62965
+[16:52:36.421 INFO ] sent response to /127.0.0.1:62964
+[16:52:52.025 INFO ] received request from /127.0.0.1:62964
+[16:52:52.026 TRACE] added broadcast address localhost/127.0.0.1:62965
+[16:52:52.026 INFO ] client /127.0.0.1:62964 shut down
+[16:52:55.080 INFO ] received request from /127.0.0.1:62968
+[16:52:55.081 TRACE] added broadcast address localhost/127.0.0.1:62969
+[16:52:55.082 INFO ] sent response to /127.0.0.1:62968
+[16:52:57.046 INFO ] received request from /127.0.0.1:62968
+[16:52:57.047 TRACE] added broadcast address localhost/127.0.0.1:62969
+[16:52:57.048 INFO ]  qq  loginlogin successful
+[16:52:57.049 INFO ] sent response to /127.0.0.1:62968
+[16:52:57.524 INFO ] received request from /127.0.0.1:62968
+[16:52:57.525 TRACE] added broadcast address localhost/127.0.0.1:62969
+[16:52:57.527 INFO ] sent response to /127.0.0.1:62968
+[16:55:47.130 INFO ] received request from /127.0.0.1:50059
+[16:55:47.131 TRACE] added broadcast address localhost/127.0.0.1:50060
+[16:55:47.132 INFO ] sent response to /127.0.0.1:50059
+[16:55:49.487 INFO ] received request from /127.0.0.1:50059
+[16:55:49.487 TRACE] added broadcast address localhost/127.0.0.1:50060
+[16:55:49.488 INFO ]  qq  loginlogin successful
+[16:55:49.489 INFO ] sent response to /127.0.0.1:50059
+[16:55:49.970 INFO ] received request from /127.0.0.1:50059
+[16:55:49.971 TRACE] added broadcast address localhost/127.0.0.1:50060
+[16:55:49.972 INFO ] sent response to /127.0.0.1:50059
+[16:56:04.935 INFO ] received request from /127.0.0.1:50059
+[16:56:04.936 TRACE] added broadcast address localhost/127.0.0.1:50060
+[16:56:04.936 INFO ] client /127.0.0.1:50059 shut down
+[16:56:06.972 INFO ] received request from /127.0.0.1:50063
+[16:56:06.972 TRACE] added broadcast address localhost/127.0.0.1:50064
+[16:56:06.973 INFO ] sent response to /127.0.0.1:50063
+[16:56:09.522 INFO ] received request from /127.0.0.1:50063
+[16:56:09.523 TRACE] added broadcast address localhost/127.0.0.1:50064
+[16:56:09.524 INFO ]  qq  loginlogin successful
+[16:56:09.525 INFO ] sent response to /127.0.0.1:50063
+[16:56:09.994 INFO ] received request from /127.0.0.1:50063
+[16:56:09.995 TRACE] added broadcast address localhost/127.0.0.1:50064
+[16:56:09.997 INFO ] sent response to /127.0.0.1:50063
+[16:56:27.577 INFO ] received request from /127.0.0.1:50068
+[16:56:27.578 TRACE] added broadcast address localhost/127.0.0.1:50069
+[16:56:27.579 INFO ] sent response to /127.0.0.1:50068
+[16:56:29.496 INFO ] received request from /127.0.0.1:50068
+[16:56:29.497 TRACE] added broadcast address localhost/127.0.0.1:50069
+[16:56:29.498 INFO ]  qq  loginlogin successful
+[16:56:29.499 INFO ] sent response to /127.0.0.1:50068
+[16:56:29.976 INFO ] received request from /127.0.0.1:50068
+[16:56:29.977 TRACE] added broadcast address localhost/127.0.0.1:50069
+[16:56:29.978 INFO ] sent response to /127.0.0.1:50068
+[16:59:12.823 INFO ] received request from /127.0.0.1:50068
+[16:59:12.823 TRACE] added broadcast address localhost/127.0.0.1:50069
+[16:59:12.823 INFO ] client /127.0.0.1:50068 shut down
+[17:03:06.406 INFO ] received request from /127.0.0.1:55077
+[17:03:06.407 TRACE] added broadcast address localhost/127.0.0.1:55078
+[17:03:06.408 INFO ] sent response to /127.0.0.1:55077
+[17:03:08.711 INFO ] received request from /127.0.0.1:55077
+[17:03:08.712 TRACE] added broadcast address localhost/127.0.0.1:55078
+[17:03:08.713 INFO ]  qq  loginlogin successful
+[17:03:08.714 INFO ] sent response to /127.0.0.1:55077
+[17:03:09.208 INFO ] received request from /127.0.0.1:55077
+[17:03:09.209 TRACE] added broadcast address localhost/127.0.0.1:55078
+[17:03:09.210 INFO ] sent response to /127.0.0.1:55077
+[17:06:35.440 INFO ] received request from /127.0.0.1:60588
+[17:06:35.441 TRACE] added broadcast address localhost/127.0.0.1:60589
+[17:06:35.442 INFO ] sent response to /127.0.0.1:60588
+[17:06:37.447 INFO ] received request from /127.0.0.1:60588
+[17:06:37.448 TRACE] added broadcast address localhost/127.0.0.1:60589
+[17:06:37.449 INFO ]  qq  loginlogin successful
+[17:06:37.450 INFO ] sent response to /127.0.0.1:60588
+[17:06:37.914 INFO ] received request from /127.0.0.1:60588
+[17:06:37.915 TRACE] added broadcast address localhost/127.0.0.1:60589
+[17:06:37.917 INFO ] sent response to /127.0.0.1:60588
+[17:09:14.150 INFO ] received request from /127.0.0.1:58616
+[17:09:14.151 TRACE] added broadcast address localhost/127.0.0.1:58617
+[17:09:14.151 INFO ] sent response to /127.0.0.1:58616
+[17:09:16.179 INFO ] received request from /127.0.0.1:58616
+[17:09:16.179 TRACE] added broadcast address localhost/127.0.0.1:58617
+[17:09:16.180 INFO ]  qq  loginlogin successful
+[17:09:16.181 INFO ] sent response to /127.0.0.1:58616
+[17:09:16.670 INFO ] received request from /127.0.0.1:58616
+[17:09:16.670 TRACE] added broadcast address localhost/127.0.0.1:58617
+[17:09:16.672 INFO ] sent response to /127.0.0.1:58616
+[17:09:51.351 INFO ] received request from /127.0.0.1:58616
+[17:09:51.352 TRACE] added broadcast address localhost/127.0.0.1:58617
+[17:09:51.352 INFO ] client /127.0.0.1:58616 shut down
+[17:09:54.535 INFO ] received request from /127.0.0.1:64786
+[17:09:54.535 TRACE] added broadcast address localhost/127.0.0.1:64787
+[17:09:54.536 INFO ] sent response to /127.0.0.1:64786
+[17:09:56.626 INFO ] received request from /127.0.0.1:64786
+[17:09:56.627 TRACE] added broadcast address localhost/127.0.0.1:64787
+[17:09:56.628 INFO ]  qq  loginlogin successful
+[17:09:56.628 INFO ] sent response to /127.0.0.1:64786
+[17:09:57.108 INFO ] received request from /127.0.0.1:64786
+[17:09:57.109 TRACE] added broadcast address localhost/127.0.0.1:64787
+[17:09:57.110 INFO ] sent response to /127.0.0.1:64786
+[17:10:48.759 INFO ] received request from /127.0.0.1:53862
+[17:10:48.759 TRACE] added broadcast address localhost/127.0.0.1:53863
+[17:10:48.761 INFO ] sent response to /127.0.0.1:53862
+[17:10:50.702 INFO ] received request from /127.0.0.1:53862
+[17:10:50.702 TRACE] added broadcast address localhost/127.0.0.1:53863
+[17:10:50.703 INFO ]  qq  loginlogin successful
+[17:10:50.704 INFO ] sent response to /127.0.0.1:53862
+[17:10:51.175 INFO ] received request from /127.0.0.1:53862
+[17:10:51.175 TRACE] added broadcast address localhost/127.0.0.1:53863
+[17:10:51.176 INFO ] sent response to /127.0.0.1:53862
+[17:12:49.875 INFO ] received request from /127.0.0.1:55166
+[17:12:49.875 TRACE] added broadcast address localhost/127.0.0.1:55167
+[17:12:49.876 INFO ] sent response to /127.0.0.1:55166
+[17:12:51.818 INFO ] received request from /127.0.0.1:55166
+[17:12:51.818 TRACE] added broadcast address localhost/127.0.0.1:55167
+[17:12:51.819 INFO ]  qq  loginlogin successful
+[17:12:51.820 INFO ] sent response to /127.0.0.1:55166
+[17:12:52.300 INFO ] received request from /127.0.0.1:55166
+[17:12:52.301 TRACE] added broadcast address localhost/127.0.0.1:55167
+[17:12:52.302 INFO ] sent response to /127.0.0.1:55166
+[17:14:12.474 INFO ] received request from /127.0.0.1:57630
+[17:14:12.476 TRACE] added broadcast address localhost/127.0.0.1:57631
+[17:14:12.477 INFO ] sent response to /127.0.0.1:57630
+[17:14:14.536 INFO ] received request from /127.0.0.1:57630
+[17:14:14.536 TRACE] added broadcast address localhost/127.0.0.1:57631
+[17:14:14.537 INFO ]  qq  loginlogin successful
+[17:14:14.538 INFO ] sent response to /127.0.0.1:57630
+[17:14:15.025 INFO ] received request from /127.0.0.1:57630
+[17:14:15.026 TRACE] added broadcast address localhost/127.0.0.1:57631
+[17:14:15.027 INFO ] sent response to /127.0.0.1:57630
+[17:15:01.894 INFO ] received request from /127.0.0.1:58817
+[17:15:01.895 TRACE] added broadcast address localhost/127.0.0.1:58818
+[17:15:01.895 INFO ] sent response to /127.0.0.1:58817
+[17:15:07.514 INFO ] received request from /127.0.0.1:58817
+[17:15:07.514 TRACE] added broadcast address localhost/127.0.0.1:58818
+[17:15:07.515 INFO ]  qq  loginlogin successful
+[17:15:07.516 INFO ] sent response to /127.0.0.1:58817
+[17:15:08.019 INFO ] received request from /127.0.0.1:58817
+[17:15:08.020 TRACE] added broadcast address localhost/127.0.0.1:58818
+[17:15:08.021 INFO ] sent response to /127.0.0.1:58817
+[17:15:30.338 INFO ] received request from /127.0.0.1:58823
+[17:15:30.339 TRACE] added broadcast address localhost/127.0.0.1:58824
+[17:15:30.340 INFO ] sent response to /127.0.0.1:58823
+[17:15:32.380 INFO ] received request from /127.0.0.1:58823
+[17:15:32.380 TRACE] added broadcast address localhost/127.0.0.1:58824
+[17:15:32.381 INFO ]  qq  loginlogin successful
+[17:15:32.382 INFO ] sent response to /127.0.0.1:58823
+[17:15:32.870 INFO ] received request from /127.0.0.1:58823
+[17:15:32.871 TRACE] added broadcast address localhost/127.0.0.1:58824
+[17:15:32.872 INFO ] sent response to /127.0.0.1:58823
+[17:16:01.444 INFO ] received request from /127.0.0.1:49992
+[17:16:01.445 TRACE] added broadcast address localhost/127.0.0.1:49993
+[17:16:01.445 INFO ] sent response to /127.0.0.1:49992
+[17:16:03.977 INFO ] received request from /127.0.0.1:49992
+[17:16:03.977 TRACE] added broadcast address localhost/127.0.0.1:49993
+[17:16:03.978 INFO ]  qq  loginlogin successful
+[17:16:03.978 INFO ] sent response to /127.0.0.1:49992
+[17:16:04.470 INFO ] received request from /127.0.0.1:49992
+[17:16:04.471 TRACE] added broadcast address localhost/127.0.0.1:49993
+[17:16:04.472 INFO ] sent response to /127.0.0.1:49992
+[17:18:51.848 INFO ] received request from /127.0.0.1:54051
+[17:18:51.848 TRACE] added broadcast address localhost/127.0.0.1:54052
+[17:18:51.851 INFO ] sent response to /127.0.0.1:54051
+[17:18:55.412 INFO ] received request from /127.0.0.1:54051
+[17:18:55.413 TRACE] added broadcast address localhost/127.0.0.1:54052
+[17:18:55.413 INFO ]  qq  loginlogin successful
+[17:18:55.414 INFO ] sent response to /127.0.0.1:54051
+[17:18:55.919 INFO ] received request from /127.0.0.1:54051
+[17:18:55.920 TRACE] added broadcast address localhost/127.0.0.1:54052
+[17:18:55.921 INFO ] sent response to /127.0.0.1:54051
+[17:20:06.595 INFO ] received request from /127.0.0.1:62414
+[17:20:06.596 TRACE] added broadcast address localhost/127.0.0.1:62415
+[17:20:06.596 INFO ] sent response to /127.0.0.1:62414
+[17:20:09.004 INFO ] received request from /127.0.0.1:62414
+[17:20:09.004 TRACE] added broadcast address localhost/127.0.0.1:62415
+[17:20:09.005 INFO ]  qq  loginlogin successful
+[17:20:09.006 INFO ] sent response to /127.0.0.1:62414
+[17:20:09.504 INFO ] received request from /127.0.0.1:62414
+[17:20:09.505 TRACE] added broadcast address localhost/127.0.0.1:62415
+[17:20:09.506 INFO ] sent response to /127.0.0.1:62414
+[17:21:20.348 INFO ] received request from /127.0.0.1:54312
+[17:21:20.348 TRACE] added broadcast address localhost/127.0.0.1:54313
+[17:21:20.349 INFO ] sent response to /127.0.0.1:54312
+[17:21:22.391 INFO ] received request from /127.0.0.1:54312
+[17:21:22.392 TRACE] added broadcast address localhost/127.0.0.1:54313
+[17:21:22.393 INFO ]  qq  loginlogin successful
+[17:21:22.394 INFO ] sent response to /127.0.0.1:54312
+[17:21:22.886 INFO ] received request from /127.0.0.1:54312
+[17:21:22.886 TRACE] added broadcast address localhost/127.0.0.1:54313
+[17:21:22.887 INFO ] sent response to /127.0.0.1:54312
+[17:24:16.538 INFO ] received request from /127.0.0.1:51924
+[17:24:16.540 TRACE] added broadcast address localhost/127.0.0.1:51925
+[17:24:16.541 INFO ] sent response to /127.0.0.1:51924
+[17:24:18.515 INFO ] received request from /127.0.0.1:51924
+[17:24:18.515 TRACE] added broadcast address localhost/127.0.0.1:51925
+[17:24:18.516 INFO ]  qq  loginlogin successful
+[17:24:18.517 INFO ] sent response to /127.0.0.1:51924
+[17:24:19.019 INFO ] received request from /127.0.0.1:51924
+[17:24:19.020 TRACE] added broadcast address localhost/127.0.0.1:51925
+[17:24:19.021 INFO ] sent response to /127.0.0.1:51924
+[17:26:08.592 INFO ] received request from /127.0.0.1:57471
+[17:26:08.592 TRACE] added broadcast address localhost/127.0.0.1:57472
+[17:26:08.593 INFO ] sent response to /127.0.0.1:57471
+[17:26:10.844 INFO ] received request from /127.0.0.1:57471
+[17:26:10.844 TRACE] added broadcast address localhost/127.0.0.1:57472
+[17:26:10.845 INFO ]  qq  loginlogin successful
+[17:26:10.846 INFO ] sent response to /127.0.0.1:57471
+[17:26:11.334 INFO ] received request from /127.0.0.1:57471
+[17:26:11.335 TRACE] added broadcast address localhost/127.0.0.1:57472
+[17:26:11.336 INFO ] sent response to /127.0.0.1:57471
+[17:28:00.934 INFO ] received request from /127.0.0.1:52385
+[17:28:00.935 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:28:00.936 INFO ] sent response to /127.0.0.1:52385
+[17:28:02.949 INFO ] received request from /127.0.0.1:52385
+[17:28:02.949 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:28:02.950 INFO ]  qq  loginlogin successful
+[17:28:02.951 INFO ] sent response to /127.0.0.1:52385
+[17:28:03.447 INFO ] received request from /127.0.0.1:52385
+[17:28:03.448 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:28:03.451 INFO ] sent response to /127.0.0.1:52385
+[17:28:07.086 INFO ] received request from /127.0.0.1:52385
+[17:28:07.088 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:28:07.090 INFO ]  qq  add
+ Added element: 
+id : "456",
+name : "a",
+coordinates : {x : "150",} {y : "100"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "12.0",passportID : "21312123213213"},
+userLogin : "qq"
+
+[17:28:07.091 TRACE] broadcasting changes
+[17:28:07.092 INFO ] sent response to localhost/127.0.0.1:55167
+[17:28:07.092 INFO ] sent response to localhost/127.0.0.1:54052
+[17:28:07.092 INFO ] sent response to localhost/127.0.0.1:60226
+[17:28:07.092 INFO ] sent response to localhost/127.0.0.1:58818
+[17:28:07.092 INFO ] sent response to localhost/127.0.0.1:57631
+[17:28:07.092 INFO ] sent response to localhost/127.0.0.1:57472
+[17:28:07.092 INFO ] sent response to localhost/127.0.0.1:60589
+[17:28:07.093 INFO ] sent response to localhost/127.0.0.1:54313
+[17:28:07.093 INFO ] sent response to localhost/127.0.0.1:49993
+[17:28:07.093 INFO ] sent response to localhost/127.0.0.1:58824
+[17:28:07.094 INFO ] sent response to localhost/127.0.0.1:64787
+[17:28:07.094 INFO ] sent response to localhost/127.0.0.1:60244
+[17:28:07.094 INFO ] sent response to localhost/127.0.0.1:53863
+[17:28:07.094 INFO ] sent response to localhost/127.0.0.1:55078
+[17:28:07.094 INFO ] sent response to localhost/127.0.0.1:62969
+[17:28:07.095 INFO ] sent response to /127.0.0.1:52385
+[17:28:07.095 INFO ] sent response to localhost/127.0.0.1:60759
+[17:28:07.095 INFO ] sent response to localhost/127.0.0.1:51925
+[17:28:07.095 INFO ] sent response to localhost/127.0.0.1:54098
+[17:28:07.095 INFO ] sent response to localhost/127.0.0.1:62415
+[17:28:07.095 INFO ] sent response to localhost/127.0.0.1:50064
+[17:28:07.095 INFO ] sent response to localhost/127.0.0.1:62959
+[17:28:07.100 INFO ] received request from /127.0.0.1:52385
+[17:28:07.100 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:28:07.103 INFO ]  qq  add
+ Added element: 
+id : "457",
+name : "a",
+coordinates : {x : "150",} {y : "100"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "12.0",passportID : "21312123213213"},
+userLogin : "qq"
+
+[17:28:07.103 TRACE] broadcasting changes
+[17:28:07.104 INFO ] sent response to localhost/127.0.0.1:57631
+[17:28:07.104 INFO ] sent response to localhost/127.0.0.1:55167
+[17:28:07.104 INFO ] sent response to localhost/127.0.0.1:60226
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:57472
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:58824
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:53863
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:55078
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:54052
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:58818
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:62415
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:62959
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:54313
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:49993
+[17:28:07.105 INFO ] sent response to localhost/127.0.0.1:60589
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:64787
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:60244
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:54098
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:60759
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:62969
+[17:28:07.106 INFO ] sent response to /127.0.0.1:52385
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:50064
+[17:28:07.106 INFO ] sent response to localhost/127.0.0.1:51925
+[17:28:41.119 INFO ] received request from /127.0.0.1:52385
+[17:28:41.120 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:28:41.121 INFO ]  qq  add
+ Added element: 
+id : "458",
+name : "a",
+coordinates : {x : "150",} {y : "100"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "12.0",passportID : "21312123213213"},
+userLogin : "qq"
+
+[17:28:41.122 TRACE] broadcasting changes
+[17:28:41.122 INFO ] sent response to localhost/127.0.0.1:57472
+[17:28:41.123 INFO ] sent response to localhost/127.0.0.1:58818
+[17:28:41.122 INFO ] sent response to localhost/127.0.0.1:55167
+[17:28:41.123 INFO ] sent response to localhost/127.0.0.1:57631
+[17:28:41.123 INFO ] sent response to localhost/127.0.0.1:55078
+[17:28:41.123 INFO ] sent response to localhost/127.0.0.1:60226
+[17:28:41.123 INFO ] sent response to localhost/127.0.0.1:54052
+[17:28:41.125 INFO ] sent response to localhost/127.0.0.1:49993
+[17:28:41.125 INFO ] sent response to localhost/127.0.0.1:58824
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:53863
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:60589
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:54313
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:62415
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:50064
+[17:28:41.126 INFO ] sent response to /127.0.0.1:52385
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:54098
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:62959
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:62969
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:60759
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:51925
+[17:28:41.126 INFO ] sent response to localhost/127.0.0.1:64787
+[17:28:41.127 INFO ] sent response to localhost/127.0.0.1:60244
+[17:28:49.457 INFO ] received request from /127.0.0.1:52385
+[17:28:49.457 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:28:49.459 INFO ]  qq  add
+ Added element: 
+id : "459",
+name : "a",
+coordinates : {x : "150",} {y : "100"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "1.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "1111-11-11T00:00",weight : "12.0",passportID : "21312123213213"},
+userLogin : "qq"
+
+[17:28:49.459 TRACE] broadcasting changes
+[17:28:49.460 INFO ] sent response to localhost/127.0.0.1:55167
+[17:28:49.460 INFO ] sent response to localhost/127.0.0.1:54052
+[17:28:49.460 INFO ] sent response to localhost/127.0.0.1:60226
+[17:28:49.460 INFO ] sent response to localhost/127.0.0.1:58818
+[17:28:49.460 INFO ] sent response to localhost/127.0.0.1:57631
+[17:28:49.460 INFO ] sent response to localhost/127.0.0.1:57472
+[17:28:49.460 INFO ] sent response to localhost/127.0.0.1:54313
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:49993
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:62415
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:54098
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:58824
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:53863
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:55078
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:60759
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:51925
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:60244
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:64787
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:50064
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:62959
+[17:28:49.461 INFO ] sent response to localhost/127.0.0.1:60589
+[17:28:49.462 INFO ] sent response to /127.0.0.1:52385
+[17:28:49.462 INFO ] sent response to localhost/127.0.0.1:62969
+[17:29:26.847 INFO ] received request from /127.0.0.1:52385
+[17:29:26.847 TRACE] added broadcast address localhost/127.0.0.1:52386
+[17:29:48.960 INFO ] received request from /127.0.0.1:53916
+[17:29:48.960 TRACE] added broadcast address localhost/127.0.0.1:53917
+[17:29:48.961 INFO ] sent response to /127.0.0.1:53916
+[17:29:50.884 INFO ] received request from /127.0.0.1:53916
+[17:29:50.884 TRACE] added broadcast address localhost/127.0.0.1:53917
+[17:29:50.885 INFO ]  qq  loginlogin successful
+[17:29:50.886 INFO ] sent response to /127.0.0.1:53916
+[17:29:51.457 INFO ] received request from /127.0.0.1:53916
+[17:29:51.458 TRACE] added broadcast address localhost/127.0.0.1:53917
+[17:29:51.459 INFO ] sent response to /127.0.0.1:53916
+[17:29:53.945 INFO ] received request from /127.0.0.1:53916
+[17:29:53.946 TRACE] added broadcast address localhost/127.0.0.1:53917
+[17:30:52.848 INFO ] received request from /127.0.0.1:61321
+[17:30:52.849 TRACE] added broadcast address localhost/127.0.0.1:61322
+[17:30:52.850 INFO ] sent response to /127.0.0.1:61321
+[17:30:54.995 INFO ] received request from /127.0.0.1:61321
+[17:30:54.995 TRACE] added broadcast address localhost/127.0.0.1:61322
+[17:30:54.996 INFO ]  qq  loginlogin successful
+[17:30:54.997 INFO ] sent response to /127.0.0.1:61321
+[17:30:55.482 INFO ] received request from /127.0.0.1:61321
+[17:30:55.483 TRACE] added broadcast address localhost/127.0.0.1:61322
+[17:30:55.484 INFO ] sent response to /127.0.0.1:61321
+[17:31:03.587 INFO ] received request from /127.0.0.1:61321
+[17:31:03.588 TRACE] added broadcast address localhost/127.0.0.1:61322
+[17:31:03.588 INFO ] client /127.0.0.1:61321 shut down
+[17:31:07.297 INFO ] received request from /127.0.0.1:60847
+[17:31:07.297 TRACE] added broadcast address localhost/127.0.0.1:60848
+[17:31:07.298 INFO ] sent response to /127.0.0.1:60847
+[17:31:09.497 INFO ] received request from /127.0.0.1:60847
+[17:31:09.497 TRACE] added broadcast address localhost/127.0.0.1:60848
+[17:31:09.498 INFO ]  qq  loginlogin successful
+[17:31:09.499 INFO ] sent response to /127.0.0.1:60847
+[17:31:09.973 INFO ] received request from /127.0.0.1:60847
+[17:31:09.974 TRACE] added broadcast address localhost/127.0.0.1:60848
+[17:31:09.975 INFO ] sent response to /127.0.0.1:60847
+[17:31:18.361 INFO ] received request from /127.0.0.1:60847
+[17:31:18.361 TRACE] added broadcast address localhost/127.0.0.1:60848
+[17:31:18.362 INFO ] client /127.0.0.1:60847 shut down
+[17:31:20.450 INFO ] received request from /127.0.0.1:60852
+[17:31:20.450 TRACE] added broadcast address localhost/127.0.0.1:60853
+[17:31:20.451 INFO ] sent response to /127.0.0.1:60852
+[17:31:22.585 INFO ] received request from /127.0.0.1:60852
+[17:31:22.586 TRACE] added broadcast address localhost/127.0.0.1:60853
+[17:31:22.586 INFO ]  qq  loginlogin successful
+[17:31:22.587 INFO ] sent response to /127.0.0.1:60852
+[17:31:23.058 INFO ] received request from /127.0.0.1:60852
+[17:31:23.058 TRACE] added broadcast address localhost/127.0.0.1:60853
+[17:31:23.059 INFO ] sent response to /127.0.0.1:60852
+[17:31:24.315 INFO ] received request from /127.0.0.1:60852
+[17:31:24.316 TRACE] added broadcast address localhost/127.0.0.1:60853
+[17:31:24.316 INFO ] client /127.0.0.1:60852 shut down
+[17:31:26.108 INFO ] received request from /127.0.0.1:60856
+[17:31:26.109 TRACE] added broadcast address localhost/127.0.0.1:60857
+[17:31:26.110 INFO ] sent response to /127.0.0.1:60856
+[17:31:28.102 INFO ] received request from /127.0.0.1:60856
+[17:31:28.102 TRACE] added broadcast address localhost/127.0.0.1:60857
+[17:31:28.103 INFO ]  qq  loginlogin successful
+[17:31:28.104 INFO ] sent response to /127.0.0.1:60856
+[17:31:28.569 INFO ] received request from /127.0.0.1:60856
+[17:31:28.569 TRACE] added broadcast address localhost/127.0.0.1:60857
+[17:31:28.571 INFO ] sent response to /127.0.0.1:60856
+[17:31:30.869 INFO ] received request from /127.0.0.1:60856
+[17:31:30.869 TRACE] added broadcast address localhost/127.0.0.1:60857
+[17:31:30.870 INFO ] client /127.0.0.1:60856 shut down
+[17:31:34.390 INFO ] received request from /127.0.0.1:60862
+[17:31:34.390 TRACE] added broadcast address localhost/127.0.0.1:60863
+[17:31:34.391 INFO ] sent response to /127.0.0.1:60862
+[17:31:36.356 INFO ] received request from /127.0.0.1:60862
+[17:31:36.356 TRACE] added broadcast address localhost/127.0.0.1:60863
+[17:31:36.357 INFO ]  qq  loginlogin successful
+[17:31:36.358 INFO ] sent response to /127.0.0.1:60862
+[17:31:36.832 INFO ] received request from /127.0.0.1:60862
+[17:31:36.833 TRACE] added broadcast address localhost/127.0.0.1:60863
+[17:31:36.834 INFO ] sent response to /127.0.0.1:60862
+[17:32:19.918 INFO ] received request from /127.0.0.1:64054
+[17:32:19.919 TRACE] added broadcast address localhost/127.0.0.1:64055
+[17:32:19.919 INFO ] sent response to /127.0.0.1:64054
+[17:32:22.105 INFO ] received request from /127.0.0.1:64054
+[17:32:22.105 TRACE] added broadcast address localhost/127.0.0.1:64055
+[17:32:22.106 INFO ]  qq  loginlogin successful
+[17:32:22.107 INFO ] sent response to /127.0.0.1:64054
+[17:32:22.593 INFO ] received request from /127.0.0.1:64054
+[17:32:22.594 TRACE] added broadcast address localhost/127.0.0.1:64055
+[17:32:22.596 INFO ] sent response to /127.0.0.1:64054
+[17:32:24.514 INFO ] received request from /127.0.0.1:64054
+[17:32:24.515 TRACE] added broadcast address localhost/127.0.0.1:64055
+[17:32:24.515 INFO ] client /127.0.0.1:64054 shut down
+[17:32:28.433 INFO ] received request from /127.0.0.1:57740
+[17:32:28.434 TRACE] added broadcast address localhost/127.0.0.1:57741
+[17:32:28.461 INFO ] sent response to /127.0.0.1:57740
+[17:32:30.753 INFO ] received request from /127.0.0.1:57740
+[17:32:30.754 TRACE] added broadcast address localhost/127.0.0.1:57741
+[17:32:30.754 INFO ]  qq  loginlogin successful
+[17:32:30.755 INFO ] sent response to /127.0.0.1:57740
+[17:32:31.230 INFO ] received request from /127.0.0.1:57740
+[17:32:31.231 TRACE] added broadcast address localhost/127.0.0.1:57741
+[17:32:31.233 INFO ] sent response to /127.0.0.1:57740
+[17:32:43.737 INFO ] received request from /127.0.0.1:57740
+[17:32:43.737 TRACE] added broadcast address localhost/127.0.0.1:57741
+[17:32:43.738 INFO ] client /127.0.0.1:57740 shut down
+[17:32:54.096 INFO ] received request from /127.0.0.1:57745
+[17:32:54.096 TRACE] added broadcast address localhost/127.0.0.1:57746
+[17:32:54.097 INFO ] sent response to /127.0.0.1:57745
+[17:32:56.097 INFO ] received request from /127.0.0.1:57745
+[17:32:56.098 TRACE] added broadcast address localhost/127.0.0.1:57746
+[17:32:56.099 INFO ]  qq  loginlogin successful
+[17:32:56.099 INFO ] sent response to /127.0.0.1:57745
+[17:32:56.593 INFO ] received request from /127.0.0.1:57745
+[17:32:56.594 TRACE] added broadcast address localhost/127.0.0.1:57746
+[17:32:56.595 INFO ] sent response to /127.0.0.1:57745
+[17:33:05.802 INFO ] received request from /127.0.0.1:57745
+[17:33:05.802 TRACE] added broadcast address localhost/127.0.0.1:57746
+[17:33:05.802 INFO ] client /127.0.0.1:57745 shut down
+[17:33:12.687 INFO ] received request from /127.0.0.1:62023
+[17:33:12.688 TRACE] added broadcast address localhost/127.0.0.1:62024
+[17:33:12.689 INFO ] sent response to /127.0.0.1:62023
+[17:33:14.655 INFO ] received request from /127.0.0.1:62023
+[17:33:14.656 TRACE] added broadcast address localhost/127.0.0.1:62024
+[17:33:14.657 INFO ]  qq  loginlogin successful
+[17:33:14.657 INFO ] sent response to /127.0.0.1:62023
+[17:33:15.120 INFO ] received request from /127.0.0.1:62023
+[17:33:15.121 TRACE] added broadcast address localhost/127.0.0.1:62024
+[17:33:15.122 INFO ] sent response to /127.0.0.1:62023
+[17:33:25.780 INFO ] received request from /127.0.0.1:62023
+[17:33:25.781 TRACE] added broadcast address localhost/127.0.0.1:62024
+[17:33:25.781 INFO ] client /127.0.0.1:62023 shut down
+[17:36:20.079 INFO ] received request from /127.0.0.1:59743
+[17:36:20.080 TRACE] added broadcast address localhost/127.0.0.1:59744
+[17:36:20.080 INFO ] sent response to /127.0.0.1:59743
+[17:36:22.426 INFO ] received request from /127.0.0.1:59743
+[17:36:22.428 TRACE] added broadcast address localhost/127.0.0.1:59744
+[17:36:22.429 INFO ]  qq  loginlogin successful
+[17:36:22.430 INFO ] sent response to /127.0.0.1:59743
+[17:36:22.562 INFO ] received request from /127.0.0.1:59743
+[17:36:22.562 TRACE] added broadcast address localhost/127.0.0.1:59744
+[17:36:22.564 INFO ] sent response to /127.0.0.1:59743
+[17:36:46.331 INFO ] received request from /127.0.0.1:59749
+[17:36:46.331 TRACE] added broadcast address localhost/127.0.0.1:59750
+[17:36:46.332 INFO ] sent response to /127.0.0.1:59749
+[17:36:48.365 INFO ] received request from /127.0.0.1:59749
+[17:36:48.365 TRACE] added broadcast address localhost/127.0.0.1:59750
+[17:36:48.366 INFO ]  qq  loginlogin successful
+[17:36:48.366 INFO ] sent response to /127.0.0.1:59749
+[17:36:48.500 INFO ] received request from /127.0.0.1:59749
+[17:36:48.500 TRACE] added broadcast address localhost/127.0.0.1:59750
+[17:36:48.501 INFO ] sent response to /127.0.0.1:59749
+[17:36:58.227 INFO ] received request from /127.0.0.1:59753
+[17:36:58.227 TRACE] added broadcast address localhost/127.0.0.1:59754
+[17:36:58.227 INFO ] sent response to /127.0.0.1:59753
+[17:37:00.376 INFO ] received request from /127.0.0.1:59753
+[17:37:00.377 TRACE] added broadcast address localhost/127.0.0.1:59754
+[17:37:00.377 INFO ]  qq  loginlogin successful
+[17:37:00.378 INFO ] sent response to /127.0.0.1:59753
+[17:37:00.511 INFO ] received request from /127.0.0.1:59753
+[17:37:00.511 TRACE] added broadcast address localhost/127.0.0.1:59754
+[17:37:00.512 INFO ] sent response to /127.0.0.1:59753
+[17:37:23.015 INFO ] received request from /127.0.0.1:59758
+[17:37:23.016 TRACE] added broadcast address localhost/127.0.0.1:59759
+[17:37:23.017 INFO ] sent response to /127.0.0.1:59758
+[17:37:25.163 INFO ] received request from /127.0.0.1:59758
+[17:37:25.164 TRACE] added broadcast address localhost/127.0.0.1:59759
+[17:37:25.165 INFO ]  qq  loginlogin successful
+[17:37:25.165 INFO ] sent response to /127.0.0.1:59758
+[17:37:25.657 INFO ] received request from /127.0.0.1:59758
+[17:37:25.659 TRACE] added broadcast address localhost/127.0.0.1:59759
+[17:37:25.660 INFO ] sent response to /127.0.0.1:59758
+[17:38:27.776 INFO ] received request from /127.0.0.1:50757
+[17:38:27.777 TRACE] added broadcast address localhost/127.0.0.1:50758
+[17:38:27.778 INFO ] sent response to /127.0.0.1:50757
+[17:38:29.667 INFO ] received request from /127.0.0.1:50757
+[17:38:29.667 TRACE] added broadcast address localhost/127.0.0.1:50758
+[17:38:29.668 INFO ]  qq  loginlogin successful
+[17:38:29.668 INFO ] sent response to /127.0.0.1:50757
+[17:38:30.152 INFO ] received request from /127.0.0.1:50757
+[17:38:30.153 TRACE] added broadcast address localhost/127.0.0.1:50758
+[17:38:30.154 INFO ] sent response to /127.0.0.1:50757
+[17:38:39.866 INFO ] received request from /127.0.0.1:50757
+[17:38:39.866 TRACE] added broadcast address localhost/127.0.0.1:50758
+[17:38:39.867 INFO ] client /127.0.0.1:50757 shut down
+[17:39:35.889 INFO ] received request from /127.0.0.1:54749
+[17:39:35.889 TRACE] added broadcast address localhost/127.0.0.1:54750
+[17:39:35.890 INFO ] sent response to /127.0.0.1:54749
+[17:39:37.882 INFO ] received request from /127.0.0.1:54749
+[17:39:37.882 TRACE] added broadcast address localhost/127.0.0.1:54750
+[17:39:37.884 INFO ]  qq  loginlogin successful
+[17:39:37.884 INFO ] sent response to /127.0.0.1:54749
+[17:39:38.356 INFO ] received request from /127.0.0.1:54749
+[17:39:38.357 TRACE] added broadcast address localhost/127.0.0.1:54750
+[17:39:38.357 INFO ] sent response to /127.0.0.1:54749
+[17:40:14.975 INFO ] received request from /127.0.0.1:54749
+[17:40:14.977 TRACE] added broadcast address localhost/127.0.0.1:54750
+[17:40:14.978 INFO ] client /127.0.0.1:54749 shut down
+[17:40:29.859 INFO ] received request from /127.0.0.1:49766
+[17:40:29.859 TRACE] added broadcast address localhost/127.0.0.1:49767
+[17:40:29.860 INFO ] sent response to /127.0.0.1:49766
+[17:40:32.252 INFO ] received request from /127.0.0.1:49766
+[17:40:32.252 TRACE] added broadcast address localhost/127.0.0.1:49767
+[17:40:32.253 ERROR]  qq  login login or password is incorrect
+[17:40:32.254 INFO ] sent response to /127.0.0.1:49766
+[17:40:34.784 INFO ] received request from /127.0.0.1:49766
+[17:40:34.785 TRACE] added broadcast address localhost/127.0.0.1:49767
+[17:40:34.786 INFO ]  qq  loginlogin successful
+[17:40:34.786 INFO ] sent response to /127.0.0.1:49766
+[17:40:35.245 INFO ] received request from /127.0.0.1:49766
+[17:40:35.247 TRACE] added broadcast address localhost/127.0.0.1:49767
+[17:40:35.248 INFO ] sent response to /127.0.0.1:49766
+[17:40:54.202 INFO ] received request from /127.0.0.1:49766
+[17:40:54.204 TRACE] added broadcast address localhost/127.0.0.1:49767
+[17:40:54.204 INFO ] client /127.0.0.1:49766 shut down
+[17:41:16.472 INFO ] received request from /127.0.0.1:60625
+[17:41:16.473 TRACE] added broadcast address localhost/127.0.0.1:60626
+[17:41:16.474 INFO ] sent response to /127.0.0.1:60625
+[17:41:18.645 INFO ] received request from /127.0.0.1:60625
+[17:41:18.646 TRACE] added broadcast address localhost/127.0.0.1:60626
+[17:41:18.647 INFO ]  qq  loginlogin successful
+[17:41:18.647 INFO ] sent response to /127.0.0.1:60625
+[17:41:19.118 INFO ] received request from /127.0.0.1:60625
+[17:41:19.118 TRACE] added broadcast address localhost/127.0.0.1:60626
+[17:41:19.120 INFO ] sent response to /127.0.0.1:60625
+[17:41:21.528 INFO ] received request from /127.0.0.1:60625
+[17:41:21.529 TRACE] added broadcast address localhost/127.0.0.1:60626
+[17:41:21.529 INFO ] client /127.0.0.1:60625 shut down
+[17:43:32.095 INFO ] received request from /127.0.0.1:58270
+[17:43:32.096 TRACE] added broadcast address localhost/127.0.0.1:58271
+[17:43:32.096 INFO ] sent response to /127.0.0.1:58270
+[17:43:34.881 INFO ] received request from /127.0.0.1:58270
+[17:43:34.882 TRACE] added broadcast address localhost/127.0.0.1:58271
+[17:43:34.883 INFO ]  qq  loginlogin successful
+[17:43:34.884 INFO ] sent response to /127.0.0.1:58270
+[17:43:35.368 INFO ] received request from /127.0.0.1:58270
+[17:43:35.368 TRACE] added broadcast address localhost/127.0.0.1:58271
+[17:43:35.369 INFO ] sent response to /127.0.0.1:58270
+[17:43:37.908 INFO ] received request from /127.0.0.1:58270
+[17:43:37.908 TRACE] added broadcast address localhost/127.0.0.1:58271
+[17:43:37.909 INFO ] client /127.0.0.1:58270 shut down
+[17:43:45.264 INFO ] received request from /127.0.0.1:54491
+[17:43:45.265 TRACE] added broadcast address localhost/127.0.0.1:54492
+[17:43:45.266 INFO ] sent response to /127.0.0.1:54491
+[17:43:47.109 INFO ] received request from /127.0.0.1:54491
+[17:43:47.110 TRACE] added broadcast address localhost/127.0.0.1:54492
+[17:43:47.110 INFO ]  qq  loginlogin successful
+[17:43:47.111 INFO ] sent response to /127.0.0.1:54491
+[17:43:47.581 INFO ] received request from /127.0.0.1:54491
+[17:43:47.582 TRACE] added broadcast address localhost/127.0.0.1:54492
+[17:43:47.583 INFO ] sent response to /127.0.0.1:54491
+[17:44:07.048 INFO ] received request from /127.0.0.1:53538
+[17:44:07.048 TRACE] added broadcast address localhost/127.0.0.1:53539
+[17:44:07.049 INFO ] sent response to /127.0.0.1:53538
+[17:44:09.521 INFO ] received request from /127.0.0.1:53538
+[17:44:09.522 TRACE] added broadcast address localhost/127.0.0.1:53539
+[17:44:09.523 INFO ]  qq  loginlogin successful
+[17:44:09.524 INFO ] sent response to /127.0.0.1:53538
+[17:44:10.039 INFO ] received request from /127.0.0.1:53538
+[17:44:10.040 TRACE] added broadcast address localhost/127.0.0.1:53539
+[17:44:10.041 INFO ] sent response to /127.0.0.1:53538
+[17:44:12.691 INFO ] received request from /127.0.0.1:53538
+[17:44:12.692 TRACE] added broadcast address localhost/127.0.0.1:53539
+[17:44:12.692 INFO ] client /127.0.0.1:53538 shut down
+[17:45:33.614 INFO ] received request from /127.0.0.1:52752
+[17:45:33.615 TRACE] added broadcast address localhost/127.0.0.1:52753
+[17:45:33.616 INFO ] sent response to /127.0.0.1:52752
+[17:45:35.517 INFO ] received request from /127.0.0.1:52752
+[17:45:35.517 TRACE] added broadcast address localhost/127.0.0.1:52753
+[17:45:35.518 INFO ]  qq  loginlogin successful
+[17:45:35.518 INFO ] sent response to /127.0.0.1:52752
+[17:45:36.017 INFO ] received request from /127.0.0.1:52752
+[17:45:36.018 TRACE] added broadcast address localhost/127.0.0.1:52753
+[17:45:36.019 INFO ] sent response to /127.0.0.1:52752
+[17:45:44.257 INFO ] received request from /127.0.0.1:52752
+[17:45:44.258 TRACE] added broadcast address localhost/127.0.0.1:52753
+[17:45:44.258 INFO ] client /127.0.0.1:52752 shut down
+[17:45:46.749 INFO ] received request from /127.0.0.1:60939
+[17:45:46.749 TRACE] added broadcast address localhost/127.0.0.1:60940
+[17:45:46.750 INFO ] sent response to /127.0.0.1:60939
+[17:45:49.219 INFO ] received request from /127.0.0.1:60939
+[17:45:49.219 TRACE] added broadcast address localhost/127.0.0.1:60940
+[17:45:49.220 INFO ]  qq  loginlogin successful
+[17:45:49.221 INFO ] sent response to /127.0.0.1:60939
+[17:45:49.695 INFO ] received request from /127.0.0.1:60939
+[17:45:49.695 TRACE] added broadcast address localhost/127.0.0.1:60940
+[17:45:49.696 INFO ] sent response to /127.0.0.1:60939
+[17:46:15.340 INFO ] received request from /127.0.0.1:50331
+[17:46:15.340 TRACE] added broadcast address localhost/127.0.0.1:50332
+[17:46:15.341 INFO ] sent response to /127.0.0.1:50331
+[17:46:18.714 INFO ] received request from /127.0.0.1:50331
+[17:46:18.715 TRACE] added broadcast address localhost/127.0.0.1:50332
+[17:46:18.715 INFO ]  qq  loginlogin successful
+[17:46:18.716 INFO ] sent response to /127.0.0.1:50331
+[17:46:19.214 INFO ] received request from /127.0.0.1:50331
+[17:46:19.215 TRACE] added broadcast address localhost/127.0.0.1:50332
+[17:46:19.216 INFO ] sent response to /127.0.0.1:50331
+[17:46:26.596 INFO ] received request from /127.0.0.1:50331
+[17:46:26.596 TRACE] added broadcast address localhost/127.0.0.1:50332
+[17:46:26.597 INFO ] client /127.0.0.1:50331 shut down
+[17:46:43.032 INFO ] received request from /127.0.0.1:64647
+[17:46:43.033 TRACE] added broadcast address localhost/127.0.0.1:64648
+[17:46:43.034 INFO ] sent response to /127.0.0.1:64647
+[17:46:45.835 INFO ] received request from /127.0.0.1:64647
+[17:46:45.836 TRACE] added broadcast address localhost/127.0.0.1:64648
+[17:46:45.837 INFO ]  qq  loginlogin successful
+[17:46:45.837 INFO ] sent response to /127.0.0.1:64647
+[17:46:46.323 INFO ] received request from /127.0.0.1:64647
+[17:46:46.324 TRACE] added broadcast address localhost/127.0.0.1:64648
+[17:46:46.325 INFO ] sent response to /127.0.0.1:64647
+[17:46:55.949 INFO ] received request from /127.0.0.1:64647
+[17:46:55.949 TRACE] added broadcast address localhost/127.0.0.1:64648
+[17:46:55.950 INFO ] client /127.0.0.1:64647 shut down
+[17:48:17.587 INFO ] received request from /127.0.0.1:61817
+[17:48:17.587 TRACE] added broadcast address localhost/127.0.0.1:61818
+[17:48:17.588 INFO ] sent response to /127.0.0.1:61817
+[17:48:19.769 INFO ] received request from /127.0.0.1:61817
+[17:48:19.770 TRACE] added broadcast address localhost/127.0.0.1:61818
+[17:48:19.770 INFO ]  qq  loginlogin successful
+[17:48:19.771 INFO ] sent response to /127.0.0.1:61817
+[17:48:20.279 INFO ] received request from /127.0.0.1:61817
+[17:48:20.279 TRACE] added broadcast address localhost/127.0.0.1:61818
+[17:48:20.280 INFO ] sent response to /127.0.0.1:61817
+[17:48:47.036 INFO ] received request from /127.0.0.1:62092
+[17:48:47.036 TRACE] added broadcast address localhost/127.0.0.1:62093
+[17:48:47.037 INFO ] sent response to /127.0.0.1:62092
+[17:48:49.463 INFO ] received request from /127.0.0.1:62092
+[17:48:49.464 TRACE] added broadcast address localhost/127.0.0.1:62093
+[17:48:49.465 INFO ]  qq  loginlogin successful
+[17:48:49.466 INFO ] sent response to /127.0.0.1:62092
+[17:48:50.003 INFO ] received request from /127.0.0.1:62092
+[17:48:50.003 TRACE] added broadcast address localhost/127.0.0.1:62093
+[17:48:50.004 INFO ] sent response to /127.0.0.1:62092
+[17:48:57.063 INFO ] received request from /127.0.0.1:62092
+[17:48:57.064 TRACE] added broadcast address localhost/127.0.0.1:62093
+[17:48:57.064 INFO ] client /127.0.0.1:62092 shut down
+[17:49:00.961 INFO ] received request from /127.0.0.1:56707
+[17:49:00.962 TRACE] added broadcast address localhost/127.0.0.1:56708
+[17:49:00.963 INFO ] sent response to /127.0.0.1:56707
+[17:49:03.357 INFO ] received request from /127.0.0.1:56707
+[17:49:03.357 TRACE] added broadcast address localhost/127.0.0.1:56708
+[17:49:03.358 INFO ]  qq  loginlogin successful
+[17:49:03.358 INFO ] sent response to /127.0.0.1:56707
+[17:49:03.863 INFO ] received request from /127.0.0.1:56707
+[17:49:03.864 TRACE] added broadcast address localhost/127.0.0.1:56708
+[17:49:03.865 INFO ] sent response to /127.0.0.1:56707
+[17:49:12.616 INFO ] received request from /127.0.0.1:56707
+[17:49:12.617 TRACE] added broadcast address localhost/127.0.0.1:56708
+[17:49:12.617 INFO ] client /127.0.0.1:56707 shut down
+[17:49:15.517 INFO ] received request from /127.0.0.1:63822
+[17:49:15.518 TRACE] added broadcast address localhost/127.0.0.1:63823
+[17:49:15.518 INFO ] sent response to /127.0.0.1:63822
+[17:49:17.841 INFO ] received request from /127.0.0.1:63822
+[17:49:17.841 TRACE] added broadcast address localhost/127.0.0.1:63823
+[17:49:17.842 INFO ]  qq  loginlogin successful
+[17:49:17.843 INFO ] sent response to /127.0.0.1:63822
+[17:49:18.335 INFO ] received request from /127.0.0.1:63822
+[17:49:18.336 TRACE] added broadcast address localhost/127.0.0.1:63823
+[17:49:18.337 INFO ] sent response to /127.0.0.1:63822
+[17:49:23.569 INFO ] received request from /127.0.0.1:63822
+[17:49:23.570 TRACE] added broadcast address localhost/127.0.0.1:63823
+[17:49:23.570 INFO ] client /127.0.0.1:63822 shut down
+[17:49:25.259 INFO ] received request from /127.0.0.1:52647
+[17:49:25.260 TRACE] added broadcast address localhost/127.0.0.1:52648
+[17:49:25.260 INFO ] sent response to /127.0.0.1:52647
+[17:49:27.330 INFO ] received request from /127.0.0.1:52647
+[17:49:27.331 TRACE] added broadcast address localhost/127.0.0.1:52648
+[17:49:27.332 INFO ]  qq  loginlogin successful
+[17:49:27.333 INFO ] sent response to /127.0.0.1:52647
+[17:49:27.822 INFO ] received request from /127.0.0.1:52647
+[17:49:27.823 TRACE] added broadcast address localhost/127.0.0.1:52648
+[17:49:27.823 INFO ] sent response to /127.0.0.1:52647
+[17:49:43.430 INFO ] received request from /127.0.0.1:52647
+[17:49:43.430 TRACE] added broadcast address localhost/127.0.0.1:52648
+[17:49:43.430 INFO ] client /127.0.0.1:52647 shut down
+[18:10:03.513 INFO ] received request from /127.0.0.1:64541
+[18:10:03.515 TRACE] added broadcast address localhost/127.0.0.1:64542
+[18:10:03.516 INFO ] sent response to /127.0.0.1:64541
+[18:10:07.685 INFO ] received request from /127.0.0.1:64541
+[18:10:07.685 TRACE] added broadcast address localhost/127.0.0.1:64542
+[18:10:07.686 INFO ]  qq  loginlogin successful
+[18:10:07.686 INFO ] sent response to /127.0.0.1:64541
+[18:10:08.189 INFO ] received request from /127.0.0.1:64541
+[18:10:08.190 TRACE] added broadcast address localhost/127.0.0.1:64542
+[18:10:08.191 INFO ] sent response to /127.0.0.1:64541
+[18:10:15.520 INFO ] received request from /127.0.0.1:64541
+[18:10:15.520 TRACE] added broadcast address localhost/127.0.0.1:64542
+[18:10:15.520 INFO ] client /127.0.0.1:64541 shut down
+[18:10:23.433 INFO ] received request from /127.0.0.1:59392
+[18:10:23.433 TRACE] added broadcast address localhost/127.0.0.1:59393
+[18:10:23.433 INFO ] sent response to /127.0.0.1:59392
+[18:10:25.836 INFO ] received request from /127.0.0.1:59392
+[18:10:25.836 TRACE] added broadcast address localhost/127.0.0.1:59393
+[18:10:25.837 INFO ]  qq  loginlogin successful
+[18:10:25.837 INFO ] sent response to /127.0.0.1:59392
+[18:10:26.310 INFO ] received request from /127.0.0.1:59392
+[18:10:26.311 TRACE] added broadcast address localhost/127.0.0.1:59393
+[18:10:26.312 INFO ] sent response to /127.0.0.1:59392
+[18:15:23.345 INFO ] received request from /127.0.0.1:62507
+[18:15:23.346 TRACE] added broadcast address localhost/127.0.0.1:62508
+[18:15:23.346 INFO ] sent response to /127.0.0.1:62507
+[18:15:25.849 INFO ] received request from /127.0.0.1:62507
+[18:15:25.850 TRACE] added broadcast address localhost/127.0.0.1:62508
+[18:15:25.851 INFO ]  qq  loginlogin successful
+[18:15:25.852 INFO ] sent response to /127.0.0.1:62507
+[18:15:26.363 INFO ] received request from /127.0.0.1:62507
+[18:15:26.364 TRACE] added broadcast address localhost/127.0.0.1:62508
+[18:15:26.365 INFO ] sent response to /127.0.0.1:62507
+[18:16:07.967 INFO ] received request from /127.0.0.1:54827
+[18:16:07.968 TRACE] added broadcast address localhost/127.0.0.1:54828
+[18:16:07.968 INFO ] sent response to /127.0.0.1:54827
+[18:16:09.727 INFO ] received request from /127.0.0.1:54827
+[18:16:09.728 TRACE] added broadcast address localhost/127.0.0.1:54828
+[18:16:09.729 INFO ]  qq  loginlogin successful
+[18:16:09.729 INFO ] sent response to /127.0.0.1:54827
+[18:16:10.217 INFO ] received request from /127.0.0.1:54827
+[18:16:10.217 TRACE] added broadcast address localhost/127.0.0.1:54828
+[18:16:10.220 INFO ] sent response to /127.0.0.1:54827
+[18:16:21.131 INFO ] received request from /127.0.0.1:59387
+[18:16:21.132 TRACE] added broadcast address localhost/127.0.0.1:59388
+[18:16:21.132 INFO ] sent response to /127.0.0.1:59387
+[18:16:23.049 INFO ] received request from /127.0.0.1:59387
+[18:16:23.049 TRACE] added broadcast address localhost/127.0.0.1:59388
+[18:16:23.050 INFO ]  qq  loginlogin successful
+[18:16:23.051 INFO ] sent response to /127.0.0.1:59387
+[18:16:23.546 INFO ] received request from /127.0.0.1:59387
+[18:16:23.547 TRACE] added broadcast address localhost/127.0.0.1:59388
+[18:16:23.548 INFO ] sent response to /127.0.0.1:59387
+[18:17:35.792 INFO ] received request from /127.0.0.1:61556
+[18:17:35.794 TRACE] added broadcast address localhost/127.0.0.1:61557
+[18:17:35.795 INFO ] sent response to /127.0.0.1:61556
+[18:17:38.431 INFO ] received request from /127.0.0.1:61556
+[18:17:38.432 TRACE] added broadcast address localhost/127.0.0.1:61557
+[18:17:38.432 INFO ]  qq  loginlogin successful
+[18:17:38.433 INFO ] sent response to /127.0.0.1:61556
+[18:17:38.938 INFO ] received request from /127.0.0.1:61556
+[18:17:38.938 TRACE] added broadcast address localhost/127.0.0.1:61557
+[18:17:38.939 INFO ] sent response to /127.0.0.1:61556
+[18:18:51.513 INFO ] received request from /127.0.0.1:61556
+[18:18:51.513 TRACE] added broadcast address localhost/127.0.0.1:61557
+[18:18:51.513 INFO ] client /127.0.0.1:61556 shut down
+[18:19:08.598 INFO ] received request from /127.0.0.1:57536
+[18:19:08.598 TRACE] added broadcast address localhost/127.0.0.1:57537
+[18:19:08.599 INFO ] sent response to /127.0.0.1:57536
+[18:19:12.132 INFO ] received request from /127.0.0.1:57536
+[18:19:12.132 TRACE] added broadcast address localhost/127.0.0.1:57537
+[18:19:12.133 INFO ]  qq  loginlogin successful
+[18:19:12.133 INFO ] sent response to /127.0.0.1:57536
+[18:19:12.674 INFO ] received request from /127.0.0.1:57536
+[18:19:12.675 TRACE] added broadcast address localhost/127.0.0.1:57537
+[18:19:12.676 INFO ] sent response to /127.0.0.1:57536
+[18:19:32.439 INFO ] received request from /127.0.0.1:57536
+[18:19:32.439 TRACE] added broadcast address localhost/127.0.0.1:57537
+[18:19:32.440 INFO ] client /127.0.0.1:57536 shut down
+[18:19:53.572 INFO ] received request from /127.0.0.1:57543
+[18:19:53.572 TRACE] added broadcast address localhost/127.0.0.1:57544
+[18:19:53.573 INFO ] sent response to /127.0.0.1:57543
+[18:19:55.712 INFO ] received request from /127.0.0.1:57543
+[18:19:55.712 TRACE] added broadcast address localhost/127.0.0.1:57544
+[18:19:55.713 INFO ]  qq  loginlogin successful
+[18:19:55.713 INFO ] sent response to /127.0.0.1:57543
+[18:19:56.198 INFO ] received request from /127.0.0.1:57543
+[18:19:56.198 TRACE] added broadcast address localhost/127.0.0.1:57544
+[18:19:56.199 INFO ] sent response to /127.0.0.1:57543
+[18:20:01.250 INFO ] received request from /127.0.0.1:57543
+[18:20:01.251 TRACE] added broadcast address localhost/127.0.0.1:57544
+[18:20:01.251 INFO ] client /127.0.0.1:57543 shut down
+[18:21:18.952 INFO ] received request from /127.0.0.1:58865
+[18:21:18.953 TRACE] added broadcast address localhost/127.0.0.1:58866
+[18:21:18.953 INFO ] sent response to /127.0.0.1:58865
+[18:21:20.989 INFO ] received request from /127.0.0.1:58865
+[18:21:20.989 TRACE] added broadcast address localhost/127.0.0.1:58866
+[18:21:20.991 INFO ]  qq  loginlogin successful
+[18:21:20.991 INFO ] sent response to /127.0.0.1:58865
+[18:21:21.475 INFO ] received request from /127.0.0.1:58865
+[18:21:21.476 TRACE] added broadcast address localhost/127.0.0.1:58866
+[18:21:21.477 INFO ] sent response to /127.0.0.1:58865
+[18:23:18.858 INFO ] received request from /127.0.0.1:62595
+[18:23:18.859 TRACE] added broadcast address localhost/127.0.0.1:62596
+[18:23:18.859 INFO ] sent response to /127.0.0.1:62595
+[18:23:20.919 INFO ] received request from /127.0.0.1:62595
+[18:23:20.920 TRACE] added broadcast address localhost/127.0.0.1:62596
+[18:23:20.920 INFO ]  qq  loginlogin successful
+[18:23:20.921 INFO ] sent response to /127.0.0.1:62595
+[18:23:21.424 INFO ] received request from /127.0.0.1:62595
+[18:23:21.425 TRACE] added broadcast address localhost/127.0.0.1:62596
+[18:23:21.426 INFO ] sent response to /127.0.0.1:62595
+[18:24:07.294 INFO ] received request from /127.0.0.1:62601
+[18:24:07.295 TRACE] added broadcast address localhost/127.0.0.1:62602
+[18:24:07.296 INFO ] sent response to /127.0.0.1:62601
+[18:24:09.887 INFO ] received request from /127.0.0.1:62601
+[18:24:09.888 TRACE] added broadcast address localhost/127.0.0.1:62602
+[18:24:09.889 INFO ]  qq  loginlogin successful
+[18:24:09.889 INFO ] sent response to /127.0.0.1:62601
+[18:24:10.379 INFO ] received request from /127.0.0.1:62601
+[18:24:10.381 TRACE] added broadcast address localhost/127.0.0.1:62602
+[18:24:10.382 INFO ] sent response to /127.0.0.1:62601
+[18:26:33.559 INFO ] received request from /127.0.0.1:62601
+[18:26:33.559 TRACE] added broadcast address localhost/127.0.0.1:62602
+[18:26:33.560 INFO ] client /127.0.0.1:62601 shut down
+[18:27:07.280 INFO ] received request from /127.0.0.1:49435
+[18:27:07.281 TRACE] added broadcast address localhost/127.0.0.1:49436
+[18:27:07.282 INFO ] sent response to /127.0.0.1:49435
+[18:27:09.797 INFO ] received request from /127.0.0.1:49435
+[18:27:09.798 TRACE] added broadcast address localhost/127.0.0.1:49436
+[18:27:09.798 INFO ]  qq  loginlogin successful
+[18:27:09.799 INFO ] sent response to /127.0.0.1:49435
+[18:27:10.300 INFO ] received request from /127.0.0.1:49435
+[18:27:10.300 TRACE] added broadcast address localhost/127.0.0.1:49436
+[18:27:10.301 INFO ] sent response to /127.0.0.1:49435
+[18:27:20.266 INFO ] received request from /127.0.0.1:49435
+[18:27:20.266 TRACE] added broadcast address localhost/127.0.0.1:49436
+[18:27:20.267 INFO ] client /127.0.0.1:49435 shut down
+[18:27:56.822 INFO ] received request from /127.0.0.1:53628
+[18:27:56.823 TRACE] added broadcast address localhost/127.0.0.1:53629
+[18:27:56.824 INFO ] sent response to /127.0.0.1:53628
+[18:28:03.969 INFO ] received request from /127.0.0.1:53628
+[18:28:03.969 TRACE] added broadcast address localhost/127.0.0.1:53629
+[18:28:03.970 INFO ]  qq  loginlogin successful
+[18:28:03.971 INFO ] sent response to /127.0.0.1:53628
+[18:28:04.468 INFO ] received request from /127.0.0.1:53628
+[18:28:04.468 TRACE] added broadcast address localhost/127.0.0.1:53629
+[18:28:04.469 INFO ] sent response to /127.0.0.1:53628
+[18:29:07.628 INFO ] received request from /127.0.0.1:54244
+[18:29:07.630 TRACE] added broadcast address localhost/127.0.0.1:54245
+[18:29:07.631 INFO ] sent response to /127.0.0.1:54244
+[18:29:31.634 INFO ] received request from /127.0.0.1:54251
+[18:29:31.635 TRACE] added broadcast address localhost/127.0.0.1:54252
+[18:29:31.635 INFO ] sent response to /127.0.0.1:54251
+[18:29:40.811 INFO ] received request from /127.0.0.1:54255
+[18:29:40.811 TRACE] added broadcast address localhost/127.0.0.1:54256
+[18:29:40.812 INFO ] sent response to /127.0.0.1:54255
+[18:36:30.725 INFO ] received request from /127.0.0.1:62068
+[18:36:30.728 TRACE] added broadcast address localhost/127.0.0.1:62069
+[18:36:30.728 ERROR] wrong command
+[18:36:30.729 INFO ] sent response to /127.0.0.1:62068
+[18:36:34.908 INFO ] received request from /127.0.0.1:62068
+[18:36:34.909 TRACE] added broadcast address localhost/127.0.0.1:62069
+[18:36:34.909 ERROR] wrong command
+[18:36:34.910 INFO ] sent response to /127.0.0.1:62068
+[18:37:20.518 INFO ] collection successfully loaded
+[18:37:20.528 INFO ] starting server
+[18:37:22.772 INFO ] received request from /127.0.0.1:61883
+[18:37:22.787 TRACE] added broadcast address localhost/127.0.0.1:61884
+[18:37:22.793 INFO ] sent response to /127.0.0.1:61883
+[18:37:25.365 INFO ] received request from /127.0.0.1:61883
+[18:37:25.368 TRACE] added broadcast address localhost/127.0.0.1:61884
+[18:37:25.370 INFO ]  qq  loginlogin successful
+[18:37:25.371 INFO ] sent response to /127.0.0.1:61883
+[18:37:25.863 INFO ] received request from /127.0.0.1:61883
+[18:37:25.865 TRACE] added broadcast address localhost/127.0.0.1:61884
+[18:51:23.876 INFO ] collection successfully loaded
+[18:51:23.887 INFO ] starting server
+[18:51:26.427 INFO ] received request from /127.0.0.1:58725
+[18:51:35.601 INFO ] received request from /127.0.0.1:58731
+[18:51:46.751 INFO ] received request from /127.0.0.1:58735
+[18:53:24.816 INFO ] received request from /127.0.0.1:61839
+[18:53:37.086 INFO ] received request from /127.0.0.1:49551
+[18:54:07.607 INFO ] received request from /127.0.0.1:63868
+[18:54:36.254 INFO ] received request from /127.0.0.1:63874
+[18:54:43.999 INFO ] collection successfully loaded
+[18:54:44.010 INFO ] starting server
+[18:55:28.076 INFO ] collection successfully loaded
+[18:55:28.087 INFO ] starting server
+[18:55:32.074 INFO ] received request from /127.0.0.1:63889
+[18:55:32.090 TRACE] added broadcast address localhost/127.0.0.1:63890
+[18:55:32.097 INFO ] sent response to /127.0.0.1:63889
+[18:55:38.671 INFO ] received request from /127.0.0.1:63889
+[18:55:38.673 TRACE] added broadcast address localhost/127.0.0.1:63890
+[18:55:38.675 INFO ]  qq  loginlogin successful
+[18:55:38.676 INFO ] sent response to /127.0.0.1:63889
+[18:55:39.191 INFO ] received request from /127.0.0.1:63889
+[18:55:39.192 TRACE] added broadcast address localhost/127.0.0.1:63890
+[18:55:39.201 INFO ] sent response to /127.0.0.1:63889
+[18:55:45.954 INFO ] received request from /127.0.0.1:63889
+[18:55:45.956 TRACE] added broadcast address localhost/127.0.0.1:63890
+[18:55:45.956 INFO ] client /127.0.0.1:63889 shut down
+[18:59:05.315 INFO ] collection successfully loaded
+[18:59:05.325 INFO ] starting server
+[18:59:07.518 INFO ] received request from /127.0.0.1:57882
+[18:59:31.545 INFO ] collection successfully loaded
+[18:59:31.556 INFO ] starting server
+[18:59:35.729 INFO ] received request from /127.0.0.1:57889
+[18:59:35.743 TRACE] added broadcast address localhost/127.0.0.1:57890
+[18:59:35.748 INFO ] sent response to /127.0.0.1:57889
+[18:59:37.991 INFO ] received request from /127.0.0.1:57889
+[18:59:37.994 TRACE] added broadcast address localhost/127.0.0.1:57890
+[18:59:37.995 INFO ]  qq  loginlogin successful
+[18:59:37.997 INFO ] sent response to /127.0.0.1:57889
+[18:59:38.499 INFO ] received request from /127.0.0.1:57889
+[18:59:38.500 TRACE] added broadcast address localhost/127.0.0.1:57890
+[19:03:30.489 INFO ] collection successfully loaded
+[19:03:30.500 INFO ] starting server
+[19:03:34.604 INFO ] received request from /127.0.0.1:57016
+[19:03:34.619 TRACE] added broadcast address localhost/127.0.0.1:57017
+[19:03:34.627 INFO ] sent response to /127.0.0.1:57016
+[19:03:38.055 INFO ] received request from /127.0.0.1:57016
+[19:03:38.058 TRACE] added broadcast address localhost/127.0.0.1:57017
+[19:03:38.059 INFO ]  qq  loginlogin successful
+[19:03:38.060 INFO ] sent response to /127.0.0.1:57016
+[19:03:38.580 INFO ] received request from /127.0.0.1:57016
+[19:03:38.581 TRACE] added broadcast address localhost/127.0.0.1:57017
+[19:09:27.984 INFO ] collection successfully loaded
+[19:09:27.994 INFO ] starting server
+[19:09:30.421 INFO ] received request from /127.0.0.1:50570
+[19:09:30.436 TRACE] added broadcast address localhost/127.0.0.1:50571
+[19:09:30.442 INFO ] sent response to /127.0.0.1:50570
+[19:09:32.500 INFO ] received request from /127.0.0.1:50570
+[19:09:32.503 TRACE] added broadcast address localhost/127.0.0.1:50571
+[19:09:32.505 INFO ]  qq  loginlogin successful
+[19:09:32.506 INFO ] sent response to /127.0.0.1:50570
+[19:09:33.024 INFO ] received request from /127.0.0.1:50570
+[19:09:33.026 TRACE] added broadcast address localhost/127.0.0.1:50571
+[19:09:33.033 INFO ] sent response to /127.0.0.1:50570
+[19:13:30.465 INFO ] collection successfully loaded
+[19:13:30.476 INFO ] starting server
+[19:13:33.097 INFO ] received request from /127.0.0.1:53948
+[19:13:33.112 TRACE] added broadcast address localhost/127.0.0.1:53949
+[19:13:33.119 INFO ] sent response to /127.0.0.1:53948
+[19:13:36.914 INFO ] received request from /127.0.0.1:53948
+[19:13:36.917 TRACE] added broadcast address localhost/127.0.0.1:53949
+[19:13:36.919 INFO ]  qq  loginlogin successful
+[19:13:36.920 INFO ] sent response to /127.0.0.1:53948
+[19:13:37.435 INFO ] received request from /127.0.0.1:53948
+[19:13:37.437 TRACE] added broadcast address localhost/127.0.0.1:53949
+[19:13:39.244 INFO ] received request from /127.0.0.1:53948
+[19:13:39.245 TRACE] added broadcast address localhost/127.0.0.1:53949
+[19:14:23.372 INFO ] collection successfully loaded
+[19:14:23.383 INFO ] starting server
+[19:14:25.706 INFO ] received request from /127.0.0.1:51573
+[19:14:25.724 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:25.732 INFO ] sent response to /127.0.0.1:51573
+[19:14:27.852 INFO ] received request from /127.0.0.1:51573
+[19:14:27.854 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:27.856 INFO ]  qq  loginlogin successful
+[19:14:27.857 INFO ] sent response to /127.0.0.1:51573
+[19:14:28.402 INFO ] received request from /127.0.0.1:51573
+[19:14:28.404 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:28.414 INFO ] sent response to /127.0.0.1:51573
+[19:14:32.876 INFO ] received request from /127.0.0.1:51573
+[19:14:32.878 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:32.894 INFO ]  qq  add
+ Added element: 
+id : "460",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:14:32.894 TRACE] broadcasting changes
+[19:14:32.897 INFO ] sent response to /127.0.0.1:51573
+[19:14:37.548 INFO ] received request from /127.0.0.1:51573
+[19:14:37.549 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:37.552 INFO ]  qq  add
+ Added element: 
+id : "461",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:14:37.552 TRACE] broadcasting changes
+[19:14:37.553 INFO ] sent response to /127.0.0.1:51573
+[19:14:39.699 INFO ] received request from /127.0.0.1:51573
+[19:14:39.700 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:39.703 INFO ]  qq  print_unique_owner
+ Jack, 2022-12-11T00:00, 95.0, 23432234234
+r, 1111-11-11T00:00, 12.0, 21312123213213
+r, 1111-11-11T00:00, 123213.0, 213213132132
+hah, 2021-11-11T00:00, 69.0, 40163299032
+r, 2021-11-11T00:00, 123.0, 213213132132
+r, 2022-12-11T00:00, 100.0, 213213132132
+
+[19:14:39.704 INFO ] sent response to /127.0.0.1:51573
+[19:14:45.006 INFO ] received request from /127.0.0.1:51573
+[19:14:45.007 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:45.020 INFO ]  qq  remove_greater Elements with id lower than 460 was successfully deleted by qq
+[19:14:45.021 TRACE] broadcasting changes
+[19:14:45.022 INFO ] sent response to /127.0.0.1:51573
+[19:14:57.005 INFO ] received request from /127.0.0.1:51573
+[19:14:57.006 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:14:57.019 INFO ]  qq  remove_by_id element with id 460 removed
+[19:14:57.019 TRACE] broadcasting changes
+[19:14:57.020 INFO ] sent response to /127.0.0.1:51573
+[19:15:01.936 INFO ] received request from /127.0.0.1:51573
+[19:15:01.937 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:15:01.947 INFO ]  qq  add
+ Added element: 
+id : "462",
+name : "sugar",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "1000",
+manufactureCost : "500.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "Jack",birthday : "2022-12-11T00:00",weight : "95.0",passportID : "23432234234"},
+userLogin : "qq"
+
+[19:15:01.948 TRACE] broadcasting changes
+[19:15:01.949 INFO ] sent response to /127.0.0.1:51573
+[19:15:10.548 INFO ] received request from /127.0.0.1:51573
+[19:15:10.549 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:15:10.559 INFO ]  qq  remove_by_id element with id 462 removed
+[19:15:10.560 TRACE] broadcasting changes
+[19:15:10.560 INFO ] sent response to /127.0.0.1:51573
+[19:15:11.829 INFO ] received request from /127.0.0.1:51573
+[19:15:11.830 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:15:11.840 INFO ]  qq  remove_by_id element with id 453 removed
+[19:15:11.840 TRACE] broadcasting changes
+[19:15:11.842 INFO ] sent response to /127.0.0.1:51573
+[19:15:12.522 INFO ] received request from /127.0.0.1:51573
+[19:15:12.523 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:15:12.534 INFO ]  qq  remove_by_id element with id 452 removed
+[19:15:12.534 TRACE] broadcasting changes
+[19:15:12.536 INFO ] sent response to /127.0.0.1:51573
+[19:15:13.031 INFO ] received request from /127.0.0.1:51573
+[19:15:13.032 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:15:13.034 INFO ]  qq  remove_by_id element with id 451 removed
+[19:15:13.034 TRACE] broadcasting changes
+[19:15:13.035 INFO ] sent response to /127.0.0.1:51573
+[19:15:13.961 INFO ] received request from /127.0.0.1:51573
+[19:15:13.962 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:15:13.972 INFO ]  qq  remove_by_id element with id 450 removed
+[19:15:13.973 TRACE] broadcasting changes
+[19:15:13.973 INFO ] sent response to /127.0.0.1:51573
+[19:15:21.402 INFO ] received request from /127.0.0.1:51573
+[19:15:21.403 TRACE] added broadcast address localhost/127.0.0.1:51574
+[19:15:50.344 INFO ] collection successfully loaded
+[19:15:50.354 INFO ] starting server
+[19:17:25.433 INFO ] collection successfully loaded
+[19:17:25.443 INFO ] starting server
+[19:17:27.335 INFO ] received request from /127.0.0.1:57146
+[19:17:27.349 TRACE] added broadcast address localhost/127.0.0.1:57147
+[19:17:27.355 INFO ] sent response to /127.0.0.1:57146
+[19:17:29.654 INFO ] received request from /127.0.0.1:57146
+[19:17:29.657 TRACE] added broadcast address localhost/127.0.0.1:57147
+[19:17:29.659 INFO ]  qq  loginlogin successful
+[19:17:29.660 INFO ] sent response to /127.0.0.1:57146
+[19:17:30.173 INFO ] received request from /127.0.0.1:57146
+[19:17:30.174 TRACE] added broadcast address localhost/127.0.0.1:57147
+[19:17:30.181 INFO ] sent response to /127.0.0.1:57146
+[19:17:37.528 INFO ] received request from /127.0.0.1:57146
+[19:17:37.530 TRACE] added broadcast address localhost/127.0.0.1:57147
+[19:17:37.539 INFO ]  qq  add
+ Added element: 
+id : "463",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:17:37.539 TRACE] broadcasting changes
+[19:17:37.542 INFO ] sent response to /127.0.0.1:57146
+[19:22:09.339 INFO ] collection successfully loaded
+[19:22:09.349 INFO ] starting server
+[19:22:14.896 INFO ] received request from /127.0.0.1:50911
+[19:22:14.912 TRACE] added broadcast address localhost/127.0.0.1:50912
+[19:22:14.920 INFO ] sent response to /127.0.0.1:50911
+[19:22:17.045 INFO ] received request from /127.0.0.1:50911
+[19:22:17.048 TRACE] added broadcast address localhost/127.0.0.1:50912
+[19:22:17.050 INFO ]  qq  loginlogin successful
+[19:22:17.051 INFO ] sent response to /127.0.0.1:50911
+[19:22:17.550 INFO ] received request from /127.0.0.1:50911
+[19:22:17.550 TRACE] added broadcast address localhost/127.0.0.1:50912
+[19:22:17.560 INFO ] sent response to /127.0.0.1:50911
+[19:25:17.881 INFO ] collection successfully loaded
+[19:25:17.892 INFO ] starting server
+[19:25:21.945 INFO ] received request from /127.0.0.1:55809
+[19:25:21.961 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:25:21.967 INFO ] sent response to /127.0.0.1:55809
+[19:25:26.562 INFO ] received request from /127.0.0.1:55809
+[19:25:26.565 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:25:26.567 INFO ]  qq  loginlogin successful
+[19:25:26.568 INFO ] sent response to /127.0.0.1:55809
+[19:25:27.077 INFO ] received request from /127.0.0.1:55809
+[19:25:27.078 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:25:27.089 INFO ] sent response to /127.0.0.1:55809
+[19:25:35.399 INFO ] received request from /127.0.0.1:55809
+[19:25:35.401 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:25:35.417 INFO ]  qq  add
+ Added element: 
+id : "464",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:25:35.417 TRACE] broadcasting changes
+[19:25:35.420 INFO ] sent response to /127.0.0.1:55809
+[19:25:39.543 INFO ] received request from /127.0.0.1:55809
+[19:25:39.544 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:25:39.555 INFO ]  qq  add
+ Added element: 
+id : "465",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:25:39.556 TRACE] broadcasting changes
+[19:25:39.557 INFO ] sent response to /127.0.0.1:55809
+[19:25:44.326 INFO ] received request from /127.0.0.1:55809
+[19:25:44.326 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:25:44.340 INFO ]  qq  remove_greater Elements with id lower than 449 was successfully deleted by qq
+[19:25:44.340 TRACE] broadcasting changes
+[19:25:44.343 INFO ] sent response to /127.0.0.1:55809
+[19:25:59.742 INFO ] received request from /127.0.0.1:55809
+[19:25:59.743 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:25:59.754 INFO ]  qq  add
+ Added element: 
+id : "466",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:25:59.755 TRACE] broadcasting changes
+[19:25:59.756 INFO ] sent response to /127.0.0.1:55809
+[19:26:00.013 INFO ] received request from /127.0.0.1:55809
+[19:26:00.014 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:00.025 INFO ]  qq  add
+ Added element: 
+id : "467",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:26:00.026 TRACE] broadcasting changes
+[19:26:00.026 INFO ] sent response to /127.0.0.1:55809
+[19:26:00.158 INFO ] received request from /127.0.0.1:55809
+[19:26:00.160 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:00.162 INFO ]  qq  add
+ Added element: 
+id : "468",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:26:00.162 TRACE] broadcasting changes
+[19:26:00.163 INFO ] sent response to /127.0.0.1:55809
+[19:26:00.317 INFO ] received request from /127.0.0.1:55809
+[19:26:00.318 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:00.321 INFO ]  qq  add
+ Added element: 
+id : "469",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:26:00.321 TRACE] broadcasting changes
+[19:26:00.322 INFO ] sent response to /127.0.0.1:55809
+[19:26:04.471 INFO ] received request from /127.0.0.1:55809
+[19:26:04.472 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:04.475 INFO ]  qq  remove_greater Elements with id lower than 469 was successfully deleted by qq
+[19:26:04.475 TRACE] broadcasting changes
+[19:26:04.476 INFO ] sent response to /127.0.0.1:55809
+[19:26:06.712 INFO ] received request from /127.0.0.1:55809
+[19:26:06.713 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:06.723 INFO ]  qq  remove_greater Elements with id lower than 468 was successfully deleted by qq
+[19:26:06.723 TRACE] broadcasting changes
+[19:26:06.725 INFO ] sent response to /127.0.0.1:55809
+[19:26:29.208 INFO ] received request from /127.0.0.1:55809
+[19:26:29.208 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:29.217 INFO ]  qq  add
+ Added element: 
+id : "470",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:26:29.218 TRACE] broadcasting changes
+[19:26:29.219 INFO ] sent response to /127.0.0.1:55809
+[19:26:29.405 INFO ] received request from /127.0.0.1:55809
+[19:26:29.406 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:29.408 INFO ]  qq  add
+ Added element: 
+id : "471",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[19:26:29.408 TRACE] broadcasting changes
+[19:26:29.409 INFO ] sent response to /127.0.0.1:55809
+[19:26:32.583 INFO ] received request from /127.0.0.1:55809
+[19:26:32.584 TRACE] added broadcast address localhost/127.0.0.1:55810
+[19:26:32.595 INFO ]  qq  remove_greater Elements with id lower than 470 was successfully deleted by qq
+[19:26:32.595 TRACE] broadcasting changes
+[19:26:32.596 INFO ] sent response to /127.0.0.1:55809
+[19:44:31.757 INFO ] collection successfully loaded
+[19:44:31.768 INFO ] starting server
+[19:44:36.356 INFO ] received request from /127.0.0.1:62060
+[19:44:36.368 TRACE] added broadcast address localhost/127.0.0.1:62061
+[19:44:43.089 INFO ] received request from /127.0.0.1:60558
+[19:44:43.090 TRACE] added broadcast address localhost/127.0.0.1:60559
+[19:57:24.349 INFO ] collection successfully loaded
+[19:57:24.359 INFO ] starting server
+[19:57:28.357 INFO ] received request from /127.0.0.1:56382
+[19:57:28.371 TRACE] added broadcast address localhost/127.0.0.1:56383
+[20:01:39.236 INFO ] received request from /127.0.0.1:61120
+[20:01:39.237 TRACE] added broadcast address localhost/127.0.0.1:61121
+[20:06:48.405 INFO ] collection successfully loaded
+[20:06:48.415 INFO ] starting server
+[20:06:50.724 INFO ] received request from /127.0.0.1:55893
+[20:06:50.737 TRACE] added broadcast address localhost/127.0.0.1:55894
+[20:06:55.342 INFO ] received request from /127.0.0.1:55897
+[20:06:55.343 TRACE] added broadcast address localhost/127.0.0.1:55898
+[20:20:52.766 INFO ] received request from /127.0.0.1:62926
+[20:20:52.767 TRACE] added broadcast address localhost/127.0.0.1:62927
+[20:20:56.918 INFO ] received request from /127.0.0.1:52624
+[20:20:56.919 TRACE] added broadcast address localhost/127.0.0.1:52625
+[20:25:28.611 INFO ] received request from /127.0.0.1:52425
+[20:25:28.612 TRACE] added broadcast address localhost/127.0.0.1:52426
+[20:34:52.170 INFO ] received request from /127.0.0.1:65173
+[20:34:52.171 TRACE] added broadcast address localhost/127.0.0.1:65174
+[20:37:47.656 INFO ] received request from /127.0.0.1:62959
+[20:37:47.657 TRACE] added broadcast address localhost/127.0.0.1:62960
+[20:37:52.102 INFO ] received request from /127.0.0.1:62963
+[20:37:52.103 TRACE] added broadcast address localhost/127.0.0.1:62964
+[20:46:25.356 INFO ] received request from /127.0.0.1:50003
+[20:46:25.357 TRACE] added broadcast address localhost/127.0.0.1:50004
+[20:46:32.163 INFO ] received request from /127.0.0.1:50009
+[20:46:32.166 TRACE] added broadcast address localhost/127.0.0.1:50010
+[20:53:11.665 INFO ] collection successfully loaded
+[20:53:11.675 INFO ] starting server
+[20:53:13.919 INFO ] received request from /127.0.0.1:59688
+[20:53:13.933 TRACE] added broadcast address localhost/127.0.0.1:59689
+[21:05:00.411 INFO ] received request from /127.0.0.1:51213
+[21:05:00.412 TRACE] added broadcast address localhost/127.0.0.1:51214
+[21:05:07.095 INFO ] received request from /127.0.0.1:54618
+[21:05:07.096 TRACE] added broadcast address localhost/127.0.0.1:54619
+[21:09:01.222 INFO ] received request from /127.0.0.1:55430
+[21:09:01.223 TRACE] added broadcast address localhost/127.0.0.1:55431
+[21:10:40.724 INFO ] received request from /127.0.0.1:50751
+[21:10:40.725 TRACE] added broadcast address localhost/127.0.0.1:50752
+[21:12:11.357 INFO ] received request from /127.0.0.1:59780
+[21:12:11.358 TRACE] added broadcast address localhost/127.0.0.1:59781
+[21:13:58.103 INFO ] received request from /127.0.0.1:52116
+[21:13:58.103 TRACE] added broadcast address localhost/127.0.0.1:52117
+[21:14:17.871 INFO ] received request from /127.0.0.1:52120
+[21:14:17.871 TRACE] added broadcast address localhost/127.0.0.1:52121
+[21:14:47.985 INFO ] collection successfully loaded
+[21:14:47.995 INFO ] starting server
+[21:14:51.221 INFO ] received request from /127.0.0.1:52129
+[21:14:51.237 TRACE] added broadcast address localhost/127.0.0.1:52130
+[21:14:51.244 INFO ] sent response to /127.0.0.1:52129
+[21:14:53.918 INFO ] received request from /127.0.0.1:52129
+[21:14:53.921 TRACE] added broadcast address localhost/127.0.0.1:52130
+[21:14:53.923 INFO ]  qq  loginlogin successful
+[21:14:53.924 INFO ] sent response to /127.0.0.1:52129
+[21:14:54.406 INFO ] received request from /127.0.0.1:52129
+[21:14:54.408 TRACE] added broadcast address localhost/127.0.0.1:52130
+[21:14:54.416 INFO ] sent response to /127.0.0.1:52129
+[21:24:19.687 INFO ] collection successfully loaded
+[21:24:19.697 INFO ] starting server
+[21:24:24.032 INFO ] received request from /127.0.0.1:65463
+[21:24:24.046 TRACE] added broadcast address localhost/127.0.0.1:65464
+[21:32:44.202 INFO ] collection successfully loaded
+[21:32:44.212 INFO ] starting server
+[21:32:48.407 INFO ] received request from /127.0.0.1:56063
+[21:32:48.420 TRACE] added broadcast address localhost/127.0.0.1:56064
+[21:32:53.434 INFO ] received request from /127.0.0.1:62927
+[21:32:53.435 TRACE] added broadcast address localhost/127.0.0.1:62928
+[22:00:55.534 INFO ] received request from /127.0.0.1:53431
+[22:00:55.535 TRACE] added broadcast address localhost/127.0.0.1:53432
+[22:01:13.048 INFO ] received request from /127.0.0.1:53435
+[22:01:13.049 TRACE] added broadcast address localhost/127.0.0.1:53436
+[22:20:20.066 INFO ] collection successfully loaded
+[22:20:20.076 INFO ] starting server
+[22:20:24.033 INFO ] received request from /127.0.0.1:64511
+[22:20:24.047 TRACE] added broadcast address localhost/127.0.0.1:64512
+[22:27:25.988 INFO ] collection successfully loaded
+[22:27:25.998 INFO ] starting server
+[22:27:29.772 INFO ] received request from /127.0.0.1:53360
+[22:27:29.784 TRACE] added broadcast address localhost/127.0.0.1:53361
+[22:27:34.054 INFO ] received request from /127.0.0.1:53364
+[22:27:34.055 TRACE] added broadcast address localhost/127.0.0.1:53365
+[22:27:54.421 INFO ] received request from /127.0.0.1:56799
+[22:27:54.422 TRACE] added broadcast address localhost/127.0.0.1:56800
+[22:28:16.617 INFO ] collection successfully loaded
+[22:28:16.626 INFO ] starting server
+[22:28:22.676 INFO ] received request from /127.0.0.1:61983
+[22:28:22.689 TRACE] added broadcast address localhost/127.0.0.1:61984
+[22:28:41.864 INFO ] received request from /127.0.0.1:61987
+[22:28:41.865 TRACE] added broadcast address localhost/127.0.0.1:61988
+[22:31:39.298 INFO ] received request from /127.0.0.1:57965
+[22:31:39.300 TRACE] added broadcast address localhost/127.0.0.1:57966
+[22:31:53.331 INFO ] received request from /127.0.0.1:57969
+[22:31:53.333 TRACE] added broadcast address localhost/127.0.0.1:57970
+[22:32:05.026 INFO ] received request from /127.0.0.1:58772
+[22:32:05.027 TRACE] added broadcast address localhost/127.0.0.1:58773
+[22:32:14.093 INFO ] received request from /127.0.0.1:57955
+[22:32:14.095 TRACE] added broadcast address localhost/127.0.0.1:57956
+[22:32:28.595 INFO ] received request from /127.0.0.1:57959
+[22:32:28.596 TRACE] added broadcast address localhost/127.0.0.1:57960
+[22:32:38.357 INFO ] received request from /127.0.0.1:57963
+[22:32:38.358 TRACE] added broadcast address localhost/127.0.0.1:57964
+[22:32:45.959 INFO ] received request from /127.0.0.1:57967
+[22:32:45.960 TRACE] added broadcast address localhost/127.0.0.1:57968
+[22:32:53.661 INFO ] received request from /127.0.0.1:57972
+[22:32:53.663 TRACE] added broadcast address localhost/127.0.0.1:57973
+[22:33:55.303 INFO ] received request from /127.0.0.1:55929
+[22:33:55.303 TRACE] added broadcast address localhost/127.0.0.1:55930
+[22:34:29.632 INFO ] received request from /127.0.0.1:51601
+[22:34:29.633 TRACE] added broadcast address localhost/127.0.0.1:51602
+[22:34:38.360 INFO ] collection successfully loaded
+[22:34:38.370 INFO ] starting server
+[22:34:42.781 INFO ] received request from /127.0.0.1:51605
+[22:34:42.796 TRACE] added broadcast address localhost/127.0.0.1:51606
+[22:35:28.683 INFO ] collection successfully loaded
+[22:35:28.693 INFO ] starting server
+[22:35:32.651 INFO ] received request from /127.0.0.1:51610
+[22:35:32.666 TRACE] added broadcast address localhost/127.0.0.1:51611
+[22:36:45.565 INFO ] collection successfully loaded
+[22:36:45.575 INFO ] starting server
+[22:36:50.070 INFO ] collection successfully loaded
+[22:36:50.080 INFO ] starting server
+[22:36:53.152 INFO ] received request from /127.0.0.1:56680
+[22:36:53.164 TRACE] added broadcast address localhost/127.0.0.1:56681
+[22:37:28.849 INFO ] collection successfully loaded
+[22:37:28.860 INFO ] starting server
+[22:37:32.250 INFO ] received request from /127.0.0.1:56684
+[22:37:32.263 TRACE] added broadcast address localhost/127.0.0.1:56685
+[22:38:01.248 INFO ] collection successfully loaded
+[22:38:01.259 INFO ] starting server
+[22:38:03.672 INFO ] received request from /127.0.0.1:56688
+[22:38:03.686 TRACE] added broadcast address localhost/127.0.0.1:56689
+[22:42:31.517 INFO ] collection successfully loaded
+[22:42:31.527 INFO ] starting server
+[22:42:34.688 INFO ] received request from /127.0.0.1:54457
+[22:42:34.702 TRACE] added broadcast address localhost/127.0.0.1:54458
+[22:42:34.708 INFO ] sent response to /127.0.0.1:54457
+[22:43:14.471 INFO ] received request from /127.0.0.1:54457
+[22:43:14.473 TRACE] added broadcast address localhost/127.0.0.1:54458
+[22:43:14.475 INFO ]  qq  loginlogin successful
+[22:43:14.477 INFO ] sent response to /127.0.0.1:54457
+[22:46:05.423 INFO ] collection successfully loaded
+[22:46:05.432 INFO ] starting server
+[22:46:08.269 INFO ] received request from /127.0.0.1:64219
+[22:46:08.283 TRACE] added broadcast address localhost/127.0.0.1:64220
+[22:46:19.008 INFO ] received request from /127.0.0.1:64219
+[22:46:19.010 TRACE] added broadcast address localhost/127.0.0.1:64220
+[22:46:19.012 INFO ]  qq  loginlogin successful
+[22:47:43.148 INFO ] collection successfully loaded
+[22:47:43.157 INFO ] starting server
+[22:47:46.644 INFO ] received request from /127.0.0.1:50660
+[22:47:46.662 TRACE] added broadcast address localhost/127.0.0.1:50661
+[22:47:48.964 INFO ] received request from /127.0.0.1:50660
+[22:47:48.966 TRACE] added broadcast address localhost/127.0.0.1:50661
+[22:47:48.968 INFO ]  qq  loginlogin successful
+[22:48:51.945 INFO ] collection successfully loaded
+[22:48:51.955 INFO ] starting server
+[22:48:54.697 INFO ] received request from /127.0.0.1:63673
+[22:48:54.709 TRACE] added broadcast address localhost/127.0.0.1:63674
+[22:49:12.457 INFO ] received request from /127.0.0.1:63673
+[22:49:12.459 TRACE] added broadcast address localhost/127.0.0.1:63674
+[22:49:12.461 INFO ]  qq  loginlogin successful
+[22:49:50.548 INFO ] received request from /127.0.0.1:60428
+[22:49:50.549 TRACE] added broadcast address localhost/127.0.0.1:60429
+[22:49:59.406 INFO ] collection successfully loaded
+[22:49:59.415 INFO ] starting server
+[22:50:02.775 INFO ] received request from /127.0.0.1:60487
+[22:50:02.790 TRACE] added broadcast address localhost/127.0.0.1:60488
+[22:50:02.799 INFO ] sent response to /127.0.0.1:60487
+[22:50:05.149 INFO ] received request from /127.0.0.1:60487
+[22:50:05.152 TRACE] added broadcast address localhost/127.0.0.1:60488
+[22:50:05.153 INFO ]  qq  loginlogin successful
+[22:50:05.155 INFO ] sent response to /127.0.0.1:60487
+[22:50:52.110 INFO ] collection successfully loaded
+[22:50:52.119 INFO ] starting server
+[22:50:55.825 INFO ] received request from /127.0.0.1:60492
+[22:50:55.841 TRACE] added broadcast address localhost/127.0.0.1:60493
+[22:50:55.849 INFO ] sent response to /127.0.0.1:60492
+[22:51:55.824 INFO ] received request from /127.0.0.1:60492
+[22:51:55.826 TRACE] added broadcast address localhost/127.0.0.1:60493
+[22:51:55.828 INFO ]  qq  loginlogin successful
+[22:51:55.829 INFO ] sent response to /127.0.0.1:60492
+[22:52:29.852 INFO ] collection successfully loaded
+[22:52:29.862 INFO ] starting server
+[22:52:32.793 INFO ] received request from /127.0.0.1:58609
+[22:52:32.808 TRACE] added broadcast address localhost/127.0.0.1:58610
+[22:52:32.816 INFO ] sent response to /127.0.0.1:58609
+[22:53:26.419 INFO ] collection successfully loaded
+[22:53:26.429 INFO ] starting server
+[22:53:28.844 INFO ] received request from /127.0.0.1:63453
+[22:53:28.857 TRACE] added broadcast address localhost/127.0.0.1:63454
+[22:53:28.865 INFO ] sent response to /127.0.0.1:63453
+[22:55:08.821 INFO ] collection successfully loaded
+[22:55:08.831 INFO ] starting server
+[22:55:13.430 INFO ] received request from /127.0.0.1:63063
+[22:55:13.443 TRACE] added broadcast address localhost/127.0.0.1:63064
+[22:55:13.452 INFO ] sent response to /127.0.0.1:63063
+[22:55:25.585 INFO ] received request from /127.0.0.1:63063
+[22:55:25.588 TRACE] added broadcast address localhost/127.0.0.1:63064
+[22:55:25.589 INFO ]  qq  loginlogin successful
+[22:55:25.590 INFO ] sent response to /127.0.0.1:63063
+[22:55:26.068 INFO ] received request from /127.0.0.1:63063
+[22:55:26.070 TRACE] added broadcast address localhost/127.0.0.1:63064
+[22:55:26.089 INFO ] sent response to /127.0.0.1:63063
+[22:55:39.598 INFO ] received request from /127.0.0.1:63063
+[22:55:39.600 TRACE] added broadcast address localhost/127.0.0.1:63064
+[22:55:39.616 INFO ]  qq  add
+ Added element: 
+id : "472",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[22:55:39.616 TRACE] broadcasting changes
+[22:55:39.619 INFO ] sent response to /127.0.0.1:63063
+[22:55:49.642 INFO ] received request from /127.0.0.1:63063
+[22:55:49.643 TRACE] added broadcast address localhost/127.0.0.1:63064
+[22:55:49.653 INFO ]  qq  add
+ Added element: 
+id : "473",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[22:55:49.653 TRACE] broadcasting changes
+[22:55:49.655 INFO ] sent response to /127.0.0.1:63063
+[22:59:04.928 INFO ] collection successfully loaded
+[22:59:04.938 INFO ] starting server
+[22:59:07.378 INFO ] received request from /127.0.0.1:65053
+[22:59:07.390 TRACE] added broadcast address localhost/127.0.0.1:65054
+[22:59:07.397 INFO ] sent response to /127.0.0.1:65053
+[22:59:10.006 INFO ] received request from /127.0.0.1:65053
+[22:59:10.008 TRACE] added broadcast address localhost/127.0.0.1:65054
+[22:59:10.010 INFO ]  qq  loginlogin successful
+[22:59:10.011 INFO ] sent response to /127.0.0.1:65053
+[22:59:10.500 INFO ] received request from /127.0.0.1:65053
+[22:59:10.501 TRACE] added broadcast address localhost/127.0.0.1:65054
+[22:59:10.509 INFO ] sent response to /127.0.0.1:65053
+[23:00:25.515 INFO ] collection successfully loaded
+[23:00:25.524 INFO ] starting server
+[23:00:29.229 INFO ] received request from /127.0.0.1:64978
+[23:00:29.244 TRACE] added broadcast address localhost/127.0.0.1:64979
+[23:00:29.253 INFO ] sent response to /127.0.0.1:64978
+[23:00:32.382 INFO ] received request from /127.0.0.1:64978
+[23:00:32.384 TRACE] added broadcast address localhost/127.0.0.1:64979
+[23:00:32.385 INFO ]  qq  loginlogin successful
+[23:00:32.387 INFO ] sent response to /127.0.0.1:64978
+[23:00:32.884 INFO ] received request from /127.0.0.1:64978
+[23:00:32.885 TRACE] added broadcast address localhost/127.0.0.1:64979
+[23:00:32.895 INFO ] sent response to /127.0.0.1:64978
+[23:01:25.231 INFO ] collection successfully loaded
+[23:01:25.241 INFO ] starting server
+[23:01:27.598 INFO ] received request from /127.0.0.1:64983
+[23:01:27.612 TRACE] added broadcast address localhost/127.0.0.1:64984
+[23:01:27.619 INFO ] sent response to /127.0.0.1:64983
+[23:01:32.526 INFO ] received request from /127.0.0.1:64983
+[23:01:32.528 TRACE] added broadcast address localhost/127.0.0.1:64984
+[23:01:32.530 INFO ]  qq  loginlogin successful
+[23:01:32.531 INFO ] sent response to /127.0.0.1:64983
+[23:01:33.020 INFO ] received request from /127.0.0.1:64983
+[23:01:33.022 TRACE] added broadcast address localhost/127.0.0.1:64984
+[23:01:33.029 INFO ] sent response to /127.0.0.1:64983
+[23:02:43.451 INFO ] collection successfully loaded
+[23:02:43.461 INFO ] starting server
+[23:02:48.192 INFO ] received request from /127.0.0.1:61816
+[23:02:48.205 TRACE] added broadcast address localhost/127.0.0.1:61817
+[23:02:48.213 INFO ] sent response to /127.0.0.1:61816
+[23:02:56.215 INFO ] received request from /127.0.0.1:61816
+[23:02:56.217 TRACE] added broadcast address localhost/127.0.0.1:61817
+[23:02:56.219 INFO ]  qq  loginlogin successful
+[23:02:56.220 INFO ] sent response to /127.0.0.1:61816
+[23:02:56.717 INFO ] received request from /127.0.0.1:61816
+[23:02:56.718 TRACE] added broadcast address localhost/127.0.0.1:61817
+[23:02:56.726 INFO ] sent response to /127.0.0.1:61816
+[23:04:09.152 INFO ] received request from /127.0.0.1:62769
+[23:04:09.154 TRACE] added broadcast address localhost/127.0.0.1:62770
+[23:04:09.155 INFO ] sent response to /127.0.0.1:62769
+[23:04:16.710 INFO ] collection successfully loaded
+[23:04:16.719 INFO ] starting server
+[23:04:19.276 INFO ] received request from /127.0.0.1:62549
+[23:04:19.290 TRACE] added broadcast address localhost/127.0.0.1:62550
+[23:04:19.297 INFO ] sent response to /127.0.0.1:62549
+[23:04:22.095 INFO ] received request from /127.0.0.1:62549
+[23:04:22.097 TRACE] added broadcast address localhost/127.0.0.1:62550
+[23:04:22.099 INFO ]  qq  loginlogin successful
+[23:04:22.101 INFO ] sent response to /127.0.0.1:62549
+[23:04:22.578 INFO ] received request from /127.0.0.1:62549
+[23:04:22.579 TRACE] added broadcast address localhost/127.0.0.1:62550
+[23:04:22.587 INFO ] sent response to /127.0.0.1:62549
+[23:06:41.638 INFO ] collection successfully loaded
+[23:06:41.647 INFO ] starting server
+[23:06:47.252 INFO ] received request from /127.0.0.1:53558
+[23:06:47.266 TRACE] added broadcast address localhost/127.0.0.1:53559
+[23:06:47.273 INFO ] sent response to /127.0.0.1:53558
+[23:06:54.868 INFO ] received request from /127.0.0.1:53558
+[23:06:54.870 TRACE] added broadcast address localhost/127.0.0.1:53559
+[23:06:54.873 INFO ]  qq  loginlogin successful
+[23:06:54.874 INFO ] sent response to /127.0.0.1:53558
+[23:06:55.355 INFO ] received request from /127.0.0.1:53558
+[23:06:55.356 TRACE] added broadcast address localhost/127.0.0.1:53559
+[23:06:55.367 INFO ] sent response to /127.0.0.1:53558
+[23:07:26.700 INFO ] received request from /127.0.0.1:53558
+[23:07:26.702 TRACE] added broadcast address localhost/127.0.0.1:53559
+[23:07:26.717 INFO ]  qq  add
+ Added element: 
+id : "474",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[23:07:26.718 TRACE] broadcasting changes
+[23:07:26.722 INFO ] sent response to /127.0.0.1:53558
+[23:08:11.134 INFO ] received request from /127.0.0.1:53558
+[23:08:11.134 TRACE] added broadcast address localhost/127.0.0.1:53559
+[23:08:11.150 INFO ]  qq  remove_greater Elements with id lower than 467 was successfully deleted by qq
+[23:08:11.150 TRACE] broadcasting changes
+[23:08:11.152 INFO ] sent response to /127.0.0.1:53558
+[23:18:45.258 INFO ] collection successfully loaded
+[23:18:45.269 INFO ] starting server
+[23:18:50.570 INFO ] received request from /127.0.0.1:54100
+[23:18:50.583 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:18:50.592 INFO ] sent response to /127.0.0.1:54100
+[23:18:52.994 INFO ] received request from /127.0.0.1:54100
+[23:18:52.996 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:18:52.998 INFO ]  qq  loginlogin successful
+[23:18:52.999 INFO ] sent response to /127.0.0.1:54100
+[23:18:53.476 INFO ] received request from /127.0.0.1:54100
+[23:18:53.477 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:18:53.485 INFO ] sent response to /127.0.0.1:54100
+[23:18:58.222 INFO ] received request from /127.0.0.1:54100
+[23:18:58.224 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:18:58.238 INFO ]  qq  add
+ Added element: 
+id : "475",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[23:18:58.239 TRACE] broadcasting changes
+[23:18:58.242 INFO ] sent response to /127.0.0.1:54100
+[23:19:00.231 INFO ] received request from /127.0.0.1:54100
+[23:19:00.232 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:00.235 INFO ]  qq  add
+ Added element: 
+id : "476",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[23:19:00.235 TRACE] broadcasting changes
+[23:19:00.236 INFO ] sent response to /127.0.0.1:54100
+[23:19:02.261 INFO ] received request from /127.0.0.1:54100
+[23:19:02.262 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:02.277 INFO ]  qq  update element with id: 475 updated
+[23:19:02.278 TRACE] broadcasting changes
+[23:19:02.279 INFO ] sent response to /127.0.0.1:54100
+[23:19:08.215 INFO ] received request from /127.0.0.1:54100
+[23:19:08.216 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:08.217 INFO ]  qq  add
+ Added element: 
+id : "477",
+name : "cola",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[23:19:08.218 TRACE] broadcasting changes
+[23:19:08.219 INFO ] sent response to /127.0.0.1:54100
+[23:19:14.162 INFO ] received request from /127.0.0.1:54100
+[23:19:14.163 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:14.174 INFO ]  qq  update element with id: 475 updated
+[23:19:14.174 TRACE] broadcasting changes
+[23:19:14.176 INFO ] sent response to /127.0.0.1:54100
+[23:19:21.226 INFO ] received request from /127.0.0.1:54100
+[23:19:21.227 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:21.239 INFO ]  qq  clear collection cleared
+[23:19:21.239 TRACE] broadcasting changes
+[23:19:21.241 INFO ] sent response to /127.0.0.1:54100
+[23:19:22.458 INFO ] received request from /127.0.0.1:54100
+[23:19:22.459 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:22.469 INFO ]  qq  add
+ Added element: 
+id : "478",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[23:19:22.469 TRACE] broadcasting changes
+[23:19:22.471 INFO ] sent response to /127.0.0.1:54100
+[23:19:22.848 INFO ] received request from /127.0.0.1:54100
+[23:19:22.849 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:22.859 INFO ]  qq  add
+ Added element: 
+id : "479",
+name : "cheese",
+coordinates : {x : "250",} {y : "50"},
+creationDate : "2022-05-25",
+price : "100",
+manufactureCost : "2.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "r",birthday : "2022-12-11T00:00",weight : "100.0",passportID : "213213132132"},
+userLogin : "qq"
+
+[23:19:22.859 TRACE] broadcasting changes
+[23:19:22.861 INFO ] sent response to /127.0.0.1:54100
+[23:19:25.846 INFO ] received request from /127.0.0.1:54100
+[23:19:25.847 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:25.857 INFO ]  qq  remove_by_id element with id 479 removed
+[23:19:25.857 TRACE] broadcasting changes
+[23:19:25.858 INFO ] sent response to /127.0.0.1:54100
+[23:19:27.810 INFO ] received request from /127.0.0.1:54100
+[23:19:27.811 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:19:27.813 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:19:27.813 INFO ] sent response to /127.0.0.1:54100
+[23:19:35.900 INFO ] received request from /127.0.0.1:54100
+[23:19:35.901 TRACE] added broadcast address localhost/127.0.0.1:54101
+[23:20:02.493 INFO ] received request from /127.0.0.1:63847
+[23:20:02.494 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:20:02.495 INFO ] sent response to /127.0.0.1:63847
+[23:20:04.357 INFO ] received request from /127.0.0.1:63847
+[23:20:04.358 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:20:04.359 INFO ]  qq  loginlogin successful
+[23:20:04.360 INFO ] sent response to /127.0.0.1:63847
+[23:20:04.847 INFO ] received request from /127.0.0.1:63847
+[23:20:04.849 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:20:04.850 INFO ] sent response to /127.0.0.1:63847
+[23:21:19.855 INFO ] received request from /127.0.0.1:63847
+[23:21:19.856 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:21:19.856 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:21:19.857 INFO ] sent response to /127.0.0.1:63847
+[23:21:19.860 INFO ] received request from /127.0.0.1:63847
+[23:21:19.860 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:21:19.861 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:21:19.862 INFO ] sent response to /127.0.0.1:63847
+[23:22:05.812 INFO ] received request from /127.0.0.1:63847
+[23:22:05.812 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:22:05.813 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:22:05.814 INFO ] sent response to /127.0.0.1:63847
+[23:22:13.357 INFO ] received request from /127.0.0.1:63847
+[23:22:13.358 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:22:13.359 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:22:13.360 INFO ] sent response to /127.0.0.1:63847
+[23:22:24.630 INFO ] received request from /127.0.0.1:63847
+[23:22:24.631 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:22:24.632 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:22:24.633 INFO ] sent response to /127.0.0.1:63847
+[23:23:45.836 INFO ] received request from /127.0.0.1:63847
+[23:23:45.837 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:23:45.838 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:23:45.839 INFO ] sent response to /127.0.0.1:63847
+[23:24:36.073 INFO ] received request from /127.0.0.1:63847
+[23:24:36.074 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:24:36.075 INFO ]  qq  info Database of Product, size: 5, initialization date: 2022-05-25
+[23:24:36.076 INFO ] sent response to /127.0.0.1:63847
+[23:24:36.085 INFO ] received request from /127.0.0.1:63847
+[23:24:36.086 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:24:36.088 INFO ]  qq  add
+ Added element: 
+id : "480",
+name : "cola",
+coordinates : {x : "32",} {y : "56"},
+creationDate : "2022-05-25",
+price : "3224",
+manufactureCost : "12.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "new",birthday : "2021-11-11T00:00",weight : "32.0",passportID : "4242423324243"},
+userLogin : "qq"
+
+[23:24:36.088 TRACE] broadcasting changes
+[23:24:36.090 INFO ] sent response to /127.0.0.1:63847
+[23:24:36.090 INFO ] sent response to localhost/127.0.0.1:54101
+[23:24:42.496 INFO ] received request from /127.0.0.1:63847
+[23:24:42.496 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:24:42.497 INFO ]  qq  info Database of Product, size: 6, initialization date: 2022-05-25
+[23:24:42.499 INFO ] sent response to /127.0.0.1:63847
+[23:24:42.501 INFO ] received request from /127.0.0.1:63847
+[23:24:42.502 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:24:42.504 INFO ]  qq  add
+ Added element: 
+id : "481",
+name : "cola",
+coordinates : {x : "32",} {y : "56"},
+creationDate : "2022-05-25",
+price : "3224",
+manufactureCost : "12.0",
+unitOfMeasure : "KILOGRAMS",
+owner : {personName : "new",birthday : "2021-11-11T00:00",weight : "32.0",passportID : "4242423324243"},
+userLogin : "qq"
+
+[23:24:42.504 TRACE] broadcasting changes
+[23:24:42.505 INFO ] sent response to localhost/127.0.0.1:54101
+[23:24:42.505 INFO ] sent response to /127.0.0.1:63847
+[23:25:34.786 INFO ] received request from /127.0.0.1:63847
+[23:25:34.787 TRACE] added broadcast address localhost/127.0.0.1:63848
+[23:25:34.787 INFO ] client /127.0.0.1:63847 shut down

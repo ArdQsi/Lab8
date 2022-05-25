@@ -2,10 +2,14 @@ package utils;
 
 import exceptions.InvalidFormatDateException;
 
+import javax.swing.text.DateFormatter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
+import java.util.Date;
 
 /**
  * Provides methods to conversion between String and LocalDateTime
@@ -54,6 +58,16 @@ public class DateConvertor {
 
     public static String dateToString1(LocalDateTime date) {
         return localDateFormat.format(date);
+    }
+
+    private static String pattern;
+
+    private static DateFormat dateFormat;
+
+    public static void setPattern(String p) {
+        pattern = p;
+        dateFormat = new SimpleDateFormat(pattern);
+        localDateFormatter = DateTimeFormatter.ofPattern(pattern);
     }
 
 

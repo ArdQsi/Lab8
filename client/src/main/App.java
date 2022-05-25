@@ -31,8 +31,6 @@ public class App extends Application {
     public static String BUNDLE = "bundles.GuiLabels";
 
     public static void main(String[] args) {
-        resourceFactory = new ObservableResourceFactory();
-        resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
         if (initialize(args)) {
             launch(args);
         } else {
@@ -46,7 +44,7 @@ public class App extends Application {
     }
 
     public static boolean initialize(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
         args = new String[]{"localhost"};
         //String addr = "";
         //int port = 0;
@@ -71,7 +69,6 @@ public class App extends Application {
         } catch (ConnectionException e) {
 
         }
-        //client.consoleMode();
         return true;
     }
 
@@ -84,7 +81,7 @@ public class App extends Application {
     public void init() {
 
         resourceFactory = new ObservableResourceFactory();
-        resourceFactory.setResources(ResourceBundle.getBundle(BUNDLE));
+        resourceFactory.setResources(ResourceBundle.getBundle("bundles.GuiLabels",new Locale("en")));
         outputter = new OutputterUI(resourceFactory);
 
         try {
@@ -115,7 +112,7 @@ public class App extends Application {
             stage.show();
 
         } catch (Exception e) {
-            getOutputter().error("f");
+            getOutputter().error("Не получилось загрузить fxml файл");
         }
     }
 
@@ -136,7 +133,6 @@ public class App extends Application {
             e.printStackTrace();
         }
     }
-
 
     public void setMainWindow() {
         try {
