@@ -148,8 +148,6 @@ public class Server extends Thread {
             byte[] data = response.toString().getBytes();
             int position = 0;
             int limit = INCREMENT;
-            System.out.println("f");
-
 
             for (int capacity = 0; data.length >= capacity; limit += 4096) {
                 byte[] window = Arrays.copyOfRange(data, position, limit);
@@ -158,20 +156,11 @@ public class Server extends Thread {
                 if (capacity >= data.length) {
                     responseWrapper = new ResponseWrapper(response, true);
                     responseWrapper.setStatus(response.getStatus());
-                    System.out.println(response.getStatus());
-                    System.out.println(response.getStatus());
-                    System.out.println(response.getStatus());
-                    System.out.println(response.getCollectionOperation());
                     responseWrapper.setCollectionOperations(response.getCollectionOperation());
-                    System.out.println(responseWrapper.getStatus());
-                    System.out.println(response.getStatus());
-                    System.out.println(responseWrapper.getCollectionOperations());
                 } else {
                     responseWrapper = new ResponseWrapper(window, false);
-                    System.out.println("ytn");
                 }
-                System.out.println("h");
-                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(4096);
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(INCREMENT);
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
                 objectOutputStream.writeObject(responseWrapper);
                 this.channel.send(ByteBuffer.wrap(byteArrayOutputStream.toByteArray()), clientAddress);
@@ -179,7 +168,6 @@ public class Server extends Thread {
                 byteArrayOutputStream.close();
                 position = limit;
                 if (data.length == 0) break;
-                System.out.println("отправил");
             }
 
         } catch (IOException e) {
