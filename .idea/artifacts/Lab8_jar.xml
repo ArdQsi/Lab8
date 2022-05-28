@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Lab8:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Lab8_jar</output-path>
+    <root id="archive" name="Lab8.jar">
+      <element id="module-output" name="client" />
+      <element id="module-output" name="general" />
+      <element id="module-output" name="server" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.15/commons-codec-1.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.2.2/postgresql-42.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-core/2.17.2/log4j-core-2.17.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/opencsv/opencsv/5.6/opencsv-5.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -13,8 +13,6 @@ public class RequestWrapper extends CommandMsg implements Request, Serializable 
     private byte[] msgBytes;
 
     public RequestWrapper(final String msg) {
-        //super();
-        //this.requestCode = requestCode;
         msgBytes = msg.getBytes();
     }
 

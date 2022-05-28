@@ -325,6 +325,11 @@ public class Server extends Thread {
         @Override
         protected void compute() {
             reentrantLock.lock();
+            /*try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                System.out.println("что");
+            }*/
             try {
                 send(address, response);
             } catch (ConnectionException e) {

@@ -245,3 +245,13 @@
 [17:40:32.253 ERROR]  qq  login login or password is incorrect
 [18:36:30.728 ERROR] wrong command
 [18:36:34.909 ERROR] wrong command
+[01:46:24.156 ERROR] received data is damaged
+[01:46:31.359 ERROR] received data is damaged
+[01:47:08.584 ERROR] received data is damaged
+[23:18:00.704 ERROR]  qq  add_if_min unable to add, min price is 70 current price is 71
+[23:59:02.697 ERROR]  qq  remove_by_id no such id 0
+[00:04:54.556 ERROR]  qq  add_if_min unable to add, min price is 70 current price is 79
+[23:57:06.876 ERROR]  Jack  update you don't have permission, element was created by qq
+[04:24:50.149 ERROR]  qq  update you don't have permission, element was created by Jack
+[04:57:46.491 ERROR]  qq  remove_by_id you don't have permission, element was created by kek
+[04:57:50.596 ERROR]  Jack  remove_by_id you don't have permission, element was created by kek

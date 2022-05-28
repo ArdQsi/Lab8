@@ -1,6 +1,66 @@
 package controllers;
 
-public class MainWindowController {
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+
+import collection.ProductObservableManager;
+import connection.*;
+import data.Coordinates;
+import exceptions.*;
+import javafx.animation.*;
+import javafx.collections.ObservableList;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
+import javafx.fxml.*;
+import javafx.scene.Group;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Shape;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import client.Client;
+
+import data.Person;
+import data.Product;
+import data.UnitOfMeasure;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.collections.FXCollections;
+import javafx.scene.control.*;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+import main.App;
+import tools.ObservableResourceFactory;
+
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javafx.scene.layout.Pane;
+import utils.DateConvertor;
+
+import static io.ConsoleOutputter.print;
+import static utils.DateConvertor.parseLocalDate;
+
+public class MainWindowController implements Initializable {
+
 
     private App app;
     private Tooltip shapeTooltip;
@@ -17,62 +77,63 @@ public class MainWindowController {
     private Map<Long, Circle> circleMap;
     private FileChooser fileChooser;
     private ResourceBundle resourceBundle;
+    long rand = 1821L;
+    Random random = new Random(rand);
+    private Map<String, String> pattern;
+    private String languagePattern;
+    static boolean flag;
 
-
-
-
-    private Client client;
-    private Stage primaryStage;
-    private static ObservableResourceFactory resourceFactory;
-    private Map<String, Locale> localeMap;
 
     @FXML
-    private TableView<Product> productTableView;
+    private TabPane tabPane;
 
     @FXML
-    private ResourceBundle resources;
+    private Tab tabMain;
 
     @FXML
-    private URL location;
+    public TableView<Product> collection_table;
 
     @FXML
-    private TableColumn<Product, Long> table_id;
+    private TableColumn<Product, Long> id_column;
 
     @FXML
-    private TableColumn<Product, String> table_name;
+    private TableColumn<Product, String> name_column;
 
     @FXML
-    private TableColumn<Product, Long> table_x;
+    private TableColumn<Product, Long> coordinateX_column;
 
     @FXML
-    private TableColumn<Product, Integer> table_y;
+    private TableColumn<Product, Integer> coordinateY_column;
 
     @FXML
-    private TableColumn<Product, LocalDate> table_date;
+    private TableColumn<Product, String> date_column;
 
     @FXML
-    private TableColumn<Product, Integer> table_price;
+    private TableColumn<Product, Integer> price_column;
 
     @FXML
-    private TableColumn<Product, Float> table_manufacture_cost;
+    private TableColumn<Product, Float> manufacture_cost_column;
 
     @FXML
-    private TableColumn<Product, UnitOfMeasure> table_unit_of_measure;
+    private TableColumn<Product, UnitOfMeasure> unit_of_measure_column;
 
     @FXML
-    private TableColumn<Product, String> table_p_name;
+    private TableColumn<Product, String> p_name_column;
 
     @FXML
-    private TableColumn<Product, LocalDateTime> table_p_birthday;
+    private TableColumn<Product, String> p_birthday_column;
 
     @FXML
-    private TableColumn<Product, Float> table_p_weight;
+    private TableColumn<Product, Float> p_weight_column;
 
     @FXML
-    private TableColumn<Product, String> table_p_passport_id;
+    private TableColumn<Product, String> p_passport_id_column;
 
     @FXML
-    private TableColumn<Product, String> table_user_login;
+    private TableColumn<Product, String> user_login_column;
+
+    @FXML
+    private Label add_an_element_text;
 
     @FXML
     private TextField name_field;
@@ -99,48 +160,98 @@ public class MainWindowController {
     private TextField person_birthday_field;
 
     @FXML
-    private TextField person_weighth_field;
+    private TextField person_weight_field;
 
     @FXML
-    private TextField person_passport_if_field;
+    private TextField person_passport_id_field;
+
+    @FXML
+    private Label commands_text;
+
+    @FXML
+    private Button print_unique_owner_but;
+
+    @FXML
+    private Button execute_script_but;
+
+    @FXML
+    private Button update_id_but;
+
+    @FXML
+    private Button add_if_min_but;
+
+    @FXML
+    private Button remove_lower_but;
+
+    @FXML
+    private Button remove_greater_but;
+
+    @FXML
+    private Button exit_but;
+
+    @FXML
+    private Button info_but;
+
+    @FXML
+    private Button remove_by_id_but;
+
+    @FXML
+    private Button clear_but;
+
+    @FXML
+    private Button add_but;
 
     @FXML
     private Label loginuser_field;
 
-    private Product product;
-    private Product resultProduct;
-
+    @FXML
+    private ComboBox<String> language_box;
 
     @FXML
-    void initialize() {
+    private ImageView filtr_view;
+
+    @FXML
+    private ImageView help_but;
+
+    @FXML
+    private Tab tabMap;
+
+    @FXML
+    private Pane canvas_plane;
+
+    @FXML
+    private Label collection_map_text;
+
+    @FXML
+    private Label loginuser_field1;
+    private TableColumn<Product, Long> d;
+
+    public void initialize(URL location, ResourceBundle resources) {
+
+        filter_view();
+        this.resourceBundle = resources;
         initializeTable();
-        //productTableView.setItems(FXCollections.observableArrayList(Position));
-        /*productTableView.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
-            int id = productTableView.getSelectionModel().getSelectedIndex();
-
-        }
-
-        ));*/
-    }
-
-
-    public void setProduct(Product product) {
-        table_name.setText(product.getName());
-        table_x.setText(product.getCoordinates().getX()+"");
-        table_y.setText(product.getCoordinates().getY()+"");
-        table_date.setText(product.getCreationDate()+"");
-        table_price.setText(product.getPrice()+"");
-        table_manufacture_cost.setText(product.getManufactureCost()+"");
-        table_unit_of_measure.setText(product.getUnitOfMeasure()+"");
-        table_p_name.setText(product.getOwner().getPersonName()+"");
-        table_p_birthday.setText(product.getOwner().getBirthday()+"");
-        table_p_weight.setText(product.getOwner().getWeight()+"");
-        table_p_passport_id.setText(product.getOwner().getPassportID()+"");
-        table_user_login.setText(product.getUserLogin());
-    }
-
-    public void refreshTable() {
-        productTableView.refresh();
+        textMap = new HashMap<>();
+        localeMap = new HashMap<>();
+        userColorMap = new HashMap<>();
+        shapeMap = new HashMap<>();
+        circleMap = new HashMap<>();
+        fileChooser = new FileChooser();
+        fileChooser.setInitialDirectory(new File("."));
+        localeMap.put("English", new Locale("en"));
+        localeMap.put("Nederlands", new Locale("nl"));
+        localeMap.put("Ελληνικά", new Locale("grk"));
+        localeMap.put("Español", new Locale("spa"));
+        localeMap.put("Русский", new Locale("ru"));
+        help_button();
+        language_box.setItems(FXCollections.observableArrayList(localeMap.keySet()));
+        pattern = new HashMap<>();
+        pattern.put("English", "dd-MM-yyyy");
+        pattern.put("Nederlands", "dd-MM-yyyy");
+        pattern.put("Ελληνικά", "dd/MM/yyyy");
+        pattern.put("Español", "dd/MM/yyyy");
+        pattern.put("Русский", "dd.MM.yyyy");
+        languagePattern = "dd-MM-yyyy";
     }
 
 
@@ -148,56 +259,49 @@ public class MainWindowController {
      * initialize table
      */
     private void initializeTable() {
-        table_id.setCellValueFactory(cellData ->
+        id_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getId()));
-        table_name.setCellValueFactory(cellData ->
+        name_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getName()));
-        table_x.setCellValueFactory(cellData ->
+        coordinateX_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getCoordinates().getX()));
-        table_y.setCellValueFactory(cellData ->
+        coordinateY_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getCoordinates().getY()));
-        table_date.setCellValueFactory(cellData ->
-                new ReadOnlyObjectWrapper<>(cellData.getValue().getCreationDate()));
-        table_price.setCellValueFactory(cellData ->
+        date_column.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(cellData.getValue().getCreationDate().format(DateTimeFormatter.ofPattern(languagePattern))));
+        price_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getPrice()));
-        table_manufacture_cost.setCellValueFactory(cellData ->
+        manufacture_cost_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getManufactureCost()));
-        table_unit_of_measure.setCellValueFactory(cellData ->
+        unit_of_measure_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getUnitOfMeasure()));
-        table_p_name.setCellValueFactory(cellData ->
+        p_name_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getPersonName()));
-        table_p_birthday.setCellValueFactory(cellData ->
-                new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getBirthday()));
-        table_p_weight.setCellValueFactory(cellData ->
+        p_birthday_column.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getBirthday().format(DateTimeFormatter.ofPattern(languagePattern))));
+        p_weight_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getWeight()));
-        table_p_passport_id.setCellValueFactory(cellData ->
+        p_passport_id_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getOwner().getPassportID()));
-        table_user_login.setCellValueFactory(cellData ->
+        user_login_column.setCellValueFactory(cellData ->
                 new ReadOnlyObjectWrapper<>(cellData.getValue().getUserLogin()));
-    }
 
-    /*private void bindGuiLanguage() {
-        resourceFactory.setResources(ResourceBundle.getBundle("bundles.gui",));
-    }*/
+        collection_table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            int id = collection_table.getSelectionModel().getSelectedIndex();
+            if (id != -1) {
+                this.name_field.setText(client.getProductManager().getCollection().get(id).getName());
+                this.coordinateX_field.setText(Long.toString(client.getProductManager().getCollection().get(id).getCoordinates().getX()));
+                this.coordinateY_field.setText(client.getProductManager().getCollection().get(id).getCoordinates().getY().toString());
+                this.price_field.setText(client.getProductManager().getCollection().get(id).getPrice().toString());
+                this.manufacture_cost_field.setText(Float.toString(client.getProductManager().getCollection().get(id).getManufactureCost()));
+                this.unit_of_measure_field.setText(client.getProductManager().getCollection().get(id).getUnitOfMeasure().toString());
+                this.person_name_field.setText(client.getProductManager().getCollection().get(id).getOwner().getPersonName().toString());
+                this.person_birthday_field.setText(DateConvertor.dateToString1(client.getProductManager().getCollection().get(id).getOwner().getBirthday()));
+                this.person_weight_field.setText(Float.toString(client.getProductManager().getCollection().get(id).getOwner().getWeight()));
+                this.person_passport_id_field.setText(client.getProductManager().getCollection().get(id).getOwner().getPassportID().toString());
 
-    /*public void initFilter() {
-        tableFilter = new TableFilter
-    }*/
-
-
-    /*public void setClient(Client client) {
-        this.client = client;
-        productTableView.setItems(client.getProductManager().getCollection());
-        client.getProductManager().setController(this);
-
-    }*/
-
-    public void setUserName(String userName) {
-        loginuser_field.setText(userName);
-    }
-
-    public void setPrimaryStage(Stage primaryStage) {
-        this.primaryStage = primaryStage;
+            }
+        });
     }
 
 
@@ -205,23 +309,29 @@ public class MainWindowController {
         this.resourceFactory = resourceFactory;
         for (String localeName : localeMap.keySet()) {
             if (localeMap.get(localeName).equals(resourceFactory.getResources().getLocale()))
-               language_box.getSelectionModel().select(localeName);
+                language_box.getSelectionModel().select(localeName);
         }
-        //language_box.setValue("English");
-//        if (language_box.getSelectionModel().getSelectedItem().isEmpty()) {
-//            language_box.getSelectionModel().select("English");
-//        }
         language_box.setOnAction((event) -> {
             Locale locale = localeMap.get(language_box.getValue());
-            resourceFactory.setResources(ResourceBundle.getBundle
-                    (App.BUNDLE, locale));
-            //DateConverter.setPattern(resourceFactory.getRawString("DateFormat"));
-            collection_table.refresh();
+            resourceBundle = ResourceBundle.getBundle(App.BUNDLE, locale);
+            resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, locale));
+            languagePattern = pattern.get(language_box.getValue());
+            bindGuiLanguage();
+            refreshTable();
+            print_unique_owner_but.setFont(Font.font("System", FontWeight.BOLD, 18));
+            add_if_min_but.setFont(Font.font("System", FontWeight.BOLD, 24));
+            remove_lower_but.setFont(Font.font("System", FontWeight.BOLD, 18));
+            if (language_box.getValue().equals("Русский")) {
+                print_unique_owner_but.setFont(Font.font("System", FontWeight.BOLD, 16));
+                add_if_min_but.setFont(Font.font("System", FontWeight.BOLD, 22));
+            } else if (language_box.getValue().equals("Nederlands")) {
+            } else if (language_box.getValue().equals("Ελληνικά")) {
+            } else if (language_box.getValue().equals("Español")) {
+            }
         });
     }
 
     private void bindGuiLanguage() {
-        //resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, localeMap.get(language_box.getSelectionModel().getSelectedItem())));
         commands_text.textProperty().bind(resourceFactory.getStringBinding("commands"));
         add_an_element_text.textProperty().bind(resourceFactory.getStringBinding("add_an_element"));
         tabMain.textProperty().bind(resourceFactory.getStringBinding("main_tab"));
@@ -259,7 +369,7 @@ public class MainWindowController {
 
     public void refreshTable() {
         collection_table.refresh();
-        //tableFilter.updateFilters();
+        canvas_plane.toString();
     }
 
     public void setClient(Client client) {
@@ -286,9 +396,9 @@ public class MainWindowController {
     private void removeByIdOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
         if (product != null) {
-            client.getCommandManager().runCommand(new CommandMsg("remove_by_id").setArgument(Long.toString(product.getId())));
+            proccessAction(new CommandMsg("remove_by_id").setArgument(Long.toString(product.getId())));
         } else {
-            client.getCommandManager().runCommand(new CommandMsg("remove_by_id").setArgument(Long.toString(idInField)));
+            proccessAction(new CommandMsg("remove_by_id").setArgument(Long.toString(idInField)));
         }
     }
 
@@ -301,24 +411,11 @@ public class MainWindowController {
     public void executeScriptOnAction() {
         File selectedFile = fileChooser.showOpenDialog(primaryStage);
         if (selectedFile == null) return;
-        Response msg = null;
-        try {
-            msg = client.getCommandManager().runFile(selectedFile);
-        } catch (FileException | InvalidDataException | ConnectionException | CollectionException | CommandException e) {
-            //app.getOutputManager().error(e.getMessage());
-            app.getOutputter().error(e.getMessage());
-        }
-        if (msg != null) {
-            System.out.println(msg.getMessage());
-            if (msg.getStatus() == Response.Status.FINE) app.getOutputter().info(msg.getMessage());
-                //if (msg.getStatus() == Response.Status.FINE) app.getOutputManager().info(msg.getMessage());
-                //else if (msg.getStatus() == Response.Status.ERROR) app.getOutputManager().error(msg.getMessage());
-            else if (msg.getStatus() == Response.Status.ERROR) app.getOutputter().error(msg.getMessage());
-        }
+        proccessActionScript(selectedFile);
     }
 
     @FXML
-    public void updateIdOnAction(ActionEvent actionEvent) {
+    public void updateIdOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
         if (product != null) {
             proccessAction(new CommandMsg("update").setArgument(Long.toString(product.getId())).setProduct(readProduct()));
@@ -339,9 +436,9 @@ public class MainWindowController {
     public void removeLowerOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
         if (product != null) {
-            client.getCommandManager().runCommand(new CommandMsg("remove_lower").setArgument(Long.toString(product.getId())));
+            proccessAction(new CommandMsg("remove_lower").setArgument(Long.toString(product.getId())));
         } else {
-            client.getCommandManager().runCommand(new CommandMsg("remove_lower").setArgument(Long.toString(idInField)));
+            proccessAction(new CommandMsg("remove_lower").setArgument(Long.toString(idInField)));
         }
 
     }
@@ -350,7 +447,9 @@ public class MainWindowController {
     public void removeGreaterOnAction() {
         Product product = collection_table.getSelectionModel().getSelectedItem();
         if (product != null) {
-            client.getCommandManager().runCommand(new CommandMsg("remove_greater").setArgument(Long.toString(product.getId())));
+            proccessAction(new CommandMsg("remove_greater").setArgument(Long.toString(product.getId())));
+        } else {
+            proccessAction(new CommandMsg("remove_greater").setArgument(Long.toString(idInField)));
         }
     }
 
@@ -375,7 +474,10 @@ public class MainWindowController {
             print("Main window close!!!");
             client.close();
         });
+        flag = true;
+        ProductObservableManager.collection.clear();
     }
+
 
     @FXML
     public void infoOnAction() {
@@ -384,21 +486,58 @@ public class MainWindowController {
 
     @FXML
     public void clearOnAction() {
-        client.getCommandManager().runCommand(new CommandMsg("clear"));
+        proccessAction(new CommandMsg("clear"));
     }
 
     @FXML
     public void addOnAction() {
-        if (flag) {
-            Product product = readProduct();
-            proccessAction(new CommandMsg("add").setProduct(product));
-        }
+        Product product = readProduct();
+        proccessAction(new CommandMsg("add").setProduct(product));
     }
 
-    public Response proccessAction(Request request) {
-        Response response = client.getCommandManager().runCommand(request);
-        String msg = response.getMessage();
-        return response;
+    public Void proccessAction(Request request) {
+        Service<Void> service = new Service<Void>() {
+            @Override
+            protected Task<Void> createTask() {
+                return new Task<Void>() {
+                    @Override
+                    protected Void call() throws Exception {
+                        client.getCommandManager().runCommand(request);
+                        return null;
+                    }
+                };
+            }
+        };
+        service.start();
+        return null;
+    }
+
+    public Void proccessActionScript(File selectedFile) {
+        Service<Void> service = new Service<Void>() {
+            @Override
+            protected Task<Void> createTask() {
+                return new Task<Void>() {
+                    @Override
+                    protected Void call() throws Exception {
+                        Response msg = null;
+                        try {
+                            msg = client.getCommandManager().runFile(selectedFile);
+                        } catch (FileException | InvalidDataException | ConnectionException | CollectionException | CommandException e) {
+                            app.getOutputter().error(e.getMessage());
+                        }
+                        if (msg != null) {
+                            System.out.println(msg.getMessage());
+                            if (msg.getStatus() == Response.Status.FINE) app.getOutputter().info(msg.getMessage());
+                            else if (msg.getStatus() == Response.Status.ERROR)
+                                app.getOutputter().error(msg.getMessage());
+                        }
+                        return null;
+                    }
+                };
+            }
+        };
+        service.start();
+        return null;
     }
 
     //работа с полями интерфейса
@@ -531,17 +670,12 @@ public class MainWindowController {
             UnitOfMeasure unitOfMeasure = readUnitOfMeasure();
             Person owner = readOwner();
             product = new Product(name, coords, price, manufactureCost, unitOfMeasure, owner);
-            flag = true;
         } catch (EmptyStringException | StringException | InvalidNumberException | InvalidEnumException e) {
-            //app.getOutputManager().error(e.getMessage());
             app.getOutputter().error(e.getMessage());
             app.getOutputManager().error(e.getMessage());
-
         } catch (InvalidDataException e) {
-            //app.getOutputManager().error(e.getMessage());
             app.getOutputter().error(e.getMessage());
             app.getOutputManager().error(e.getMessage());
-
         }
         return product;
     }
@@ -558,9 +692,6 @@ public class MainWindowController {
         person_weight_field.setText(product.getOwner().getWeight() + "");
         person_passport_id_field.setText(product.getOwner().getPassportID());
     }
-
-    long rand = 1821L;
-    Random random = new Random(rand);
 
     public void refreshCanvas(ObservableList<Product> collection, Collection<Product> changes, CollectionOperation op) {
         for (Product product : changes) {
@@ -595,10 +726,25 @@ public class MainWindowController {
 
         circle.setOnMouseClicked(event -> {
             Group group = new Group();
-            Button button = new Button("Редактировать");
+            Button button = new Button(resourceBundle.getString("edit"));
             button.setLayoutX(370);
             button.setLayoutY(250);
             Stage stage = new Stage();
+            button.setOnAction(event1 -> {
+                this.name_field.setText(pr.getName());
+                this.coordinateX_field.setText(pr.getCoordinates().getX() + "");
+                this.coordinateY_field.setText(pr.getCoordinates().getY() + "");
+                this.price_field.setText(pr.getPrice().toString());
+                this.manufacture_cost_field.setText(pr.getManufactureCost() + "");
+                this.unit_of_measure_field.setText(pr.getUnitOfMeasure().toString());
+                this.person_name_field.setText(pr.getOwner().getPersonName());
+                this.person_birthday_field.setText(DateConvertor.dateToString1(pr.getOwner().getBirthday()));
+                this.person_weight_field.setText(pr.getOwner().getWeight() + "");
+                this.person_passport_id_field.setText(pr.getOwner().getPassportID());
+                idInField = pr.getId();
+                stage.close();
+                this.tabPane.getSelectionModel().selectFirst();
+            });
             Label label = new Label(pr.toString());
             group.getChildren().add(button);
             group.getChildren().add(label);
@@ -608,13 +754,42 @@ public class MainWindowController {
             stage.setHeight(350);
             stage.show();
         });
+        circleMap.put(pr.getId(), circle);
         canvas_plane.getChildren().add(circle);
+
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(2000), circle);
+        fadeTransition.setFromValue(0.0f);
+        fadeTransition.setToValue(1.0f);
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setAutoReverse(true);
+        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(2000), circle);
+        translateTransition.setFromY(circle.getCenterY() * (-1) - 20);
+        translateTransition.setToY(0);
+        translateTransition.setCycleCount(1);
+        translateTransition.setAutoReverse(true);
+
+        ScaleTransition scaleTransition = new ScaleTransition(Duration.millis(2000), circle);
+        scaleTransition.setFromY(2f);
+        scaleTransition.setFromX(2f);
+        scaleTransition.setToY(1f);
+        scaleTransition.setToX(1f);
+        scaleTransition.setCycleCount(1);
+        scaleTransition.setAutoReverse(true);
+
+        ParallelTransition parallelTransition = new ParallelTransition();
+        parallelTransition.getChildren().addAll(
+                fadeTransition,
+                translateTransition,
+                scaleTransition
+        );
+        parallelTransition.play();
 
     }
 
     private void filter_view() {
         filtr_view.setOnMouseClicked(event -> {
             Stage stage = new Stage();
+            stage.setTitle("Filter");
             FXMLLoader filterWindowLoader = new FXMLLoader();
             filterWindowLoader.setLocation(getClass().getResource("../controllers/filter.fxml"));
             try {
@@ -637,30 +812,37 @@ public class MainWindowController {
         });
     }
 
-    public ObservableResourceFactory getResourceFactory() {
-        return resourceFactory;
+    private void help_button() {
+        help_but.setOnMouseClicked(event -> {
+            Group group = new Group();
+            Stage stage = new Stage();
+            stage.setTitle("Help");
+            Label label = new Label("help : вывести справку по доступным командам\n" +
+                    "info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)\n" +
+                    "show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении\n" +
+                    "add {element} : добавить новый элемент в коллекцию\n" +
+                    "update id {element} : обновить значение элемента коллекции, id которого равен заданному\n" +
+                    "remove_by_id id : удалить элемент из коллекции по его id\n" +
+                    "clear : очистить коллекцию\n" +
+                    "save : сохранить коллекцию в файл\n" +
+                    "execute_script file_name : считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.\n" +
+                    "exit : завершить программу (без сохранения в файл)\n" +
+                    "add_if_min {element} : добавить новый элемент в коллекцию, если его значение меньше, чем у наименьшего элемента этой коллекции\n" +
+                    "remove_greater {element} : удалить из коллекции все элементы, превышающие заданный\n" +
+                    "remove_lower {element} : удалить из коллекции все элементы, меньшие, чем заданный\n" +
+                    "filter_less_than_manufacture_cost manufactureCost : вывести элементы, значение поля manufactureCost которых меньше заданного\n" +
+                    "print_unique_owner : вывести уникальные значения поля owner всех элементов в коллекции\n");
+            group.getChildren().add(label);
+            Scene scene = new Scene(group);
+            stage.setScene(scene);
+            stage.setWidth(1400);
+            stage.setHeight(400);
+            stage.show();
+        });
     }
 
-    private void initCanvas() {
-        ZoomOperator zoomOperator = new ZoomOperator();
-        canvas_plane.setOnScroll(new EventHandler<ScrollEvent>() {
-            @Override
-            public void handle(ScrollEvent event) {
-                double zoomFactor = 1.5;
-                if (event.getDeltaY() <= 0) {
-                    zoomFactor = 1 / zoomFactor;
-                }
-
-                double x = 20;
-                double y = 20;
-                if ((event.getDeltaY() <= 0 && (zoomOperator.getBounds().getHeight() <= 100 || zoomOperator.getBounds().getWidth() <= 100)))
-                    return;
-                zoomOperator.zoom(canvas_plane, zoomFactor, x, y);
-            }
-        });
-        //zoomOperator.draggable(canvas_plane);
-        canvas_plane.setMinHeight(20);
-        canvas_plane.setMinWidth(20);
+    public ObservableResourceFactory getResourceFactory() {
+        return resourceFactory;
     }
 }
 

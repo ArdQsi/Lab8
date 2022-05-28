@@ -1,7 +1,6 @@
 package main;
 
 import client.Client;
-import collection.ProductObservableManager;
 import io.OutputManager;
 import io.OutputterUI;
 import controllers.ControllerLogin;
@@ -14,11 +13,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import tools.ObservableResourceFactory;
 
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import static io.ConsoleOutputter.print;
+
 
 public class App extends Application {
     static Client client;
@@ -137,32 +139,32 @@ public class App extends Application {
     public void setMainWindow() {
         try {
             FXMLLoader mainWindowLoader = new FXMLLoader();
-            mainWindowLoader.setResources(ResourceBundle.getBundle("bundles.GuiLabels",new Locale("ru")));
+            mainWindowLoader.setResources(ResourceBundle.getBundle("bundles.GuiLabels",new Locale("en")));
             mainWindowLoader.setLocation(getClass().getResource("../controllers/main.fxml"));
             Parent mainWindowRootNode = mainWindowLoader.load();
             Scene mainWindowScene = new Scene(mainWindowRootNode);
             MainWindowController mainWindowController = mainWindowLoader.getController();
             mainWindowController.initLangs(resourceFactory);
+            //client.sendHello();
 
             mainWindowController.setClient(client);
             mainWindowController.setUsername(client.getUser()!=null?client.getUser().getLogin():"");
             mainWindowController.setPrimaryStage(primaryStage);
             mainWindowController.setApp(this);
-
-            primaryStage.setScene(mainWindowScene);
-            primaryStage.setResizable(true);
-            primaryStage.setOnCloseRequest((e) ->{
-                print("Main window close!!!");
-                client.close();
+                        Platform.runLater(()->{
+                primaryStage.setScene(mainWindowScene);
+                primaryStage.setResizable(true);
+                primaryStage.setOnCloseRequest((e) ->{
+                    print("Main window close!!!");
+                    client.close();
+                });
+                primaryStage.show();
             });
-             primaryStage.show();
-
         } catch (Exception e) {
             System.out.println(e);
             e.printStackTrace();
         }
     }
-
     public OutputterUI getOutputter() {
         return outputter;
     }

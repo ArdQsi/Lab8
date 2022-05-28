@@ -12,7 +12,6 @@ import tools.ObservableResourceFactory;
 import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
-import java.nio.channels.ClosedChannelException;
 import java.util.Arrays;
 
 
@@ -46,6 +45,7 @@ public class Client extends Thread implements Closeable {
     public Client(String addr, int p) throws ConnectionException {
         this.init(addr, p);
     }
+    public Client(){}
 
     private void init(String addr, int p) throws ConnectionException {
         this.connect(addr, p);
@@ -95,7 +95,6 @@ public class Client extends Thread implements Closeable {
             byte[] data = request.toString().getBytes();
             int position = 0;
             int limit = INCREMENT;
-
             for (int capacity = 0; data.length > capacity; limit += 4096) {
                 byte[] window = Arrays.copyOfRange(data, position, limit);
                 capacity += limit - position;
@@ -201,8 +200,7 @@ public class Client extends Thread implements Closeable {
         authSuccess = f;
     }
 
-    @Override
-    public void run() {
+    public void sendHello(){
         Request hello = new CommandMsg();
         hello.setStatus(Request.Status.HELLO);
         try {
@@ -215,6 +213,11 @@ public class Client extends Thread implements Closeable {
         } catch (ConnectionException | InvalidDataException e) {
             printErr("cannot load collection from server");
         }
+    }
+
+    @Override
+    public void run() {
+        sendHello();
         while (running) {
             try {
                 receivedRequest = false;
@@ -249,9 +252,9 @@ public class Client extends Thread implements Closeable {
                         break;
                 }
             } catch (ConnectionException e) {
-
+                System.out.println("a");
             } catch (InvalidDataException e) {
-
+                System.out.println("b");
             }
         }
     }
@@ -288,6 +291,7 @@ public class Client extends Thread implements Closeable {
             }
         } catch (ConnectionException | InvalidDataException e) {
             connected = false;
+            outputManager.error("сервер недоступен");
         } catch (NullPointerException e) {
             outputManager.error("неудачная регистрация");
         }
@@ -340,9 +344,6 @@ public class Client extends Thread implements Closeable {
         commandManager.close();
         socket.close();
         broadcastSocket.close();
-        currentThread().interrupt();
     }
-
-
 }
 
